@@ -13,6 +13,14 @@
         font-family: wantedsb;
         src: url(webfonts/WantedSans-SemiBold.otf) format(opentype);
       }
+      @font-face {
+        font-family: wantedr;
+        src: url(webfonts/WantedSans-Regular.otf) format(opentype);
+      }
+      @font-face {
+        font-family: kjcb;
+        src: url(webfonts/KimjungchulScript-Bold.woff) format(woff);
+      }
       * {
         margin: 0;
         padding: 0;
@@ -26,17 +34,27 @@
       .top > div {
         float: left;
       }
-      .ajae {
+      .desc {
         position: relative;
         top: -50px;
         left: -50px;
+      }
+      h1 {
+        font: 46px/2 aritab;
+        color: #471404;
+      }
+      h2 {
+        font: 26px wantedsb;
+      }
+      .child > p {
+        font: 20px wantedr;
       }
     </style>
   </head>
   <body>
     <div class="info">
       <div class="top">
-        <div class="ajae">
+        <div class="desc">
           <img src="images/cts23726_img01.png" alt="아저씨" />
         </div>
         <div class="child">
