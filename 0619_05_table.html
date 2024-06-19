@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: noto;
+        src: url(webfonts/NotoSansKR-Regular.woff);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      table {
+        border-collapse: collapse;
+        text-align: center;
+        margin: 20px auto;
+        width: 1000px;
+        height: 300px;
+      }
+      td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        font-family: noto;
+      }
+      .gu {
+        background-color: #eee;
+        border-top: 2px solid black;
+      }
+      .bg {
+      }
+      td:first-child {
+        border-left: none;
+      }
+      td:nth-child(5) {
+        border-right: none;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr class="gu">
+        <td>구분</td>
+        <td>8일전</td>
+        <td>7~4일 전</td>
+        <td>3~1일 전</td>
+        <td>당일</td>
+      </tr>
+      <tr>
+        <td>시설 대관</td>
+        <td rowspan="3" class="bg">위약금 없음</td>
+        <td rowspan="3" class="bg">견적금액 50% 청구</td>
+        <td>견적금액 90% 청구</td>
+        <td rowspan="3" class="bg">견적금액 100% 청구</td>
+      </tr>
+      <tr>
+        <td>케이터링</td>
+        <td>견적금액 90% 청구</td>
+      </tr>
+      <tr>
+        <td>프로그램</td>
+        <td>견적금액 100% 청구</td>
+      </tr>
+    </table>
+  </body>
+</html>
