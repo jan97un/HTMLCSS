@@ -17,6 +17,19 @@
       /* p .first + span {
         color: red;
       } */
+      /* 인접 선택자(+). 현재 요소 바로 뒤 요소 */
+      p .first ~ span {
+        color: red;
+      }
+      /* 형제 선택자(~). 현재 요소와 같은 계층 요소 */
+      h1,
+      a {
+        background-color: beige;
+      }
+      /* 그룹 선택자(,). 선택자 그룹화 */
+      h1 ~ p {
+        background-color: aqua;
+      }
     </style>
   </head>
   <body>
