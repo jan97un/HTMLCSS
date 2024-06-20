@@ -7,29 +7,26 @@
     <style>
       @font-face {
         font-family: noto;
-        src: url(webfonts/NotoSansKR-Regular.woff);
+        src: url(webfonts/NotoSansKR-Regular.woff) format(woff);
       }
       * {
         margin: 0;
         padding: 0;
       }
       table {
+        margin: 20px;
         border-collapse: collapse;
         text-align: center;
-        margin: 20px auto;
-        width: 1000px;
-        height: 300px;
+      }
+      .date {
+        background-color: #eee;
+        border-top: 2px solid #000;
       }
       td {
-        border: 1px solid #ccc;
-        padding: 10px;
+        padding: 20px;
+        border: 1px solid #000;
+        border-color: #aaa;
         font-family: noto;
-      }
-      .gu {
-        background-color: #eee;
-        border-top: 2px solid black;
-      }
-      .bg {
       }
       td:first-child {
         border-left: none;
@@ -41,26 +38,28 @@
   </head>
   <body>
     <table>
-      <tr class="gu">
+      <tr class="date">
         <td>구분</td>
         <td>8일전</td>
-        <td>7~4일 전</td>
-        <td>3~1일 전</td>
+        <td>7~4일전</td>
+        <td>3~1일전</td>
         <td>당일</td>
       </tr>
       <tr>
-        <td>시설 대관</td>
-        <td rowspan="3" class="bg">위약금 없음</td>
-        <td rowspan="3" class="bg">견적금액 50% 청구</td>
+        <td>시설대관</td>
+        <td rowspan="3">위약금 없음</td>
+        <td rowspan="3">견적금액 50% 청구</td>
         <td>견적금액 90% 청구</td>
-        <td rowspan="3" class="bg">견적금액 100% 청구</td>
+        <td rowspan="3">견적금액 100% 청구</td>
       </tr>
       <tr>
         <td>케이터링</td>
+
         <td>견적금액 90% 청구</td>
       </tr>
       <tr>
         <td>프로그램</td>
+
         <td>견적금액 100% 청구</td>
       </tr>
     </table>

@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>picture 태그</title>
-    <style></style>
+    <title>Document</title>
   </head>
   <body>
     <picture>
@@ -14,6 +13,8 @@
       <source media="(min-width:500px)" srcset="./images/photo4.jpg" />
       <source media="(max-width:499px)" srcset="./images/photo5.jpg" />
       <img src="images/photo6.jpg" alt="photo6" />
+      <!-- picture 태그의 마지막에 img 태그를 마지막 자식으로 지정한다. -->
+      <!-- img 태그는 picture 태그를 지원하지 않거나, 일치하는 source 태그가 없는 브라우저에서 사용된다. -->
     </picture>
   </body>
 </html>

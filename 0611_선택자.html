@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        border: 1px solid #000;
+      }
+      p > a {
+        color: green;
+      }
+      p > span > a {
+        color: pink;
+      }
+      /* p .first + span {
+        color: red;
+      } */
+    </style>
+  </head>
+  <body>
+    <h1 class="jg">제목태그</h1>
+    <p>문단태그</p>
+    <a href="">링크태그</a>
+    <p>
+      <span class="first">span태그</span>
+      <span>span태그</span>
+      <span>span태그</span>
+      <span>span태그</span>
+      <a href="">링크태그</a>
+      <span>
+        <a href="">링크태그</a>
+      </span>
+    </p>
+  </body>
+</html>
