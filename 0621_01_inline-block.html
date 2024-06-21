@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* body {
+        text-align: center;
+      } */
+      .clearfix::before,
+      .clearfix::after {
+        content: "";
+        display: block;
+      }
+      .clearfix::after {
+        clear: both;
+      }
+      /* article {
+        overflow: hidden;
+      } */
+      div,
+      span {
+        /* width: 50px; */
+        border: 1px solid;
+      }
+      div {
+        float: left;
+      }
+      span {
+        float: right;
+      }
+      /* float을 주면 inline도 width를 가진다 */
+      section {
+        width: 50px;
+        border: 1px solid;
+        margin: 50px auto;
+        /* clear: both; */
+      }
+    </style>
+  </head>
+  <body>
+    <article class="clearfix">
+      <div>블록요소</div>
+      <div>블록요소</div>
+      <div>블록요소</div>
+      <div>블록요소</div>
+      <div>블록요소</div>
+      <!-- block은 화면 전체 가로너비를 가짐 -->
+      <span>인라인요소</span>
+      <span>인라인요소</span>
+      <span>인라인요소</span>
+      <span>인라인요소</span>
+      <span>인라인요소</span>
+      <!-- inline은 크기를 못 가짐 -->
+    </article>
+    <section>블록요소</section>
+  </body>
+</html>
