@@ -27,15 +27,21 @@
       div {
         float: left;
       }
-      span {
+      /* span {
         float: right;
-      }
+      } */
       /* float을 주면 inline도 width를 가진다 */
       section {
         width: 50px;
         border: 1px solid;
         margin: 50px auto;
         /* clear: both; */
+      }
+      nav {
+        float: right;
+      }
+      nav span {
+        float: left;
       }
     </style>
   </head>
@@ -47,11 +53,13 @@
       <div>블록요소</div>
       <div>블록요소</div>
       <!-- block은 화면 전체 가로너비를 가짐 -->
-      <span>인라인요소</span>
-      <span>인라인요소</span>
-      <span>인라인요소</span>
-      <span>인라인요소</span>
-      <span>인라인요소</span>
+      <nav>
+        <span>인라인요소1</span>
+        <span>인라인요소2</span>
+        <span>인라인요소3</span>
+        <span>인라인요소4</span>
+        <span>인라인요소5</span>
+      </nav>
       <!-- inline은 크기를 못 가짐 -->
     </article>
     <section>블록요소</section>

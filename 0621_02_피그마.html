@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrap {
+        width: 800px;
+        margin: 0 auto;
+        font-size: 0;
+        /* 중요 */
+      }
+      /* .top {
+        height: 24px;
+      } */
+      .dir {
+        overflow: hidden;
+        /* height: 13px; */
+      }
+      .dir > div {
+        float: left;
+      }
+      .dir .directory {
+        font-size: 10px;
+        margin-left: 270px;
+      }
+      .dir .directory ul {
+        list-style: none;
+      }
+      .dir .directory ul li {
+        float: left;
+        margin-right: 40px;
+        text-transform: uppercase;
+      }
+      .dir .food02 {
+        float: right;
+      }
+      .con {
+        overflow: hidden;
+      }
+      .con > div {
+        float: left;
+      }
+      .food {
+        position: relative;
+        z-index: 1;
+        /* nav 위에 띄워서 줄 가리기 */
+      }
+      .con .side {
+        position: relative;
+        top: 165px;
+        width: 149px;
+      }
+      .month {
+        border-left: 1px solid #ccc;
+      }
+      .month > p:first-child {
+        font-size: 50px;
+        /* wrap에 font 0 속성을 부여해서 size를 주지 않으면 보이지 않음 */
+        text-align: center;
+        background-color: #fddee1;
+        color: #e3a6ac;
+        width: 110px;
+        height: 110px;
+        border-radius: 70px;
+        line-height: 110px;
+        margin: 0 auto;
+        /* font-weight: bold; */
+      }
+      .month > p:nth-child(2) {
+        font-size: 12px;
+        /* wrap에 font 0 속성을 부여해서 size를 주지 않으면 보이지 않음 */
+        text-align: left;
+        background-color: #fddee1;
+        color: #ee6f7b;
+        width: 95%;
+        height: 20px;
+        margin: 10px auto 0;
+        line-height: 20px;
+        text-transform: uppercase;
+      }
+      .nav {
+        position: relative;
+        left: -2px;
+      }
+      .contents > p {
+        font-size: 11px;
+        border-bottom: 1px solid #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="top"><img src="images/food_img/top.gif" alt="top" /></div>
+      <div class="dir">
+        <div class="food01">
+          <img src="images/food_img/food_01.gif" alt="food_01" />
+        </div>
+        <div class="directory">
+          <!-- <img src="images/food_img/directory.gif" alt="directory" /> -->
+          <ul>
+            <li>august / 2003 /</li>
+            <li>summer</li>
+            <li>special</li>
+            <li>e·magazine</li>
+          </ul>
+        </div>
+        <div class="food02">
+          <img src="images/food_img/food_02.gif" alt="food_02" />
+        </div>
+      </div>
+      <div class="con">
+        <div class="note">
+          <img src="images/food_img/note.gif" alt="note" />
+        </div>
+        <div class="food">
+          <img src="images/food_img/image.gif" alt="food" />
+        </div>
+        <div class="side">
+          <div class="month">
+            <p><strong>08</strong></p>
+            <p>&nbsp;FOOD & DIET</p>
+          </div>
+          <!-- <div class="number">
+            <img src="images/food_img/number.gif" alt="number" />
+          </div> -->
+          <div class="nav">
+            <!-- <img src="images/food_img/navigation.gif" alt="nav" /> -->
+            <div class="contents">
+              <p>01.contents</p>
+              <p>02.contents</p>
+              <p>03.contents</p>
+              <p>04.contents</p>
+              <p>05.contents</p>
+            </div>
+            <div class="banner">
+              <p>contents banner</p>
+              <p>contents banner</p>
+              <p>contents banner</p>
+            </div>
+          </div>
+        </div>
+        <div class="page">
+          <img src="images/food_img/page.gif" alt="page" />
+        </div>
+      </div>
+      <div class="bot"><img src="images/food_img/bottom.gif" alt="bot" /></div>
+    </div>
+  </body>
+</html>
