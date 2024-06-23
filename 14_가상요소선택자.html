@@ -4,6 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      li:first-child {
+        color: red;
+      }
+      li:nth-child(5) {
+        color: red;
+      }
+      li:last-child::first-letter {
+        font-size: 50px;
+      }
+      li:last-child::first-line {
+        text-decoration: underline;
+      }
+      li:hover {
+        cursor: pointer;
+        color: blue;
+      }
+      p:nth-child(2) {
+        color: green;
+      }
+      /* p:last-child {
+        color: pink;
+      } */
+      p:nth-child(5) {
+        color: pink;
+      }
+      a:hover::before {
+        content: "앞";
+      }
+      a:hover:after {
+        content: "뒤";
+      }
+    </style>
   </head>
   <body>
     <ul>
@@ -35,5 +68,6 @@
     <p>문단태그2</p>
     <p>문단태그3</p>
     <p>문단태그4</p>
+    <a href="#">링크태그</a>
   </body>
 </html>
