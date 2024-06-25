@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        margin: 50px auto;
+        width: 700px;
+      }
+      section div {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #000;
+        text-align: center;
+        color: white;
+      }
+      h3 {
+        padding: 50px 0 30px;
+        position: relative;
+      }
+      h3:after {
+        content: "";
+        width: 30px;
+        height: 1px;
+        background-color: #ccc;
+        position: absolute;
+        bottom: 15px;
+        left: 85px;
+      }
+      section > p {
+        color: red;
+        width: 50px;
+        height: 200px;
+        text-align: center;
+        line-height: 200px;
+        font-size: 25px;
+      }
+      section div,
+      section > p {
+        float: left;
+      }
+      .길 {
+        background-color: #434343;
+      }
+      .credo {
+        background-color: #7d7d7d;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>
+        <h3>경영이념</h3>
+        <p>
+          사회적 책임을 근간으로<br />
+          하는 경영이념
+        </p>
+      </div>
+      <p><i class="fa-solid fa-chevron-right"></i></p>
+      <div class="길">
+        <h3>신세계의 길</h3>
+        <p>
+          사회적 책임을 실천하는<br />
+          신념 및 방향
+        </p>
+      </div>
+      <p><i class="fa-solid fa-chevron-right"></i></p>
+      <div class="credo">
+        <h3>신세계 Credo</h3>
+        <p>
+          이해관계자들의 사회적<br />
+          책임경영 실천강령
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

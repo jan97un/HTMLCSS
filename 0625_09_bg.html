@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    p {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      background-image: url(images/photo1.jpg);
+      background-position: center;
+      background-size: 50%;
+      background-repeat: no-repeat;
+      /* repeat이 position 앞에 나와도 된다 */
+    }
+    div {
+      width: 200px;
+      height: 200px;
+      background: red url(images/photo1.jpg) center/30% no-repeat;
+    }
+  </style>
+  <body>
+    <p>1</p>
+    <div></div>
+  </body>
+</html>
