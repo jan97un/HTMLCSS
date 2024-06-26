@@ -5,18 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,800;1,62..125,800&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wdth@0,62..125;1,62..125&display=swap");
       article {
         width: 1480px;
         height: 440px;
+        margin: 50px auto;
+      }
+      article > ul {
+        float: left;
       }
       .pic {
-        width: 740px;
-        height: 440px;
-        background: url(images/yp.jpg) left 50% no-repeat;
+        width: 720px;
+        height: 100%;
+        background: url(images/yp.jpg) left no-repeat;
+        border-radius: 10px;
       }
       .value {
         list-style: none;
+        width: 440px;
+        height: 100%;
+        padding-top: 200px;
+        box-sizing: border-box;
+        margin-left: 100px;
       }
+      .value > li:nth-child(2) {
+        font: 400 48px "Archivo", sans-serif;
+      }
+      .value > li:nth-child(3) {
+        font: 800 48px "Archivo", sans-serif;
+        color: #ffc72c;
+      }
+      /* {width: calc(100% - 720px);} */
+      /* 대신 계산해준다 */
+      /* 부모에 float을 줘서 위치 조정한다 */
     </style>
   </head>
   <body>
