@@ -8,11 +8,20 @@
       /* body > p:last-of-type {
         color: red;
       } */
+      /* 부모의 마지막이 p인 요소를 모두 선택한다 */
       /* body :not(p) {
         color: red;
       } */
-      p:only-child {
+      /* p 요소가 아닌 요소를 모두 선택한다 */
+      /* p:only-child {
         color: red;
+      } */
+      /* 부모의 유일한 자식인 p 요소를 모두 선택한다 */
+      /* p:only-of-type {
+        color: red;
+      } */
+      /* 부모의 유일한 p인 요소를 모두 선택한다 */
+      p:nth-last-child(3) {
       }
     </style>
   </head>

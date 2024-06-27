@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: #d3222a;
+      }
+      .wrap {
+        /* width: 1000px;
+        margin: 0 auto; */
+      }
+      .top {
+        width: 1000px;
+        margin: 0 auto;
+        text-align: right;
+        overflow: hidden;
+      }
+      .top > ul {
+        float: right;
+        list-style: none;
+      }
+      .top ul li {
+        float: left;
+      }
+      .top ul li:nth-child(5) a::after {
+        content: "";
+      }
+      .top ul li a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        line-height: 45px;
+      }
+      .top ul li a::after {
+        content: "|";
+        padding: 0 10px;
+      }
+      .pattern {
+        background-image: url(images/pattern.gif);
+        height: 82px;
+      }
+      .pattern_inner {
+        width: 1000px;
+        margin: 0 auto;
+      }
+      .main {
+        width: 1000px;
+        margin: 0 auto;
+        height: 625px;
+      }
+      /* overfloat:hidden or font-size:0 */
+      .main > div {
+        float: left;
+      }
+      .main1 {
+        position: relative;
+      }
+      .girl {
+        position: absolute;
+      }
+      .logo {
+        position: absolute;
+        width: 188px;
+        left: 30px;
+        top: 45px;
+      }
+      .main > div ul {
+        position: absolute;
+        top: 220px;
+        left: 40px;
+        list-style: none;
+      }
+      .main > div ul li a {
+        color: #000;
+        text-decoration: none;
+        text-transform: capitalize;
+      }
+      .main > div:nth-child(2) {
+        background-image: url(images/index_main_02.gif);
+        width: 514px;
+        height: 100%;
+        float: right;
+      }
+      .main > div:nth-child(2) p {
+        color: white;
+        font-weight: bold;
+        font-size: 32px;
+      }
+      .bot {
+        /* clear: left; */
+        text-align: center;
+        line-height: 95px;
+        height: 100px;
+        background-color: white;
+        border-bottom: 1px solid #ccc;
+      }
+      /* clear:left = float:left 해제 */
+      .bot_inner {
+        width: 1000px;
+        margin: 0 auto;
+      }
+      /* 이미지 위에 백그라운드가 들어가려면 부모로 한 겹 더 감싸야한다 */
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="top">
+        <!-- <img src="images/index_top.gif" alt="top" /> -->
+        <ul>
+          <li><a href="#">회원가입</a></li>
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">japanese</a></li>
+          <li><a href="#">chinese</a></li>
+          <li><a href="#">italian</a></li>
+        </ul>
+      </div>
+      <div class="pattern">
+        <div class="pattern_inner">
+          <img src="images/index_pattern.gif" alt="pat" />
+        </div>
+      </div>
+      <div class="main">
+        <div class="main1">
+          <div class="girl">
+            <img src="images/index_main_01.jpg" alt="main1" />
+          </div>
+          <div class="logo">
+            <img src="images/instory_logo.gif" alt="logo" />
+          </div>
+          <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">instory</a></li>
+            <li><a href="#">portfolio</a></li>
+            <li><a href="#">product</a></li>
+            <li><a href="#">illustrator</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p>Home 메인페이지입니다</p>
+        </div>
+      </div>
+      <div class="bot">
+        <div class="bot_inner">
+          <img src="images/copyright.gif" alt="copyright" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
