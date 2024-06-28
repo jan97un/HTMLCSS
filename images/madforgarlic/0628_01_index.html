@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      #wrap {
+        background-color: #161616;
+      }
+      .topmenu {
+        background-color: #666;
+      }
+      .top {
+        width: 1000px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      .top ul {
+        float: right;
+      }
+      .top ul li {
+        float: left;
+      }
+      .top ul li a {
+        color: white;
+        text-transform: uppercase;
+        font-size: 12px;
+        padding: 0 10px;
+        height: 30px;
+        display: block;
+        line-height: 30px;
+      }
+      /* a는 inline 태그여서 높이가 들어가지 않는다 */
+      .top ul li:nth-child(4) a {
+        width: 140px;
+        background-color: #fff;
+        height: 20px;
+        color: #666;
+        line-height: 20px;
+        margin-top: 5px;
+      }
+      .top ul li a img {
+        vertical-align: middle;
+      }
+      /* inline 속성을 갖고 있는 이미지에 vertical-align 을 줄 수 있다 */
+      nav {
+        background-color: #161616;
+      }
+      .navmenu {
+        width: 1000px;
+        margin: 0 auto;
+        height: 70px;
+      }
+      .logo {
+        float: left;
+      }
+      .navmenu ul {
+        float: right;
+      }
+      .navmenu ul li {
+        float: left;
+        line-height: 70px;
+        padding: 0 20px;
+      }
+      .navmenu ul li a {
+        color: white;
+        font-weight: bold;
+      }
+      .visual {
+        height: 400px;
+        background: #9a9a9a url(images/mad_17.jpg) no-repeat center;
+      }
+      .food {
+        width: 1000px;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 20px 0;
+      }
+      .food li {
+        float: left;
+        margin-left: calc((100% - (235px * 4)) / 3);
+      }
+      .food li:first-child {
+        margin-left: 0;
+      }
+      .bot {
+        width: 1000px;
+        margin: 0 auto;
+        overflow: hidden;
+        padding-bottom: 20px;
+      }
+      .bot > div {
+        float: left;
+        width: 50%;
+      }
+      .bot .txt {
+        color: white;
+        width: 80%;
+        margin: 0 auto;
+        margin-left: 68px;
+        margin-top: 18px;
+      }
+      .txt h3 {
+        margin-bottom: 25px;
+      }
+      .txt > ul li {
+        font-size: 13px;
+        line-height: 22px;
+        text-transform: uppercase;
+      }
+      .txt > ul li span:first-child {
+        font-weight: 600;
+      }
+      .txt > ul li span:nth-child(3) {
+        color: #9a9a9a;
+        font-size: 12px;
+      }
+
+      footer {
+        border-top: 1px solid #9a9a9a;
+      }
+      .foot {
+        width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+        color: #9a9a9a;
+        font-size: 13px;
+      }
+      .foot ul {
+        display: inline-block;
+        padding-top: 16px;
+      }
+      .foot ul li {
+        float: left;
+        padding: 0 8px;
+      }
+      .foot address {
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="topmenu">
+          <div class="top">
+            <ul>
+              <li><a href="#">login</a></li>
+              <li><a href="#">join</a></li>
+              <li><a href="#">guest</a></li>
+              <li><a href="#">검색어를 입력해주세요</a></li>
+              <li>
+                <a href="#"><img src="./images/zoom.png" alt="돋보기" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <nav>
+          <div class="navmenu">
+            <div class="logo"><img src="./images/mad_12.gif" alt="logo" /></div>
+            <ul>
+              <li><a href="#">BRAND</a></li>
+              <li><a href="#">MENU</a></li>
+              <li><a href="#">STORE</a></li>
+              <li><a href="#">MEMBERSHIP</a></li>
+              <li><a href="#">EVENT</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div class="visual"></div>
+        <ul class="food">
+          <li><img src="images/mad_25.jpg" alt="steak" /></li>
+          <li><img src="images/mad_27.jpg" alt="rice" /></li>
+          <li><img src="images/mad_29.jpg" alt="pizza" /></li>
+          <li><img src="images/mad_31.jpg" alt="pasta" /></li>
+        </ul>
+        <div class="bot">
+          <div><img src="images/mad_39.jpg" alt="무료" /></div>
+          <div>
+            <div class="txt">
+              <h3>공지사항</h3>
+              <ul>
+                <!-- <img src="images/mad_41.gif" alt="공지사항" /> -->
+                <li>
+                  <span>mad surprise</span>&nbsp;&nbsp;<span
+                    >매월 지정일 매드서프라이즈!</span
+                  >&nbsp;&nbsp;<span>2017-06-28</span>
+                </li>
+                <li>
+                  <span>mad celebration</span>&nbsp;&nbsp;<span
+                    >생일,결혼기념일 스페셜!</span
+                  >&nbsp;&nbsp;<span>2017-06-28</span>
+                </li>
+                <li>
+                  <span>mad day</span>&nbsp;&nbsp;<span
+                    >매월 마지막 주 수요일 기억하세요!</span
+                  >&nbsp;&nbsp;<span>2017-06-28</span>
+                </li>
+                <li>
+                  <span>mad 10%</span>&nbsp;&nbsp;<span
+                    >멤버십이라면 언제나 10% 할인제공!</span
+                  >&nbsp;&nbsp;<span>2017-06-28</span>
+                </li>
+                <li>
+                  <span>mad rewards</span>&nbsp;&nbsp;<span
+                    >올수록 커지는 리워즈 혜택!</span
+                  >&nbsp;&nbsp;<span>2017-06-28</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="foot">
+          <ul>
+            <li>서비스이용약관</li>
+            <li>개인정보처리방침</li>
+            <li>기기운영관리방침</li>
+            <li>고객서비스센터</li>
+            <li>관리자문의</li>
+          </ul>
+          <address>
+            서울특별시 강남구 압구정로 222(신사동) ㈜엠에프지코리아
+          </address>
+          <p>COPYRIGHT ⓒ MFGKOREA ALL RIGHTS RESERVED.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
