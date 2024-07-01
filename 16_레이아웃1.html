@@ -26,9 +26,10 @@
         position: absolute;
         background-color: aqua;
       }
+      /* 부모에 relative를 주고 자식에게 absolute를 주면 자식은 부모 안에서 논다 */
+      /* 이 경우 자식이 원래 정해진 길이값을 갖고 있던 게 아니라서 자식은 글자만큼의 최소값만을 가진다 */
     </style>
   </head>
-
   <body>
     <span>인라인태그</span>
     <a href="#">링크태그</a>
@@ -40,7 +41,6 @@
       <li>리스트3</li>
       <li>리스트4</li>
     </ul>
-
     <div>그룹태그</div>
     <ul>
       <li>리스트1</li>

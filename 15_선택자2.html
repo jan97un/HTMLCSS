@@ -21,9 +21,29 @@
         color: red;
       } */
       /* 부모의 유일한 p인 요소를 모두 선택한다 */
-      p:nth-last-child(3) {
+      /* p:nth-last-child(3) {
+        color: red;
+      } */
+      /* 마지막 자식부터 부모의 자식 중 세 번째인 p 요소를 모두 선택한다 */
+      /* p::selection {
+        background-color: yellow;
+      } */
+      /* 선택한 p를 선택(드래그, 클릭)했을 때 반응한다 */
+      p {
         color: red;
       }
+      .first {
+        color: green;
+      }
+      /* 동일한 class 이름을 가진 모든 요소이다 */
+      p:nth-child(2) {
+        color: blue;
+      }
+      /* p의 부모의 두 번째 자식이다 */
+      #one {
+        color: yellow;
+      }
+      /* one 이라는 id를 가진 요소이다 */
     </style>
   </head>
   <body>

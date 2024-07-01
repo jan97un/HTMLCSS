@@ -23,12 +23,12 @@
       .parent div:nth-child(2) {
         left: calc(600px - 120px);
       }
+      /* calc()는 대신 계산해준다. 다만, 중간에 넣을 기호의 앞뒤를 띄워야 한다 */
       .parent div:last-child {
         right: 0;
       }
     </style>
   </head>
-
   <body>
     <div class="parent">
       <div class="child"></div>
