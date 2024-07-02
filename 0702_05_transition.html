@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      article {
+        width: 1280px;
+        margin: 0 auto;
+      }
+      .top {
+        text-align: center;
+      }
+      .main {
+        width: 1280px;
+      }
+      .left {
+        float: left;
+      }
+      .left ul li {
+        width: 340px;
+        height: 550px;
+        float: left;
+        position: relative;
+        color: white;
+      }
+      .left ul li:first-of-type {
+        background-image: url(images/pr_img1.jpg);
+      }
+      .left ul li:nth-of-type(2) {
+        background-image: url(images/pr_img2.jpg);
+      }
+      .left ul li div {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .right {
+        width: 565px;
+        float: right;
+      }
+      .right ul li {
+        width: 250px;
+        height: 250px;
+        background-color: #f0f0f0;
+        position: relative;
+        float: left;
+        margin: 10px;
+      }
+      .right ul li div {
+        position: absolute;
+        left: 42%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .right ul li div h1 {
+        font-weight: normal;
+        color: #544c47;
+        font-size: 24px;
+      }
+      .right ul li div h1 span {
+        display: block;
+        font-weight: bold;
+      }
+      .right ul li div p:nth-of-type(1) {
+        margin: 10px 0;
+        color: #222222;
+      }
+      .right ul li div p:nth-of-type(2) {
+      }
+      .line {
+        position: absolute;
+        background-color: #07348c;
+      }
+      /* absolute 를 줘서 display:block 의 역할을 함 */
+      .line-top {
+        width: 100%;
+        height: 5px;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: 0 0;
+        transition: all 0.1s ease-in-out 0.3s;
+      }
+      .line-right {
+        width: 5px;
+        height: 100%;
+        right: 0;
+        transform: scaleY(0);
+        transform-origin: 0 0;
+        transition: all 0.1s ease-in-out 0.2s;
+      }
+      .line-bottom {
+        width: 100%;
+        height: 5px;
+        bottom: 0;
+        transform: scaleX(0);
+        transform-origin: 100% 0;
+        transition: all 0.1s ease-in-out 0.1s;
+      }
+      .line-left {
+        width: 5px;
+        height: 100%;
+        left: 0;
+        transform: scaleY(0);
+        transform-origin: 0 100%;
+        transition: all 0.1s ease-in-out;
+      }
+      .right ul li:hover .line-top {
+        transform: scaleX(1);
+        transition: all 0.1s ease-in-out;
+      }
+      .right ul li:hover .line-right {
+        transform: scaleY(1);
+        transition: all 0.1s ease-in-out 0.1s;
+      }
+      .right ul li:hover .line-bottom {
+        transform: scaleX(1);
+        transition: all 0.1s ease-in-out 0.2s;
+      }
+      .right ul li:hover .line-left {
+        transform: scaleY(1);
+        transition: all 0.1s ease-in-out 0.3s;
+      }
+      .right ul li div img {
+        transition: 0.5s;
+      }
+      .right ul li:hover div img {
+        transform: translateX(20px);
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <section class="top">
+        <div>
+          <h1>PR Center</h1>
+          <p>
+            세상에 없던 신기술을 개척하는 기업, 극동건설이 기술의 진보를
+            선도합니다
+          </p>
+        </div>
+      </section>
+      <section class="main">
+        <div class="left">
+          <ul>
+            <li>
+              <div>
+                <h1>극동뉴스</h1>
+                <p>극동건설의 다양한 소식을 가장 빠르게<br />전달해드립니다.</p>
+                <p><img src="images/next_bar_wh.png" alt="next" /></p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h1>R&D</h1>
+                <p>
+                  끊임없는 신기술 개발과 혁신으로 극동건설이 건축기술의 진보를
+                  위해 노력하고 있습니다.
+                </p>
+                <p><img src="images/next_bar_wh.png" alt="next" /></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <ul>
+            <li>
+              <div>
+                <h1>언론속의 <span>극동</span></h1>
+                <p>
+                  언론에 소개되는 극동의 소식을<br />
+                  안내해드립니다.
+                </p>
+                <p><img src="images/next_bar_bk.png" alt="next" /></p>
+              </div>
+              <span class="line line-top"></span>
+              <span class="line line-right"></span>
+              <span class="line line-bottom"></span>
+              <span class="line line-left"></span>
+            </li>
+            <li>
+              <div>
+                <h1>입주고객<span>A/S안내</span></h1>
+                <p>
+                  스타클래스 입주 후 A/S<br />
+                  신청에 대한 안내입니다.
+                </p>
+                <p><img src="images/next_bar_bk.png" alt="next" /></p>
+              </div>
+              <span class="line line-top"></span>
+              <span class="line line-right"></span>
+              <span class="line line-bottom"></span>
+              <span class="line line-left"></span>
+            </li>
+            <li>
+              <div>
+                <h1>극동건설 <span>인재채용</span></h1>
+                <p>
+                  극동건설과 함께 성장해<br />
+                  나갈 인재를 모집합니다
+                </p>
+                <p><img src="images/next_bar_bk.png" alt="next" /></p>
+              </div>
+              <span class="line line-top"></span>
+              <span class="line line-right"></span>
+              <span class="line line-bottom"></span>
+              <span class="line line-left"></span>
+            </li>
+            <li>
+              <div>
+                <h1>기업 <span>홍보영상</span></h1>
+                <p>
+                  극동건설의 다양한<br />
+                  홍보영상을 소개합니다.
+                </p>
+                <p><img src="images/next_bar_bk.png" alt="next" /></p>
+              </div>
+              <span class="line line-top"></span>
+              <span class="line line-right"></span>
+              <span class="line line-bottom"></span>
+              <span class="line line-left"></span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </article>
+  </body>
+</html>
