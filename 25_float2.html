@@ -6,33 +6,33 @@
     <title>Document</title>
     <style>
       .parent {
-        height: 100px;
+        width: 1200px;
+        margin: 0 auto;
+        border: 1px solid #000;
+        background-color: yellow;
       }
       .parent,
       .parent1 {
-        width: 1200px;
-        margin: 0 auto;
-        border: 1px solid;
-        position: relative;
-        background-color: yellow;
-      }
-      .parent1 {
         overflow: hidden;
       }
-      .parent > div {
-        position: absolute;
-      }
+      /*child 요소에 float 속성을 지정하면 부모요소가 높이를 상실하고
+      아래요소를 자석처럼 끌어당기는 단점을 부모요소에 overflow:hidden 을
+      지정하면 보완된다*/
       .parent > div:first-child {
-        left: 0;
-      }
-      .parent > div:last-child {
-        right: 0;
-      }
-      .parent1 > div:first-child {
         float: left;
       }
-      .parent1 > div:last-child {
+      .parent > div:last-child {
         float: right;
+      }
+      .parent1 {
+        width: 200px;
+        border: 1px solid #000;
+        margin: auto;
+      }
+      .parent1 > div {
+        float: left;
+      }
+      .parent2 > div:first-child {
       }
     </style>
   </head>
@@ -42,7 +42,13 @@
       <div>right</div>
     </div>
     <div class="parent1">
-      <div>left<br />left<br />left</div>
+      <div>left왼쪽</div>
+      <div>center</div>
+      <div>right</div>
+    </div>
+    <div class="parent2">
+      <div>left왼쪽</div>
+      <div>center</div>
       <div>right</div>
     </div>
   </body>
