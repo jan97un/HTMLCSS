@@ -32,7 +32,24 @@
       .parent1 > div {
         float: left;
       }
+      .parent2 {
+        width: 200px;
+        border: 1px solid #000;
+        position: relative;
+        margin: auto;
+        height: 20px;
+      }
       .parent2 > div:first-child {
+        position: absolute;
+        left: 0;
+      }
+      .parent2 > div:nth-child(2) {
+        position: absolute;
+        left: 55px;
+      }
+      .parent2 > div:nth-child(3) {
+        position: absolute;
+        left: 100px;
       }
     </style>
   </head>
