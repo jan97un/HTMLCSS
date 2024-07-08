@@ -8,42 +8,72 @@
       .parent {
         width: 1200px;
         background-color: #ccc;
+        margin: 20px auto;
       }
-      .parent > div {
+      .parent div {
         width: 100px;
         height: 100px;
       }
-      .parent > div p:first-child {
+      .parent > div:first-child {
         background-color: red;
       }
-      .parent > div p:nth-child(2) {
+      .parent > div:nth-child(2) {
         background-color: blue;
       }
-      .parent > div p:nth-child(3) {
+      .parent > div:nth-child(3) {
         background-color: yellow;
       }
       .top {
+        overflow: hidden;
+      }
+      /* child 요소에 fl 을 준 뒤, mid 의 psa 으로 가려진 top 를 oh 로 숨겨진 걸 보여지게 해준다 */
+      .top > div {
         float: left;
+      }
+      .mid {
+        position: relative;
+        height: 100px;
+      }
+      /* child 요소에 psa 을 주고 그 부모에 psr 를 준 다음, 높이값을 줘 형태를 확보하고 위치를 확보한다 */
+      .mid > div {
+        position: absolute;
+      }
+      .mid > div:first-child {
+        left: 0;
+      }
+      .mid > div:nth-child(2) {
+        left: 100px;
+      }
+      .mid > div:nth-child(3) {
+        left: 200px;
+      }
+      .bot {
+        font-size: 0;
+      }
+      /* dib 을 통해 inline 속성으로 바꿔 가로로 일자나열한 뒤,
+      block 속성은 유지해 va t 을 부여하고 부모의 font-size 를 0으로 만들어 위아래 간격을 조정한다. 글씨를 다시 보이게 하기 위해 child 요소에 font-size 를 부여한다 */
+      .bot > div {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 16px;
       }
     </style>
   </head>
   <body>
-    <div class="parent">
-      <div class="top">
-        <p>11</p>
-        <p>22</p>
-        <p>33</p>
-      </div>
-      <div class="mid">
-        <p>11</p>
-        <p>22</p>
-        <p>33</p>
-      </div>
-      <div class="bot">
-        <p>11</p>
-        <p>22</p>
-        <p>33</p>
-      </div>
+    <div class="parent top">
+      <div>11</div>
+      <div>22</div>
+      <div></div>
+    </div>
+    <div class="parent mid">
+      <div>11</div>
+      <div>22</div>
+      <div></div>
+    </div>
+    <div class="parent bot">
+      <div>11</div>
+      <div>22</div>
+      <div></div>
     </div>
   </body>
 </html>
