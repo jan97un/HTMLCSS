@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        animation-name: ani;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        border-radius: 50%;
+        background-color: green;
+        position: absolute;
+      }
+      @keyframes ani {
+        0%,
+        100% {
+          bottom: 0;
+          animation-timing-function: ease-out;
+        }
+        50% {
+          bottom: 200px;
+          animation-timing-function: ease-in;
+        }
+        /* 100% {
+          bottom: 0px;
+          animation-timing-function: ease-out;
+        } */
+      }
+      div {
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>
