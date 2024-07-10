@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      p,
+      h5 {
+        font-family: "nanumsquare";
+      }
+      #one ul {
+        width: 1080px;
+        height: 100px;
+        margin: 50px auto;
+      }
+      #one ul li {
+        width: calc((100% - 5px) / 6);
+        height: 100%;
+        float: left;
+        background: #e2fdfe;
+        position: relative;
+      }
+      #one ul li::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 80px;
+        background-color: #e0e0e0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      #one ul li:last-child:after {
+        width: 0;
+      }
+      #one ul li a {
+        color: #222;
+        text-align: center;
+        display: block;
+      }
+      #one ul li a > .hung {
+        margin: 10px 0;
+      }
+      #one ul li:hover a > .hung {
+        background-color: rgb(214, 240, 241);
+        width: 48px;
+        height: 48px;
+        margin: 10px auto;
+        border-radius: 48px;
+        text-align: center;
+      }
+      #one ul li a > .hung > img {
+        vertical-align: middle;
+      }
+      #one ul li a > .txt {
+        letter-spacing: -0.07em;
+      }
+      #two ul {
+        width: 1080px;
+        height: 480px;
+        margin: 0 auto;
+      }
+      #two ul li {
+        width: calc(100% / 4);
+        height: 100%;
+        float: left;
+        background-color: rgb(226, 243, 252);
+      }
+      #two ul li a {
+        text-align: center;
+        display: block;
+      }
+      #two ul li a .png {
+        width: 192px;
+        height: 256px;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        position: relative;
+      }
+      #two ul li a .png > p:first-child {
+        position: absolute;
+        left: 40px;
+        overflow: hidden;
+        border-radius: 20px;
+      }
+      #two ul li a .png > p:first-child img {
+        object-fit: cover;
+        transition: all 1s;
+      }
+      #two ul li:hover a .png > p:first-child img {
+        transform: scale(1.2);
+      }
+      #two ul li a .png > p:nth-child(2) {
+        position: absolute;
+        left: 130px;
+        top: 140px;
+        z-index: 1;
+      }
+      #two ul li a .png > p:nth-child(3) {
+        position: absolute;
+        left: 130px;
+        top: 140px;
+      }
+      #two ul li a h5 {
+        color: #222;
+        font-size: 18px;
+        letter-spacing: -0.07em;
+        font-weight: 400;
+        margin-bottom: 30px;
+      }
+      #two ul li a h5 span {
+        color: #222;
+        font-size: 24px;
+        font-weight: 700;
+      }
+      #two ul li a > p {
+        color: #333;
+        font-size: 18px;
+        letter-spacing: -2px;
+        font-weight: 400;
+      }
+      #three ul {
+        width: 1080px;
+        height: 364px;
+        margin: 50px auto;
+      }
+      #three ul li {
+        width: calc((100% - 3px) / 4);
+        height: 100%;
+        float: left;
+        position: relative;
+      }
+      #three ul li::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 170px;
+        background-color: #e0e0e0;
+        right: 0;
+        top: 65%;
+        transform: translateY(-65%);
+      }
+      #three ul li:last-child:after {
+        width: 0;
+      }
+      #three ul li a {
+        text-align: center;
+        display: block;
+      }
+      #three ul li a h5 {
+        color: #222;
+        font-size: 24px;
+        position: relative;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      #three ul li a p {
+        color: #333;
+        font-size: 18px;
+        position: relative;
+        font-weight: 400;
+      }
+      #three ul li:first-child a p:first-child {
+        left: -20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="one">
+        <ul>
+          <li>
+            <a href="#">
+              <p class="hung">
+                <img src="images/ico_quick_menu1.png" alt="quick" />
+              </p>
+              <p class="txt">이용대금명세서</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <p class="hung">
+                <img src="images/ico_quick_menu2.png" alt="quick" />
+              </p>
+              <p class="txt">결제예상금액</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <p class="hung">
+                <img src="images/ico_quick_menu3.png" alt="quick" />
+              </p>
+              <p class="txt">이용내역조회</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <p class="hung">
+                <img src="images/ico_quick_menu4.png" alt="quick" />
+              </p>
+              <p class="txt">내정보변경</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <p class="hung">
+                <img src="images/ico_quick_menu5.png" alt="quick" />
+              </p>
+              <p class="txt">카드분실신고</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <p class="hung">
+                <img src="images/ico_quick_menu6.png" alt="quick" />
+              </p>
+              <p class="txt">카드사용등록</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="two">
+        <ul>
+          <li>
+            <a href="#">
+              <div class="png">
+                <p><img src="images/special_mlon_1_bg.png" alt="special" /></p>
+                <p><img src="images/special_mlon_1_obj.png" alt="special" /></p>
+                <p><img src="images/special_mlon_1_shd.png" alt="special" /></p>
+              </div>
+              <h5><span>단기카드대출</span><br />(현금서비스)</h5>
+              <p>
+                현금이 급할 때 바로<br />
+                찾아쓰는,<br />
+                편리한 생활자금 마련방법
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="png">
+                <p><img src="images/special_mlon_2_bg.png" alt="special" /></p>
+                <p><img src="images/special_mlon_2_obj.png" alt="special" /></p>
+                <p><img src="images/special_mlon_2_shd.png" alt="special" /></p>
+              </div>
+              <h5><span>장기카드대출</span><br />(카드론)</h5>
+              <p>
+                목돈이 필요할 때<br />
+                복잡한 심사 과정 없이 <br />간편하게
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="png">
+                <p><img src="images/special_mlon_3_bg.png" alt="special" /></p>
+                <p><img src="images/special_mlon_3_obj.png" alt="special" /></p>
+                <p><img src="images/special_mlon_3_shd.png" alt="special" /></p>
+              </div>
+              <h5><span>일부결제금액이월약정</span><br />(리볼빙)</h5>
+              <p>
+                원하는 만큼만 결제하고 매월<br />
+                결제금액을 계획적으로 관리
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="png">
+                <p><img src="images/special_mlon_4_bg.png" alt="special" /></p>
+                <p><img src="images/special_mlon_4_obj.png" alt="special" /></p>
+                <p><img src="images/special_mlon_4_shd.png" alt="special" /></p>
+              </div>
+              <h5><span>올인원대출</span><br />(신용대출)</h5>
+              <p>
+                우리카드가 없어도 서류없이,<br />
+                방문없이, 내 신용만으로
+              </p>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="three">
+        <ul>
+          <li>
+            <a href="#">
+              <p><img src="images/special_mbnf_1_obj.png" alt="special2" /></p>
+              <h5>해외이용의 정석</h5>
+              <p>여행, 직구, 항공<br />무엇이든 우리카드로</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <p><img src="images/special_mbnf_2_obj.png" alt="special2" /></p>
+              <h5>MY Pick 서비스</h5>
+              <p>혜택도 맞춤!<br />나만을 위한 맞춤 혜택</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <p><img src="images/special_mbnf_3_obj.png" alt="special2" /></p>
+              <h5>우리V클럽</h5>
+              <p>특별함을 원하는<br />고객을 위한 VIP우대 혜택</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <p><img src="images/special_mbnf_4_obj.png" alt="special2" /></p>
+              <h5>우리 Point</h5>
+              <p>차곡차곡 쌓아<br />다양한 곳에서 사용가능</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
