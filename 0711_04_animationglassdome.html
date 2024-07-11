@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      .txt {
+        font-size: 70px;
+        position: relative;
+        font-weight: bold;
+      }
+      .black {
+        position: absolute;
+        left: 0;
+        top: 0;
+        animation-name: txt;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .gray {
+        color: #e6e6e6;
+      }
+      .boost {
+        animation-delay: 0.5s;
+      }
+      @keyframes txt {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      /* h1 {
+        -wenkit-text-stroke: 1px red;
+        text-stroke: 1px red;
+        color: transparent;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="txt">
+      <p class="black">Harness Your Data to</p>
+      <p class="gray">Harness Your Data to</p>
+    </div>
+    <div class="txt">
+      <p class="black boost">Boost Efficiency and Reduce Emissions</p>
+      <p class="gray">Boost Efficiency and Reduce Emissions</p>
+    </div>
+    <h1>text-stroke</h1>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        margin: 10px;
+        animation: move 5s 2s;
+      }
+      .none {
+        animation-fill-mode: none;
+      }
+      /* 기본으로 대기하고 최종적으로도 기본 */
+      .forwards {
+        animation-fill-mode: forwards;
+      }
+      /* 기본으로 대기하지만 최종적으로 키프레임 */
+      .backwards {
+        animation-fill-mode: backwards;
+      }
+      /* 키프레임으로 대기하지만 최종적으로 기본 */
+      .both {
+        animation-fill-mode: both;
+      }
+      /* 키프레임으로 대기하고 최종적으로도 키프레임 */
+      @keyframes move {
+        0% {
+          transform: translateX(0);
+          background-color: red;
+        }
+        100% {
+          transform: translateX(500px);
+          background-color: yellow;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="none">none</div>
+    <div class="forwards">forwards</div>
+    <div class="backwards">backwards</div>
+    <div class="both">both</div>
+  </body>
+</html>
