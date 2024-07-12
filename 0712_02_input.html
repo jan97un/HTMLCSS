@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <form action="" method="post">
+      <fieldset>
+        <legend>Form</legend>
+        <p>이름(필수) <input type="text" placeholder="이름" required /></p>
+        <p>이메일(필수) <input type="email" placeholder="email" required /></p>
+        <p>전화번호(필수) <input type="tel" placeholder="tel" required /></p>
+        <p>
+          관심분야 <label for="HTML5">HTML5</label
+          ><input type="radio" name="web" value="HTML5" id="HTML5" />
+          <label for="CSS3">CSS3</label
+          ><input type="radio" name="web" value="CSS3" id="CSS3" />
+          <label for="javascript">javascript</label
+          ><input type="radio" name="web" value="javascript" id="javascript" />
+          <label for="jQuery">jQuery</label
+          ><input type="radio" name="web" value="jQuery" id="jQuery" />
+        </p>
+        <p>
+          문의내용(필수)
+          <textarea
+            name="tell"
+            id="tell"
+            cols=""
+            rows="10"
+            placeholder="문의내용"
+            required
+          ></textarea>
+        </p>
+        <p><input type="button" value="보내기" /></p>
+      </fieldset>
+    </form>
+  </body>
+</html>

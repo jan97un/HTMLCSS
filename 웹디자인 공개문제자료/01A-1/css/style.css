@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+.contents {
+  width: 1200px;
+  margin: 50px auto;
+  height: 200px;
+}
+.contents > div {
+  width: calc(100% / 3);
+  float: left;
+  position: relative;
+}
+.contents > .left input[type="radio"] {
+  display: none;
+}
+.contents > .left .title li {
+  position: absolute;
+  width: 100px;
+  background-color: #ccc;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #333;
+  z-index: 1;
+}
+.contents > .left .title li:nth-child(2) {
+  left: 100px;
+}
+.contents > .left .title li label {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+}
+.contents > .left .content {
+  position: relative;
+  top: 40px;
+  border: 1px solid #333;
+  width: 100%;
+  height: 150px;
+}
+.contents > .left .content > li {
+  position: absolute;
+  display: none;
+  font-size: 14px;
+  width: 100%;
+}
+.contents > .left .content > li table {
+  width: 90%;
+  table-layout: fixed;
+  margin: 10px auto;
+}
+.contents > .left .content > li table td:first-child {
+  width: 70%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.contents > .left .content > li table td:last-child {
+  width: 30%;
+  text-align: right;
+}
+.contents > .left .content > li ul {
+  text-align: center;
+  width: 100%;
+}
+.contents > .left .content > li ul li {
+  display: inline-block;
+  height: 150px;
+  line-height: 150px;
+}
+.contents > .left .content li img {
+  width: 120px;
+  vertical-align: middle;
+}
+#notice:checked ~ .title li:first-child,
+#gallery:checked ~ .title li:last-child {
+  background-color: #fff;
+  border-bottom: none;
+}
+#notice:checked ~ ul.content > li:first-child,
+#gallery:checked ~ ul.content > li:last-child {
+  display: block;
+}
