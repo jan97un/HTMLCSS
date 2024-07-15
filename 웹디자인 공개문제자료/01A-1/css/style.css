@@ -11,10 +11,99 @@ a {
   text-decoration: none;
   color: #333;
 }
-.contents {
+#wrap {
+  width: 1200px;
+  height: 700px;
+  margin: 0 auto;
+}
+header {
+  width: 100%;
+  height: 100px;
+  background-color: red;
+}
+header .logo {
+  width: 200px;
+  height: 100px;
+  float: left;
+  position: relative;
+}
+header .logo a {
+  display: block;
+  width: 100%;
+  height: 40px;
+  background-image: url(../images/txtlogo.jpg);
+  background-repeat: no-repeat;
+  background-size: 200px 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+header nav {
+  float: right;
+}
+header nav > ul {
+  height: 60px;
+  width: 600px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+header nav > ul > li {
+  float: left;
+  width: 25%;
+  height: 60px;
+  position: relative;
+  text-align: center;
+}
+header nav > ul > li > a {
+  display: block;
+  border: 1px solid #333;
+  border-left: none;
+  line-height: 50px;
+  background-color: #fff;
+}
+header nav > ul > li:first-child > a {
+  border-left: 1px solid #333;
+}
+header nav > ul > li .sub {
+  height: 0px;
+  overflow: hidden;
+  transition: 0.8s;
+  position: absolute;
+  left: 0;
+  top: 52px;
+  width: 100%;
+  background-color: #fff;
+}
+header nav > ul:hover > li > .sub {
+  height: 160px;
+  border-bottom: 1px solid #333;
+}
+header nav > ul > li > .sub > li {
+  line-height: 40px;
+}
+header nav > ul > li:first-child > .sub {
+  border-left: 1px solid #333;
+}
+header nav > ul > li:last-child > .sub {
+  border-right: 1px solid #333;
+}
+header nav > ul > li:hover > a {
+  background-color: #000;
+  color: #fff;
+}
+header nav > ul > li .sub > li:hover > a {
+  background-color: #000;
+  color: #fff;
+  display: block;
+}
+header nav ul .contents {
   width: 1200px;
   margin: 50px auto;
   height: 200px;
+}
+.slide {
+  width: 100%;
+  height: 300px;
 }
 .contents > div {
   width: calc(100% / 3);
@@ -33,8 +122,11 @@ a {
   border: 1px solid #333;
   z-index: 1;
 }
+.contents > .left .title li:nth-child(1) {
+  left: 10px;
+}
 .contents > .left .title li:nth-child(2) {
-  left: 100px;
+  left: 110px;
 }
 .contents > .left .title li label {
   width: 100%;
@@ -44,7 +136,7 @@ a {
 }
 .contents > .left .content {
   position: relative;
-  top: 40px;
+  top: 41px;
   border: 1px solid #333;
   width: 100%;
   height: 150px;
@@ -87,8 +179,75 @@ a {
 #gallery:checked ~ .title li:last-child {
   background-color: #fff;
   border-bottom: none;
+  padding-bottom: 1px;
 }
 #notice:checked ~ ul.content > li:first-child,
 #gallery:checked ~ ul.content > li:last-child {
+  display: block;
+}
+.contents .center {
+  height: 200px;
+}
+.contents .center > div {
+  width: 50%;
+}
+.contents .center .bannerImg {
+  float: left;
+}
+.contents .center .bannerImg img {
+  width: 90%;
+  height: 90%;
+  padding: 10px;
+}
+.contents .center .bannerTxt {
+  float: right;
+}
+.contents .center .bannerTxt > h4 {
+  margin: 30px 0;
+}
+.contents .center .bannerTxt > p {
+  font-size: 14px;
+  line-height: 30px;
+}
+.contents .right {
+  height: 200px;
+}
+#popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+#popup .popWindow {
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #000;
+  background: #fff;
+}
+#popup .popWindow h1 {
+  border-bottom: 1px solid;
+  padding: 20px;
+  font-size: 24px;
+}
+#popup .popWindow .txt {
+  padding: 20px;
+}
+#popup .popWindow .txt p {
+  padding-top: 10px;
+}
+#popup .popWindow .txt a {
+  float: right;
+  border: 1px solid #000;
+  padding: 10px 20px;
+}
+#popup:target {
   display: block;
 }
