@@ -7,3 +7,12 @@
 a {
   text-decoration: none;
 }
+header nav .logo {
+  width: 285px;
+  height: 100px;
+}
+header nav .logo .logoimg {
+  background-repeat: no-repeat;
+  width: 285px;
+  height: 32px;
+}

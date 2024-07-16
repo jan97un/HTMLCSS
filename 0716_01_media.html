@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- audio 와 video 태그 둘 다 인라인 태그이다 -->
+    <!-- autoplay 기능은 크롬에서 막아놓았다 -->
+    <!-- 단, muted 속성을 넣을 경우 autoplay 기능이 활성화된다 -->
+    <audio controls muted>
+      <source src="video/Kalimba.mp3" type="audio/mpeg" />
+      <source src="video/Kalimba.ogg" type="audio/ogg" />
+    </audio>
+    <video controls width="500" poster="images/photo1.jpg">
+      <!-- 단위가 없어도 적용된다 -->
+      <source src="video/Wildlife.mp4" type="video/mp4" />
+      <source src="video/Wildlife.webm" type="video/webm" />
+    </video>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/rVP8n5-5t-U?si=O_A_hsqjNnuh0_Ep"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    <video
+      controls
+      autoplay
+      muted
+      src="video/[무려 오스카 최우수 애니메이션 상을 받은 디즈니 픽사의 애니메이션 ]삶이 지치거나 힘들고 우울할 때 봐야 할 영화【영화리뷰_결말포함】.mp4"
+      type="video/mp4"
+    ></video>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/ZHc5r2udNC8?si=eZ4x4biHJ2FGltfA"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </body>
+</html>
