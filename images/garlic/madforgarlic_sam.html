@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      .list {
+        width: 1504px;
+        margin: 50px auto;
+      }
+      .list > ul {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0;
+      }
+      .list > ul li {
+        position: relative;
+        overflow: hidden;
+      }
+      .list > ul li > img {
+        transition: 0.5s;
+      }
+      .list > ul > li:hover > img {
+        transform: scale(1.2);
+      }
+      .list > ul li .over {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background: rgba(0, 0, 0, 0);
+      }
+      .list > ul li:hover .over {
+        background: rgba(0, 0, 0, 0.6);
+      }
+      .list > ul .over .inner {
+        transform: translateY(0);
+        transition: 0.5s;
+      }
+      .list > ul .over .inner p:first-child {
+        opacity: 0;
+        transition: 0.5s 0.2s;
+      }
+
+      .list > ul .over .inner p {
+        color: #fff;
+        font-weight: bold;
+        font-size: 17px;
+      }
+      .list > ul .over .inner a {
+        opacity: 0;
+        transition: 0.5s 0.2s;
+        width: 117px;
+        height: 37px;
+        display: block;
+        margin: 0 auto;
+      }
+      .list > ul .over .inner a p {
+        color: #231f20;
+        background-color: #fff;
+        font-weight: normal;
+        font-size: 12px;
+        margin-top: 20px;
+        padding: 12px 20px;
+      }
+      .list > ul > li:hover .over .inner {
+        transform: translateY(-20px);
+      }
+      .list > ul li:hover .over .inner p:first-child {
+        opacity: 1;
+      }
+      .list > ul li:hover .over .inner a {
+        opacity: 1;
+      }
+      /* .list > ul li:hover .over .inner a:hover p {
+        color: ;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="list">
+      <ul>
+        <li>
+          <img src="images/mad1.png" alt="mad" />
+          <div class="over">
+            <div class="inner">
+              <p><img src="images/icon1.png" alt="icon" /></p>
+              <p>BREAD & STARTER</p>
+              <a href="#"><p>자세히 보기</p></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <ul>
+            <li><img src="images/mad2-1.png" alt="mad" /></li>
+            <li><img src="images/mad2-2.png" alt="mad" /></li>
+          </ul>
+        </li>
+        <li>
+          <img src="images/mad2-3.jpg" alt="mad" />
+          <div class="over">
+            <div class="inner">
+              <p><img src="images/icon1.png" alt="icon" /></p>
+              <p>SALAD</p>
+              <a href="#"><p>자세히 보기</p></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img src="images/mad3.png" alt="mad" />
+          <div class="over">
+            <div class="inner">
+              <p><img src="images/icon1.png" alt="icon" /></p>
+              <p>PASTA</p>
+              <a href="#"><p>자세히 보기</p></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img src="images/mad4.jpg" alt="mad" />
+          <div class="over">
+            <div class="inner">
+              <p><img src="images/icon1.png" alt="icon" /></p>
+              <p>PIZZA</p>
+              <a href="#"><p>자세히 보기</p></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img src="images/mad5.jpg" alt="mad" />
+          <div class="over">
+            <div class="inner">
+              <p><img src="images/icon1.png" alt="icon" /></p>
+              <p>RICE & RISOTTO</p>
+              <a href="#"><p>자세히 보기</p></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img src="images/mad6.jpg" alt="mad" />
+          <div class="over">
+            <div class="inner">
+              <p><img src="images/icon1.png" alt="icon" /></p>
+              <p>STEAK</p>
+              <a href="#"><p>자세히 보기</p></a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

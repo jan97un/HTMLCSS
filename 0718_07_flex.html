@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .flex-container {
+        width: 1376px;
+        height: 406px;
+        margin: 50px auto;
+      }
+      .flex-container ul {
+        display: flex;
+        justify-content: space-between;
+      }
+      .flex-container ul li {
+        flex: 0 0 174px;
+        height: 406px;
+        transition: flex-basis 0.5s;
+        position: relative;
+      }
+      .flex-container ul li::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0);
+      }
+      .flex-container ul li:first-of-type {
+        flex: 0 1 742px;
+      }
+      .flex-container ul li img {
+        width: 100%;
+        height: 406px;
+        object-fit: cover;
+        border-radius: 15px;
+      }
+      .flex-container ul:hover li:hover {
+        flex-basis: 742px;
+        background-color: rgba(0, 0, 0, 0);
+      }
+      .flex-container ul:hover li:not(:hover) {
+        flex-basis: 174px;
+      }
+      p,
+      strong {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <ul>
+        <li>
+          <a href="#"><img src="images/lg1.jpg" alt="lg" /></a>
+          <p>LG생활건강이 만드는</p>
+          <strong>지속 가능한 삶</strong>
+        </li>
+        <li>
+          <a href="#"><img src="images/lg2.jpg" alt="lg" /></a>
+          <p>지구를 물려주기 위한</p>
+          <strong>우리의 약속</strong>
+        </li>
+        <li>
+          <a href="#"><img src="images/lg3.jpg" alt="lg" /></a>
+          <p>고객의 건강과 안전을</p>
+          <strong>지키는 열정</strong>
+        </li>
+        <li>
+          <a href="#"><img src="images/lg4.jpg" alt="lg" /></a>
+          <p>공평하고 행복한 세상을 만들기 위한</p>
+          <strong>나눔과 포용</strong>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

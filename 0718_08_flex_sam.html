@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .news {
+        width: 1376px;
+        height: 406px;
+        margin: 50px auto;
+      }
+      .news ul {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+      }
+      .news ul li {
+        flex-basis: 15%;
+        cursor: pointer;
+        transition: flex-basis 0.5s;
+      }
+      .news ul li div {
+        border-radius: 10px;
+        padding: 30px 10px 0;
+        box-sizing: border-box;
+        width: 93%;
+        height: 100%;
+        margin: 0 auto;
+      }
+      .news ul li:first-child {
+        flex-basis: calc(100% - (15% * 3));
+      }
+      .news ul li:first-child div {
+        background: url(images/lg1.jpg);
+        width: 97%;
+      }
+      .news ul li:nth-child(2) div {
+        background: url(images/lg2.jpg);
+      }
+      .news ul li:nth-child(3) div {
+        background: url(images/lg3.jpg);
+      }
+      .news ul li:nth-child(4) div {
+        background: url(images/lg4.jpg);
+      }
+      .news ul:hover li:hover {
+        flex-basis: calc(100% - (15% * 3));
+      }
+      .news ul:hover li:hover div {
+        width: 97%;
+        margin: 0 auto;
+      }
+      .news ul:hover li:not(:hover) div {
+        width: 93%;
+        margin: 0 auto;
+      }
+      .news ul:hover li:not(:hover) {
+        flex-basis: 15%;
+      }
+      .news ul li p {
+        color: #fff;
+      }
+      .news ul li p:first-child {
+        font-size: 18px;
+        display: none;
+      }
+      .news ul li p:last-child {
+        font-size: 24px;
+      }
+      .news ul li:hover p:first-child {
+        display: block;
+      }
+      .news ul li:hover p:last-child {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="news">
+      <ul>
+        <li>
+          <div>
+            <p>LG생활건강이 만드는</p>
+            <p>지속 가능한 삶</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>LG생활건강이 만드는</p>
+            <p>지속 가능한 삶</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>LG생활건강이 만드는</p>
+            <p>지속 가능한 삶</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>LG생활건강이 만드는</p>
+            <p>지속 가능한 삶</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
