@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grid-container {
+        width: 1200px;
+        height: 500px;
+        margin: 50px auto;
+        display: grid;
+        background: #ccc;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .grid-item {
+        background: #ddd;
+        border: 1px solid #000;
+      }
+      .grid-item:first-child {
+        justify-self: start;
+        align-self: center;
+        order: 1;
+      }
+      .two {
+        z-index: 1;
+      }
+      /* 겹치게 하고 z-index 로 위에 띄운다 */
+      .two,
+      .three {
+        grid-column: 1;
+        grid-row: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">1</div>
+      <div class="grid-item two">2</div>
+      <div class="grid-item three">3</div>
+    </div>
+  </body>
+</html>

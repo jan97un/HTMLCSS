@@ -4,15 +4,38 @@
   margin: 0;
   padding: 0;
 }
+ul {
+  list-style: none;
+}
 a {
   text-decoration: none;
+}
+header {
+  width: 1240px;
+  height: 100px;
+  margin: 0 auto;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
 }
 header nav .logo {
   width: 285px;
   height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 header nav .logo .logoimg {
   background-repeat: no-repeat;
-  width: 285px;
+  width: 233px;
   height: 32px;
+}
+header nav ul.dep1 {
+  width: 704px;
+  height: 100%;
+}
+header nav ul.dep1 > li {
+  width: 176px;
+  height: 100%;
 }

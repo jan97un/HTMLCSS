@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap {
+        width: 1422px;
+        margin: 100px auto;
+        display: grid;
+        grid-template-columns: 215px 22px 215px 215px 215px 22px 215px;
+        grid-template-rows: 215px 11px 11px 215px;
+      }
+      #wrap > div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .one {
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 2;
+      }
+      .two {
+        grid-row: 4;
+        grid-column: 1;
+      }
+      .three {
+        grid-row: 3;
+        grid-column: 3;
+      }
+      .four {
+        grid-row: 1 / span 4;
+      }
+      .five {
+      }
+      .six {
+      }
+      .seven {
+        grid-row: 3;
+        grid-column: 5 / span 3;
+      }
+      .eight {
+        grid-row: 1 / span 4;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="one"><img src="images/ah1.jpg" alt="ah" /></div>
+      <div class="two"><img src="images/ah2.jpeg" alt="ah" /></div>
+      <div class="three"><img src="images/ah3.jpeg" alt="ah" /></div>
+      <div class="four"><img src="images/ah4.jpg" alt="ah" /></div>
+      <div class="five"><img src="images/ah5.JPG" alt="ah" /></div>
+      <div class="six"><img src="images/ah6.jpeg" alt="ah" /></div>
+      <div class="seven"><img src="images/ah7.jpeg" alt="ah" /></div>
+      <div class="eight"><img src="images/ah8.jpeg" alt="ah" /></div>
+    </div>
+  </body>
+</html>
