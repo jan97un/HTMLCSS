@@ -9,22 +9,21 @@
         margin: 0;
         padding: 0;
       }
-      /* html {
-        font-size: 30px;
-      } */
       :root {
         font-size: 30px;
       }
+      /* 모든 요소에 적용한다 */
       p {
         font-size: 200%;
         font-family: "맑은 고딕", 돋움, Arial, sans-serif;
         background-color: red;
-        margin: 50px 0;
+        margin: 50px auto;
         padding: 50px;
         width: 1em;
+        /* 부모 크기 비례 */
       }
       .parent {
-        background-color: red;
+        background-color: blue;
         font-size: 50px;
         width: 2em;
         height: 500px;
@@ -35,12 +34,13 @@
         padding: 50px;
         opacity: 0.5;
         font-size: 0.5rem;
+        /* 최상위 크기 비례 */
       }
     </style>
   </head>
   <body>
     <p>그린컴퓨터아트학원 Web Design</p>
-    <p>web design</p>
+    <p>web disign</p>
     <div class="parent">
       parent
       <div class="child">child</div>

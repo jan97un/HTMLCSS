@@ -12,30 +12,31 @@
       .wrap {
         width: 1200px;
         margin: 0 auto;
-        border: 1px solid;
+        border: 1px solid #000;
         overflow: hidden;
+        /* overflow hidden 으로 높이값 찾아주기 */
       }
       .wrap > div {
         float: left;
         width: 20%;
       }
-      .one {
+      .left {
         background-color: red;
       }
-      .two {
+      .center {
         background-color: blue;
         margin: 0 20%;
       }
-      .three {
+      .right {
         background-color: green;
       }
     </style>
   </head>
   <body>
     <div class="wrap">
-      <div class="one">1</div>
-      <div class="two">2</div>
-      <div class="three">3</div>
+      <div class="left">1</div>
+      <div class="center">2</div>
+      <div class="right">3</div>
     </div>
   </body>
 </html>

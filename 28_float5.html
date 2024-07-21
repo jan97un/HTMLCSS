@@ -4,6 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      .header {
+        height: 100px;
+        background-color: red;
+      }
+      .banner {
+        height: 100px;
+        background-color: blue;
+      }
+      .main {
+        width: 100%;
+        height: 500px;
+      }
+      .main > div {
+        float: left;
+        height: 100%;
+      }
+      .main .left {
+        width: 25%;
+        background-color: green;
+      }
+      .main .center {
+        width: 65%;
+        background-color: pink;
+      }
+      .main .right {
+        width: 10%;
+        background-color: green;
+      }
+      .footer {
+        height: 100px;
+        background-color: blue;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div id="wrap">
+      <div class="header">1</div>
+      <div class="banner">2</div>
+      <div class="main">
+        <div class="left">3</div>
+        <div class="center">4</div>
+        <div class="right">5</div>
+      </div>
+      <div class="footer">6</div>
+    </div>
+  </body>
 </html>
