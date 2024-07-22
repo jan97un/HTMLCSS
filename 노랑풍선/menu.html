@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        color: #fff;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      #menu {
+        width: 1480px;
+        height: 500px;
+        margin: 100px auto;
+      }
+      #menu ul {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+      }
+      #menu ul li {
+        flex-basis: 11.5%;
+        transition: flex-basis 0.5s;
+        border-radius: 15px;
+      }
+      #menu ul li:nth-child(1) {
+        background: url(images/bg1.jpg);
+        background-position: 50%;
+      }
+      #menu ul li:nth-child(2) {
+        background: url(images/bg2.jpg);
+        background-position: 60%;
+      }
+      #menu ul li:nth-child(3) {
+        background: url(images/bg3.jpg);
+        background-position: 10%;
+      }
+      #menu ul li:nth-child(4) {
+        background: url(images/bg4.jpg);
+        background-position: 50%;
+      }
+      #menu ul li:nth-child(5) {
+        background: url(images/bg5.jpg);
+        background-position: 50%;
+      }
+      #menu ul li:nth-child(6) {
+        background: url(images/bg6.jpg);
+        background-position: 30%;
+      }
+      #menu ul li:nth-child(7) {
+        background: url(images/bg7.jpg);
+        background-position: 50%;
+      }
+      #menu ul li:nth-child(8) {
+        background: url(images/bg8.jpg);
+        background-position: right;
+      }
+
+      #menu ul:hover li:hover {
+        flex-basis: calc(100% - (11.5% * 7));
+      }
+      #menu ul:hover li:nth-child(1):hover {
+        background-position: 50%;
+      }
+      #menu ul:hover li:nth-child(2):hover {
+        background-position: 60%;
+      }
+      #menu ul:hover li:nth-child(3):hover {
+        background-position: 10%;
+      }
+      #menu ul:hover li:nth-child(4):hover {
+        background-position: 50%;
+      }
+      #menu ul:hover li:nth-child(5):hover {
+        background-position: 50%;
+      }
+      #menu ul:hover li:nth-child(6):hover {
+        background-position: 30%;
+      }
+      #menu ul:hover li:nth-child(7):hover {
+        background-position: 50%;
+      }
+      #menu ul:hover li:nth-child(8):hover {
+        background-position: right;
+      }
+      #menu ul:hover li:not(:hover) {
+        flex-basis: 10.5%;
+      }
+      #menu ul li div {
+        width: 93%;
+        height: 100%;
+        display: flex;
+        text-align: center;
+      }
+      #menu ul li div p {
+        align-self: center;
+        margin: 0 auto;
+      }
+      #menu ul li div p:first-child {
+        font-family: "ybfontbold";
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: -1px;
+      }
+      #menu ul li div p:nth-child(2) {
+        font-family: "ybfontmedium";
+        font-weight: 800;
+        font-size: 16px;
+        display: none;
+        letter-spacing: -1.3px;
+        line-height: 28px;
+      }
+      #menu ul:hover li:hover div {
+        width: 97%;
+      }
+      #menu ul:hover li:not(:hover) div {
+        width: 93%;
+      }
+      #menu ul li:hover div p:first-child {
+        font-size: 36px;
+      }
+      #menu ul li:hover p:nth-child(2) {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="menu">
+      <ul>
+        <li>
+          <div>
+            <p>Package</p>
+            <p>
+              전세계 맞춤 패키지여행으로<br />
+              연인, 친구, 가족과 함께 <br />
+              행복한 추억을 만듭니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>Honeymoon</p>
+            <p>
+              신혼부부의 취향과 조건에 맞춘 <br />
+              특별한 여행으로<br />
+              낭만적인 순간을 함께합니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>Golf<br />& Theme</p>
+            <p>
+              골프투어, 가족여행, 크루즈여행,
+              <br />
+              휴양여행, 성지순례, 문화탐방 등<br />
+              원하는 테마로 여행할 수 있습니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>Air Ticket</p>
+            <p>
+              세계 주요 도시 및<br />
+              국내 항공 권 예약·발권과
+              <br />
+              단체 그룹 예약까지 가능합니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>Hotel</p>
+            <p>
+              마음에 맞는 전세계 및 국내 호텔을
+              <br />
+              쉽고 빠르게 예약할 수 있습니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>Tour<br />& Ticket</p>
+            <p>
+              배낭여행 및 개별여행을 위한<br />
+              유레일 패스 등 교통권과 현지투어,<br />
+              입장티켓을 예약할 수 있습니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>Domestic</p>
+            <p>
+              국내의 문화유적, 제주 패키지,
+              <br />
+              골프 및 렌터카, 특급 호텔 예약을
+              <br />
+              제공합니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p>Incentive</p>
+            <p>
+              국제회의 및 박람회, 기업·단체 연수
+              <br />
+              단체 포상, 대학교, 지역 모임 등<br />
+              인센티브 여행을 함께합니다.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
