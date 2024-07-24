@@ -11,9 +11,16 @@
       }
       section {
         position: relative;
+        width: 500px;
+        height: 500px;
       }
       section p {
         clip-path: url(#path1);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
       }
       svg {
         position: absolute;
@@ -22,17 +29,15 @@
         width: 100%;
         height: 100%;
       }
-      svg path {
-      }
     </style>
   </head>
   <body>
     <section>
-      <p><img src="images/photo1.jpg" alt="photo1" /></p>
+      <p><img src="images/photo2.jpg" alt="photo1" /></p>
       <svg>
-        <clipPath id="path1" clipPathUnits="userSpaceOnUse">
-          <!-- <clipPath id="path1" clipPathUnits="objectBoundingBox"> -->
-          <path d="M-60,502.9" />
+        <!-- <clipPath id="path1" clipPathUnits="userSpaceOnUse"> -->
+        <clipPath id="path1" clipPathUnits="objectBoundingBox">
+          <!-- <path d="M-60,502.9" />
           <path
             d="M605.1,43.6c-13.8-23.8-47.5-43.3-75-43.3H260.9c-27.5,0-61.2,19.5-75,43.3L51.3,276.7
 		c-13.8,23.8-13.8,62.8,0,86.6l134.6,233.1c13.8,23.8,47.5,43.3,75,43.3h269.2c27.5,0,61.2-19.5,75-43.3l134.6-233.1
@@ -42,6 +47,10 @@
             d="M605.1,43.6c-13.8-23.8-47.5-43.3-75-43.3H260.9c-27.5,0-61.2,19.5-75,43.3L51.3,276.7
 		c-13.8,23.8-13.8,62.8,0,86.6l134.6,233.1c13.8,23.8,47.5,43.3,75,43.3h269.2c27.5,0,61.2-19.5,75-43.3l134.6-233.1
 		c13.8-23.8,13.8-62.8,0-86.6L605.1,43.6z"
+          /> -->
+          <path
+            d="M0,0.3c0-0.1,0-0.1,0.1-0.2L0.4,0c0,0,0.1,0,0.2,0l0.3,0.2C1,0.2,1,0.3,1,0.3v0.3c0,0.1,0,0.1-0.1,0.2L0.6,1
+	c0,0-0.1,0-0.2,0L0.1,0.8C0,0.8,0,0.7,0,0.7L0,0.3z"
           />
         </clipPath>
       </svg>
