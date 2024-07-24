@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      @font-face {
+        font-family: "NotoSansKR";
+        src: url(webfonts/NotoSansKR-Regular.woff) format("woff");
+      }
       * {
         margin: 0;
         padding: 0;
@@ -19,23 +23,17 @@
         grid-template-columns: 300px 300px 590px;
         grid-template-rows: 242px 376px 100px 600px;
       }
-      .wrap > div a {
-        display: block;
-        width: 100%;
-        height: 100%;
-      }
-      .wrap > div a img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
       .bene1 {
         grid-column: 1 / span 2;
-        grid-row: 1;
       }
       .bene2 {
-        grid-column: 1;
         grid-row: 2 / span 2;
+        width: 300px;
+        height: 476px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
       }
       .bene3 {
         grid-column: 2;
@@ -53,6 +51,11 @@
         grid-column: 3;
         grid-row: 3 / span 2;
       }
+      .wrap > div a p:nth-child(2) {
+        font-size: 14px;
+        font-family: "NotoSansKR";
+        color: #3a476a;
+      }
     </style>
   </head>
   <body>
@@ -61,7 +64,13 @@
         <a href="#"><img src="images/bene1.jpg" alt="bene" /></a>
       </div>
       <div class="bene2">
-        <a href="#"><img src="images/bene2.gif" alt="bene" /></a>
+        <a href="#">
+          <p><img src="images/bene2.gif" alt="bene" /></p>
+          <p>
+            '좋은' 사람들이<br />'좋은' 원두로<br />'좋은' 커피를 내리는 곳<br />바로
+            카페베네입니다.
+          </p>
+        </a>
       </div>
       <div class="bene3">
         <a href="#"><img src="images/bene3.jpg" alt="bene" /></a>

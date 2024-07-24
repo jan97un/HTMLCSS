@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      svg {
+        width: 1920px;
+        height: 1080px;
+      }
+      svg path {
+        fill: none;
+        stroke-width: 5px;
+        stroke: #000;
+        stroke-dasharray: 6000;
+        stroke-dashoffset: 6000;
+        animation: ani 3s infinite;
+        stroke-linecap: round;
+      }
+      @keyframes ani {
+        0% {
+          stroke-dashoffset: 0;
+        }
+        100% {
+          stroke-dashoffset: 6000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg>
+      <path
+        d="M261.5,741.1c25.7-215.3,171.1-384.9,354.3-422.2c147.3-30,347.2,19.7,425.9,174.1
+        c58.2,114.2,51.6,288.1-40.7,346.9C884.7,914,652,792.7,614.6,646C569.1,467.2,808.2,229.1,1043,212.7
+        c197.9-13.8,346,133.1,419.8,206.2c157.3,155.9,206.6,337.5,223.5,419.8"
+      />
+    </svg>
+  </body>
+</html>

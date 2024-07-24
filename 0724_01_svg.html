@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      svg {
+        width: 500px;
+        height: 500px;
+        border: 2px solid #000;
+      }
+      .mic path {
+        transform: scale(20);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 인라인태그 -->
+    <svg>
+      <rect
+        width="300"
+        height="100"
+        style="fill: none; stroke-width: 3; stroke: rgb(0, 0, 0)"
+      />
+    </svg>
+    <svg>
+      <rect
+        x="10"
+        y="10"
+        width="300"
+        height="100"
+        fill="none"
+        stroke-width=" 3"
+        stroke=" rgb(0, 0, 0)"
+      />
+    </svg>
+    <svg width="100" height="100">
+      <circle
+        cx="0"
+        cy="0"
+        r="40"
+        stroke="green"
+        stroke-width="4"
+        fill="yellow"
+      />
+      <circle
+        cx="500"
+        cy="500"
+        r="40"
+        stroke="green"
+        stroke-width="4"
+        fill="yellow"
+      />
+      <circle
+        cx="500"
+        cy="0"
+        r="40"
+        stroke="green"
+        stroke-width="4"
+        fill="yellow"
+      />
+      <circle
+        cx="0"
+        cy="500"
+        r="40"
+        stroke="green"
+        stroke-width="4"
+        fill="yellow"
+      />
+    </svg>
+    <svg width="100" height="100">
+      <g stroke="aqua" stroke-width="4" fill="yellow">
+        <circle cx="0" cy="0" r="40" />
+        <circle cx="500" cy="500" r="40" />
+        <circle cx="500" cy="0" r="40" />
+        <circle cx="0" cy="500" r="40" />
+      </g>
+      <!-- g = group -->
+    </svg>
+    <svg height="140" width="500">
+      <ellipse
+        cx="200"
+        cy="80"
+        rx="100"
+        ry="50"
+        style="fill: yellow; stroke: purple; stroke-width: 2"
+      />
+    </svg>
+    <svg height="210" width="500">
+      <line
+        x1="0"
+        y1="0"
+        x2="200"
+        y2="200"
+        style="stroke: rgb(255, 0, 0); stroke-width: 20; stroke-linecap: round"
+      />
+    </svg>
+    <svg height="210" width="500">
+      <polygon
+        points="0,50 50,0 450,0 500,50 500,450 450,500 50,500 0,450 "
+        style="fill: lime; stroke: purple; stroke-width: 1"
+      />
+    </svg>
+    <svg height="200" width="500">
+      <polyline
+        points="20,20 40,25 60,40 80,120 120,140 200,180"
+        style="fill: none; stroke: black; stroke-width: 3"
+      />
+    </svg>
+    <svg height="210" width="400">
+      <path d="M150 0 L75 200 L225 200 Z" />
+    </svg>
+    <!-- 절대위치 -->
+    <svg height="210" width="400">
+      <path d="m150 0 l-75 200 l225 200 Z" />
+    </svg>
+    <!-- 상대위치 -->
+    <svg>
+      <polygon
+        points="210,228 153.5,194.4 93.7,222 108.2,157.9 63.5,109.6 129,103.5 161.1,46.1 187.1,106.5 251.6,119.3 
+            202.2,162.7 "
+        style="fill: lime; stroke: purple; stroke-width: 1"
+      />
+    </svg>
+    <svg class="mic">
+      <path
+        d="M11,21v-3.1c-1.7-0.2-3.2-1-4.3-2.3S5,12.7,5,11h2c0,1.4,0.5,2.6,1.5,3.5S10.6,16,12,16s2.6-0.5,3.5-1.5
+            S17,12.4,17,11h2c0,1.8-0.6,3.3-1.7,4.6c-1.1,1.3-2.6,2.1-4.3,2.3V21H11z"
+        fill="#57479D"
+      />
+      <path
+        d="M14.1,2.9C13.5,2.3,12.8,2,12,2s-1.5,0.3-2.1,0.9S9,4.2,9,5v6c0,0.8,0.3,1.5,0.9,2.1S11.2,14,12,14
+            s1.5-0.3,2.1-0.9S15,11.8,15,11V5C15,4.2,14.7,3.5,14.1,2.9z"
+        fill="#45BA84"
+      />
+      <line x1="8.5" y1="14.5" x2="6.7" y2="15.6" fill="#5FA5DA" />
+    </svg>
+  </body>
+</html>
