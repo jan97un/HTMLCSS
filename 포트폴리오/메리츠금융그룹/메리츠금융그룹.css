@@ -148,6 +148,25 @@ main {
   justify-content: space-between;
   padding: 0 20px;
 }
+main .mainTxtWrap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 179px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #ef3b24;
+  animation: main 2.4s forwards 0.2s;
+}
+@keyframes main {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: calc(50%);
+  }
+}
 main .mainTxtWrap {
   background: khaki;
 }
@@ -194,7 +213,17 @@ main .mainTxtWrap a::after {
   height: 8px;
   transform: translateY(-50%);
 }
-main .mainNumWrap {
+main .mainTxtWrap::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 179px;
+  width: 0;
+  height: 2px;
+  background-color: #ef3b24;
+  animation: maintxt 2.4s forwards 0.2s;
+}
+main .mainTxtWrap {
   width: 354px;
   margin-right: 16px;
   border: 1px solid #ef3b24;
@@ -203,7 +232,7 @@ main .mainNumWrap {
   position: relative;
   background: #fff;
 }
-main .mainNumWrap:before {
+main .mainTxtWrap:before {
   content: "";
   position: absolute;
   background-color: #ef3b24;
@@ -214,9 +243,33 @@ main .mainNumWrap:before {
   border-radius: 10px;
   z-index: -1;
 }
-main .mainNumWrap ul li {
+main .mainTxtWrap ul li {
   line-height: 40px;
   margin-bottom: 18px;
+  transform: translateY(50px);
+  animation: mainnum 1s forwards;
+  opacity: 0;
+}
+main .mainTxtWrap ul li:nth-child(2) {
+  animation-delay: 0.3s;
+}
+main .mainTxtWrap ul li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+main .mainTxtWrap ul li:nth-child(4) {
+  animation-delay: 0.9s;
+}
+main .mainTxtWrap ul li:nth-child(5) {
+  animation-delay: 1.2s;
+}
+@keyframes mainnum {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 main .mainNumWrap ul li:last-child span {
   font-size: 12px;
@@ -224,7 +277,6 @@ main .mainNumWrap ul li:last-child span {
   font-weight: 300;
 }
 main .mainNumWrap ul li a p {
-  letter-spacing: -0.5px;
   white-space: nowrap;
 }
 main .mainNumWrap ul li a .redTxt {
@@ -244,6 +296,7 @@ main .mainNumWrap ul li a .numTxt span {
 }
 main .mainNumWrap ul li a p strong {
   font-size: 46px;
+  letter-spacing: -1.5px;
 }
 footer {
   background-color: #e6e6e6;
