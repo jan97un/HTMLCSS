@@ -157,14 +157,14 @@ main .mainTxtWrap::before {
   height: 16px;
   border-radius: 50%;
   background-color: #ef3b24;
-  animation: main 2.4s forwards 0.2s;
+  animation: maincircle 2.5s forwards 0.2s;
 }
-@keyframes main {
+@keyframes maincircle {
   0% {
-    transform: translateX(0);
+    left: 0;
   }
   100% {
-    transform: calc(50%);
+    left: calc(31.95%);
   }
 }
 main .mainTxtWrap {
@@ -177,7 +177,7 @@ main .mainTxtWrap .mainTit {
   line-height: 60px;
 }
 main .mainTxtWrap .mainTit:nth-of-type(2) {
-  margin: 13px 0 0 13px;
+  margin: 13px 0 45px 12px;
 }
 main .mainTxtWrap .mainTit span {
   color: #ef3b24;
@@ -186,6 +186,9 @@ main .mainTxtWrap .mainTxt {
   font-size: 18px;
   color: #888;
   font-weight: 300;
+  line-height: 24px;
+}
+main .mainTxtWrap .mainTxt:nth-of-type(2) {
 }
 main .mainTxtWrap .mainTxt strong {
   font-weight: 700;
@@ -217,13 +220,21 @@ main .mainTxtWrap::after {
   content: "";
   position: absolute;
   left: 0;
-  top: 179px;
+  top: 186px;
   width: 0;
   height: 2px;
   background-color: #ef3b24;
-  animation: maintxt 2.4s forwards 0.2s;
+  animation: mainbar 2.5s forwards 0.2s;
 }
-main .mainTxtWrap {
+@keyframes mainbar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(31.95%);
+  }
+}
+main .mainNumWrap {
   width: 354px;
   margin-right: 16px;
   border: 1px solid #ef3b24;
@@ -232,7 +243,7 @@ main .mainTxtWrap {
   position: relative;
   background: #fff;
 }
-main .mainTxtWrap:before {
+main .mainNumWrap:before {
   content: "";
   position: absolute;
   background-color: #ef3b24;
@@ -243,23 +254,23 @@ main .mainTxtWrap:before {
   border-radius: 10px;
   z-index: -1;
 }
-main .mainTxtWrap ul li {
+main .mainNumWrap ul li {
   line-height: 40px;
   margin-bottom: 18px;
   transform: translateY(50px);
   animation: mainnum 1s forwards;
   opacity: 0;
 }
-main .mainTxtWrap ul li:nth-child(2) {
+main .mainNumWrap ul li:nth-child(2) {
   animation-delay: 0.3s;
 }
-main .mainTxtWrap ul li:nth-child(3) {
+main .mainNumWrap ul li:nth-child(3) {
   animation-delay: 0.6s;
 }
-main .mainTxtWrap ul li:nth-child(4) {
+main .mainNumWrap ul li:nth-child(4) {
   animation-delay: 0.9s;
 }
-main .mainTxtWrap ul li:nth-child(5) {
+main .mainNumWrap ul li:nth-child(5) {
   animation-delay: 1.2s;
 }
 @keyframes mainnum {
