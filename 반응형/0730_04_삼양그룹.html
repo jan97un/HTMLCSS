@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      @font-face {
+        font-family: "sybold";
+        src: url(webfonts/삼양체\ Bo_otf.otf) format("opentype");
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul.con {
+        width: 100%;
+        max-width: 1600px;
+        margin: 100px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        transition: 0.5s ease-in;
+      }
+      ul.con li {
+        flex: 1 0 20%;
+        height: 360px;
+        transition: 0.5s;
+        position: relative;
+        overflow: hidden;
+      }
+      ul.con li a {
+        padding: 50px;
+        display: block;
+      }
+      ul.con li a .bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        transform: scale(1);
+        transition: 0.5s;
+      }
+      ul.con li:nth-child(1) a .bg {
+        background-image: url(images/pc1.jpg);
+      }
+      ul.con li:nth-child(2) a .bg {
+        background-image: url(images/pc2.png);
+      }
+      ul.con li:nth-child(3) a .bg {
+        background-image: url(images/pc3.jpg);
+      }
+      ul.con li:nth-child(4) a .bg {
+        background-image: url(images/pc4.jpg);
+      }
+      ul.con li:hover a .bg {
+        transform: scale(1.1);
+      }
+      ul.con li a p {
+        position: relative;
+        color: #fff;
+        z-index: 1;
+      }
+      ul.con li a p:nth-of-type(1) {
+        font: bold 36px "sybold";
+        margin-bottom: 20px;
+      }
+      ul.con li a p:nth-of-type(2) {
+        font: bold 19px "sybold";
+        margin-bottom: 20px;
+        transform: translateY(30px);
+        transition-duration: 0.3s;
+        transition-delay: 0.1s;
+        opacity: 0;
+      }
+      ul.con li:hover a p:nth-of-type(2) {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      ul.con li a p:nth-of-type(3) {
+        transform: translateY(30px);
+        transition-duration: 0.3s;
+        transition-delay: 0.2s;
+        opacity: 0;
+      }
+      ul.con li:hover a p:nth-of-type(3) {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      ul.con li a:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+      ul.con li:nth-child(1) a:after {
+        background-color: rgba(0, 163, 241, 0.84);
+      }
+      ul.con li:nth-child(2) a:after {
+        background-color: rgba(219, 92, 41, 0.79);
+      }
+      ul.con li:nth-child(3) a:after {
+        background-color: rgba(139, 185, 6, 0.76);
+      }
+      ul.con li:nth-child(4) a:after {
+        background-color: rgba(0, 163, 241, 0.64);
+      }
+      ul.con li:hover a:after {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="con">
+      <li>
+        <a href="#">
+          <div class="bg"></div>
+          <p>화학</p>
+          <p>언제나 편리하게</p>
+          <p><img src="images/arrow.svg" alt="arrow" /></p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="bg"></div>
+          <p>식품</p>
+          <p>누구나 풍요롭게</p>
+          <p><img src="images/arrow.svg" alt="arrow" /></p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="bg"></div>
+          <p>의약바이오</p>
+          <p>오래도록 건강하게</p>
+          <p><img src="images/arrow.svg" alt="arrow" /></p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="bg"></div>
+          <p>패키징</p>
+          <p>어디서나 즐겁게</p>
+          <p><img src="images/arrow.svg" alt="arrow" /></p>
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>
