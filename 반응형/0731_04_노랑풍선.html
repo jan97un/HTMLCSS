@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+      }
+      .ybWrap {
+        max-width: 1480px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .yb {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 40px;
+        height: 1880px;
+      }
+      .yb li {
+        display: flex;
+        width: 100%;
+        gap: 7%;
+        height: 440px;
+      }
+      .yb li:nth-child(2),
+      .yb li:nth-child(4) {
+        justify-content: flex-end;
+        text-align: right;
+      }
+      .yb li p img {
+        width: 720px;
+        height: 440px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .yb li .txt {
+        width: 440px;
+        height: 440px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .yb li .txt p:nth-child(1) {
+        color: #777;
+        font: 24px "Archivo", sans-serif;
+        letter-spacing: -2px;
+      }
+      .yb li .txt p:nth-child(2) {
+        color: #222;
+        font: 48px "Archivo", sans-serif;
+        letter-spacing: -6px;
+      }
+      .yb li .txt p:nth-child(3) {
+        color: #ffc72c;
+        font: bold 48px "Archivo", sans-serif;
+      }
+      @media screen and (max-width: 1023px) {
+        .ybWrap {
+          padding: 0 24px;
+        }
+        .yb li .txt p:nth-child(1) {
+          font-size: 16px;
+          letter-spacing: -1px;
+        }
+        .yb li .txt p:nth-child(2) {
+          font-size: 22px;
+          letter-spacing: -1px;
+        }
+        .yb li .txt p:nth-child(3) {
+          font-size: 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ybWrap">
+      <ul class="yb">
+        <li>
+          <p class="bg"><img src="images/bg_story_1.jpg" alt="bg" /></p>
+          <div class="txt">
+            <p>여행의 새로운 가치를 알립니다</p>
+            <p>가치를 전달하는 여행</p>
+            <p>Value-Creating</p>
+          </div>
+        </li>
+        <li>
+          <div class="txt">
+            <p>고객의, 고객에 의한, 고객을 위한</p>
+            <p>신뢰를 받는 여행</p>
+            <p>Trustworthy</p>
+          </div>
+          <p class="bg"><img src="images/bg_story_2.jpg" alt="bg" /></p>
+        </li>
+        <li>
+          <p class="bg"><img src="images/bg_story_3.jpg" alt="bg" /></p>
+          <div class="txt">
+            <p>일상의 가장 반짝이는 순간을 만듭니다</p>
+            <p>즐거움을 선사하는 여행</p>
+            <p>Joyful</p>
+          </div>
+        </li>
+        <li>
+          <div class="txt">
+            <p>다양한 여행상품으로 여행 문화를 선도합니다</p>
+            <p>혁신적인 여행</p>
+            <p>Innovative</p>
+          </div>
+          <p class="bg"><img src="images/bg_story_4.jpg" alt="bg" /></p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
