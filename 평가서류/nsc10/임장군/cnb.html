@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "NanumBarunGothic";
+      }
+      @font-face {
+        font-family: "NanumBarunGothic";
+        src: url(CNB-webfonts/NanumBarunGothic.otf) format("opentype");
+      }
+      ul {
+        list-style: none;
+      }
+      .ssg {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .ssg h2 {
+        padding: 50px 0;
+        font-size: 40px;
+        position: relative;
+        line-height: 50px;
+        letter-spacing: 1px;
+      }
+      .ssg h2:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 121px;
+        height: 4px;
+        background-color: #000;
+        transform: translateX(-50%);
+      }
+      .ssg p {
+        padding: 45px 0 130px;
+        font-size: 22px;
+        color: #444;
+        line-height: 40px;
+      }
+      .ssg .con {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+      .ssg .con li {
+        width: calc(50% - 20px);
+      }
+      .ssg .con li a img {
+        border-radius: 40px;
+      }
+      @media screen and (max-width: 768px) {
+        br {
+          display: none;
+        }
+        .ssg {
+          padding: 0 15px;
+          box-sizing: border-box;
+        }
+        .ssg h2 {
+          font-size: 20px;
+          padding: 30px 0 20px;
+        }
+        .ssg h2::after {
+          display: none;
+        }
+        .ssg p {
+          font-size: 15px;
+          padding: 0;
+          word-break: keep-all;
+          line-height: 30px;
+          margin-bottom: 40px;
+        }
+        .ssg .con {
+          gap: 10px;
+          width: 100%;
+        }
+        .ssg .con li {
+          width: calc(50% - 5px);
+        }
+        .ssg .con li a img {
+          width: 100%;
+          border-radius: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="ssg">
+        <h2>
+          생활 속에서 함께하는<br />
+          식품 제조 선도 기업
+        </h2>
+        <p>
+          신세계푸드는 글로벌 수준의 R&D센터와 식품 제조 인프라를 갖추고
+          있습니다.<br />
+          프리미엄 가정 간편식, 베이커리, Fresh Food, 대안식품 등을<br />
+          직접 연구개발 및 생산하며 식품시장을 선도해 가고 있습니다.
+        </p>
+        <ul class="con">
+          <li>
+            <a href="#"><img src="CNB-images/con1.jpg" alt="con" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="CNB-images/con2.jpg" alt="con" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="CNB-images/con3.jpg" alt="con" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="CNB-images/con4.jpg" alt="con" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="CNB-images/con5.jpg" alt="con" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="CNB-images/con6.jpg" alt="con" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="CNB-images/con7.jpg" alt="con" /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
