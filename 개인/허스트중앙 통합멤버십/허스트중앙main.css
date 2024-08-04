@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+#wrap {
+  width: 100%;
+  height: 100%;
+}
+header {
+  position: fixed;
+  width: 100%;
+  height: 72px;
+  z-index: 9999;
+}
+header .headWrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+}
+header .headWrap .headSide {
+}
+.headInner {
+  min-width: 1280px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+header .headWrap .headSide .headInner {
+}
+header .headWrap .headSide .headInner .headLogo {
+  background: url(images/logoblack.svg);
+  width: 97px;
+  height: 33px;
+  position: absolute;
+  left: 40px;
+  top: calc((72px - 33px) / 2);
+}
+header .headWrap .headSide .headInner .sign {
+  position: absolute;
+  right: 40px;
+  top: 0;
+}
+header .headWrap .headSide .headInner .sign > div {
+  display: inline-flex;
+  padding: 0 10px;
+  line-height: 72px;
+}
+header .headWrap .headSide .headInner .sign > div p a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+header .headWrap .headNav .headInner .dep1 {
+  display: flex;
+  justify-content: center;
+}
+header .headWrap .headNav .headInner .dep1 > li {
+  position: relative;
+  line-height: 72px;
+}
+header .headWrap .headNav .headInner .dep1 li a {
+  font-size: 16px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+header .headWrap .headNav .headInner .dep1 > li > a {
+  display: block;
+  padding: 0 34px;
+  font-weight: 700;
+}
+header .headWrap .headNav .headInner .dep1 li .subNav {
+  position: absolute;
+  left: 0;
+  top: 72px;
+  height: calc(50vh - 72px);
+  width: 100%;
+  z-index: 101;
+  display: none;
+}
+header .headWrap .headNav .headInner .dep1:hover li .subNav {
+  display: block;
+}
+header .headWrap .headNav .headInner .dep2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header .headWrap .headNav .headInner .dep2 li {
+  line-height: 40px;
+}
+header .headWrap .headNav .headInner .dep2 li a {
+  font-weight: 500;
+  color: #666;
+}
+header .headWrap .headNav .headInner .bgWhite {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0;
+  z-index: 100;
+  background-color: aqua;
+}
+header .headWrap .headNav .headInner .dep1:hover ~ .bgWhite {
+  height: calc(50vh - 72px);
+}

@@ -4,55 +4,77 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="허스트중앙main.css" />
   </head>
   <body>
-    <div class="mainWrap">
+    <div id="wrap">
       <header>
-        <div class="headerLogo"></div>
-        <div class="headerMenu">
-          <ul class="dep1">
-            <li>
-              <a href="">서비스 소개</a>
-              <ul class="dep2">
-                <li><a href="">About Us</a></li>
+        <div class="headWrap">
+          <div class="headSide">
+            <div class="headInner">
+              <p class="headLogo"></p>
+              <div class="sign">
+                <div class="signup">
+                  <p><a href="">SIGNUP</a></p>
+                </div>
+                <div class="login">
+                  <p><a href="">LOGIN</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="headNav">
+            <div class="headInner">
+              <ul class="dep1">
+                <li>
+                  <a href="">서비스 소개</a>
+                  <div class="subNav">
+                    <ul class="dep2">
+                      <li><a href="">About Us</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="">멤버십</a>
+                  <div class="subNav">
+                    <ul class="dep2">
+                      <li><a href="">포인트 안내</a></li>
+                      <li><a href="">포인트 관리</a></li>
+                      <li><a href="">포인트 샵</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="">고객센터</a>
+                  <div class="subNav">
+                    <ul class="dep2">
+                      <li><a href="">공지사항</a></li>
+                      <li><a href="">FAQ</a></li>
+                      <li><a href="">1:1문의</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="">마이페이지</a>
+                  <div class="subNav">
+                    <ul class="dep2">
+                      <li><a href="">마이홈</a></li>
+                      <li><a href="">회원정보수정</a></li>
+                      <li><a href="">포인트관리</a></li>
+                      <li><a href="">포인트샵</a></li>
+                      <li><a href="">1:1문의내역</a></li>
+                      <li><a href="">나의스크랩</a></li>
+                    </ul>
+                  </div>
+                </li>
               </ul>
-            </li>
-            <li>
-              <a href="">멤버십</a>
-              <ul class="dep2">
-                <li><a href="">포인트 안내</a></li>
-                <li><a href="">포인트 관리</a></li>
-                <li><a href="">포인트 샵</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="">고객센터</a>
-              <ul class="dep2">
-                <li><a href="">공지사항</a></li>
-                <li><a href="">FAQ</a></li>
-                <li><a href="">1:1문의</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="">마이페이지</a>
-              <ul class="dep2">
-                <li><a href="">마이홈</a></li>
-                <li><a href="">회원정보수정</a></li>
-                <li><a href="">포인트관리</a></li>
-                <li><a href="">포인트샵</a></li>
-                <li><a href="">1:1문의내역</a></li>
-                <li><a href="">나의스크랩</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="headerRight">
-          <p><a href="">SIGNUP</a></p>
-          <p><a href="">LOGIN</a></p>
+              <div class="bgWhite"></div>
+            </div>
+          </div>
         </div>
       </header>
-      <div class="mainPageWrap">
-        <main>
+      <!-- <main>
+        <div class="mainWrap">
           <div class="mainPage video">
             <div class="mainvideo"></div>
             <div class="mainTxt">
@@ -244,9 +266,64 @@
               </p>
             </div>
           </footer>
-        </main>
-      </div>
-      <nav></nav>
+        </div>
+        <nav>
+          <div class="inputWrap">
+            <input type="radio" name="floatnav" id="float1" />
+            <input type="radio" name="floatnav" id="float2" />
+            <input type="radio" name="floatnav" id="float3" />
+            <input type="radio" name="floatnav" id="float4" />
+            <input type="radio" name="floatnav" id="float5" />
+            <input type="radio" name="floatnav" id="float6" />
+            <input type="radio" name="floatnav" id="float7" />
+            <input type="radio" name="floatnav" id="float8" />
+            <div class="floatnav">
+              <ul>
+                <li>
+                  <label for="float1">
+                    <p>회사소개</p>
+                  </label>
+                </li>
+                <li>
+                  <label for="float2">
+                    <p>ELLE</p>
+                  </label>
+                </li>
+                <li>
+                  <label for="float3">
+                    <p>Cosmopolitan</p>
+                  </label>
+                </li>
+                <li>
+                  <label for="float4">
+                    <p>Harper's BAZZAR</p>
+                  </label>
+                </li>
+                <li>
+                  <label for="float5">
+                    <p>Esquire</p>
+                  </label>
+                </li>
+                <li>
+                  <label for="float6">
+                    <p>엘르보이스</p>
+                  </label>
+                </li>
+                <li>
+                  <label for="float7">
+                    <p>예술산책</p>
+                  </label>
+                </li>
+                <li>
+                  <label for="float8">
+                    <p>eee</p>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </main> -->
     </div>
   </body>
 </html>
