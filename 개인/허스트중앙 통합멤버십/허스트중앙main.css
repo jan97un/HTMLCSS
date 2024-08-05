@@ -6,10 +6,13 @@
 * {
   margin: 0;
   padding: 0;
+}
+body {
+  font-family: "Noto Sans KR", sans-serif;
   text-align: center;
   box-sizing: border-box;
+  color: #111;
 }
-
 ul {
   list-style: none;
 }
@@ -25,22 +28,20 @@ header {
   width: 100%;
   height: 72px;
   z-index: 9999;
+  background-color: #fff;
 }
 header .headWrap {
   max-width: 1280px;
   margin: 0 auto;
   position: relative;
 }
-header .headWrap .headSide {
-}
-.headInner {
-  min-width: 1280px;
+.inner {
+  max-width: 1280px;
   padding: 0 40px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
-header .headWrap .headSide .headInner {
-}
-header .headWrap .headSide .headInner .headLogo {
+header .headWrap .headSide .inner .headLogo {
   background: url(images/logoblack.svg);
   width: 97px;
   height: 33px;
@@ -48,71 +49,214 @@ header .headWrap .headSide .headInner .headLogo {
   left: 40px;
   top: calc((72px - 33px) / 2);
 }
-header .headWrap .headSide .headInner .sign {
+header .headWrap .headSide .inner .sign {
   position: absolute;
   right: 40px;
   top: 0;
 }
-header .headWrap .headSide .headInner .sign > div {
+header .headWrap .headSide .inner .sign > div {
   display: inline-flex;
   padding: 0 10px;
   line-height: 72px;
 }
-header .headWrap .headSide .headInner .sign > div p a {
+header .headWrap .headSide .inner .sign > div p a {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 600;
+  color: #111;
 }
-header .headWrap .headNav .headInner .dep1 {
+header .headWrap .headNav .inner .dep1 {
   display: flex;
   justify-content: center;
+  flex-wrap: nowrap;
 }
-header .headWrap .headNav .headInner .dep1 > li {
+header .headWrap .headNav .inner .dep1 > li {
   position: relative;
   line-height: 72px;
 }
-header .headWrap .headNav .headInner .dep1 li a {
+header .headWrap .headNav .inner .dep1 li a {
   font-size: 16px;
-  font-family: "Noto Sans KR", sans-serif;
+  color: #111;
 }
-header .headWrap .headNav .headInner .dep1 > li > a {
+header .headWrap .headNav .inner .dep1 > li > a {
   display: block;
   padding: 0 34px;
   font-weight: 700;
 }
-header .headWrap .headNav .headInner .dep1 li .subNav {
+header .headWrap .headNav .inner .dep1 li .subNav {
   position: absolute;
   left: 0;
   top: 72px;
-  height: calc(50vh - 72px);
   width: 100%;
   z-index: 101;
   display: none;
+  background-color: #fff;
 }
-header .headWrap .headNav .headInner .dep1:hover li .subNav {
+header .headWrap .headNav .inner .dep1:hover li .subNav {
   display: block;
 }
-header .headWrap .headNav .headInner .dep2 {
+header .headWrap .headNav .inner .dep2 {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-header .headWrap .headNav .headInner .dep2 li {
+header .headWrap .headNav .inner .dep2 li {
   line-height: 40px;
 }
-header .headWrap .headNav .headInner .dep2 li a {
+header .headWrap .headNav .inner .dep2 li a {
   font-weight: 500;
   color: #666;
 }
-header .headWrap .headNav .headInner .bgWhite {
+header .headWrap .headNav .inner .bgWhite {
   position: absolute;
   left: 0;
   width: 100%;
   height: 0;
   z-index: 100;
-  background-color: aqua;
+  background-color: #fff;
+  overflow: hidden;
 }
-header .headWrap .headNav .headInner .dep1:hover ~ .bgWhite {
-  height: calc(50vh - 72px);
+header .headWrap .headNav .inner .dep1:hover ~ .bgWhite {
+  height: 280px;
+}
+main .mainWrap .mainPage {
+  height: 100vh;
+  /* height:953px */
+  position: relative;
+}
+main .mainWrap .mainPage .mainBg p img {
+  width: 100%;
+  height: 100vh;
+  /* height:953px */
+  object-fit: cover;
+}
+main .mainWrap .mainPage .mainTxt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+main .mainWrap .mainPage .mainTxt .mainLink a span {
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  padding-right: 28px;
+}
+main .mainWrap .mainPage .mainTxtMem p:nth-child(1) {
+  font-size: 28px;
+  font-weight: 700;
+}
+main .mainWrap .mainPage .mainTxtMem p:nth-child(2) {
+  font-size: 56px;
+  font-weight: 700;
+  margin-top: 24px;
+}
+main .mainWrap .mainPage .mainTxtMem p:nth-child(3) {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+main .mainWrap .mainPage .mainTxtPage p:nth-child(1) {
+  font-size: 80px;
+  font-weight: 700;
+}
+main .mainWrap .mainPage .mainTxtPage p:nth-child(2) {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 20px;
+  color: #666;
+}
+main .mainWrap .mainPage .mainTxtBrand p:nth-child(2) {
+  font-size: 28px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin-top: 47px;
+}
+main .mainWrap .mainPage .mainTxtBrand p:nth-child(3) {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+main .mainWrap .mainPage .mainTxtMem .mainLink {
+  margin-top: 80px;
+}
+main .mainWrap .mainPage .mainTxtBrand .mainLink,
+main .mainWrap .mainPage .mainTxtApp .mainLink {
+  margin-top: 60px;
+}
+main .mainWrap .mainPage .mainBright .mainLink a {
+  padding: 16px 24px;
+  border: 1px solid rgba(17, 17, 17, 0.6);
+  color: #111;
+}
+main .mainWrap .mainPage .mainDark .mainLink a {
+  color: #fff;
+  padding: 16px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+main .mainWrap .mainPage .mainBright .mainLink a span::after {
+  content: "";
+  position: absolute;
+  background: url(images/arrowdark.svg) 0/100% no-repeat;
+  right: 0;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+}
+main .mainWrap .mainPage .mainDark .mainLink a span::after {
+  content: "";
+  position: absolute;
+  background: url(images/arrowwhite.png) 0/100% no-repeat;
+  right: 0;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+}
+main .mainWrap .point {
+  background-color: #111;
+  color: #fff;
+}
+main .mainWrap .coupon {
+  background: url(images/main3bg.png) 0/100% no-repeat;
+  color: #fff;
+}
+
+main .mainWrap .elle .mainTxtBrand p:nth-child(3) {
+  color: #666;
+}
+main .mainWrap .cosmopolitan {
+  background-color: #ff1493;
+  color: #fff;
+}
+main .mainWrap .bazzar {
+  background-color: #111;
+  color: #fff;
+}
+main .mainWrap .esquire {
+  background-color: #969c98;
+  color: #fff;
+}
+main .mainWrap .ellevoice {
+  background-color: #f2efe8;
+}
+main .mainWrap .ellevoice > div {
+  display: flex;
+}
+main .mainWrap .ellevoice > div > .voiceTxtWrap {
+  width: 458px;
+  display: flex;
+  flex-direction: column;
+}
+main .mainWrap .ellevoice > div > .voiceTxtWrap div:first-child {
+  text-align: left;
+}
+main .mainWrap .ellevoice > div > picture {
+  margin-left: 60px;
+}
+main .mainWrap .ellevoice > div > picture img {
+  width: 682px;
+  height: 587px;
 }
