@@ -253,6 +253,19 @@ main .mainWrap .ellevoice > div > .voiceTxtWrap {
 main .mainWrap .ellevoice > div > .voiceTxtWrap div:first-child {
   text-align: left;
 }
+main .mainWrap .ellevoice > div > .voiceTxtWrap div p:first-child {
+  font-size: 20px;
+  font-weight: 700;
+}
+main .mainWrap .ellevoice > div > .voiceTxtWrap div p:nth-child(2) {
+  font-size: 36px;
+  font-weight: 700;
+}
+main .mainWrap .ellevoice > div > .voiceTxtWrap div p:nth-child(3) {
+  font-size: 18px;
+  font-weight: 500;
+  color: #666;
+}
 main .mainWrap .ellevoice > div > picture {
   margin-left: 60px;
 }
