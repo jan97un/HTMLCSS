@@ -12,6 +12,8 @@ body {
   text-align: center;
   box-sizing: border-box;
   color: #111;
+  word-break: keep-all;
+  letter-spacing: -0.1px;
 }
 ul {
   list-style: none;
@@ -216,6 +218,38 @@ main .mainWrap .mainPage .mainDark .mainLink a span::after {
   height: 20px;
   transform: translateY(-50%);
 }
+main .mainWrap .mainPage .mainTxtApp {
+  display: flex;
+}
+main .mainWrap .mainPage .mainTxtApp .appTxtWrap {
+  width: 458px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+main .mainWrap .mainPage .mainTxtApp .appTxtWrap div p:first-child {
+  font-size: 20px;
+  font-weight: 700;
+}
+main .mainWrap .mainPage .mainTxtApp .appTxtWrap div p:nth-child(2) {
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 24px;
+}
+main .mainWrap .mainPage .mainTxtApp .appTxtWrap div p:nth-child(3) {
+  font-size: 18px;
+  font-weight: 500;
+  color: #666;
+  margin-top: 20px;
+}
+main .mainWrap .mainPage .mainTxtApp picture {
+  margin-left: 60px;
+}
+main .mainWrap .mainPage .mainTxtApp picture img {
+  width: 682px;
+  height: 587px;
+}
 /* 페이지 분류 */
 main .mainWrap .point {
   background-color: #111;
@@ -243,36 +277,12 @@ main .mainWrap .esquire {
 main .mainWrap .ellevoice {
   background-color: #f2efe8;
 }
-main .mainWrap .ellevoice > div {
-  display: flex;
+main .mainWrap .artwalk {
+  background-color: #111;
+  color: #fff;
 }
-main .mainWrap .ellevoice > div > .voiceTxtWrap {
-  width: 458px;
-  display: flex;
-  flex-direction: column;
-}
-main .mainWrap .ellevoice > div > .voiceTxtWrap div:first-child {
-  text-align: left;
-}
-main .mainWrap .ellevoice > div > .voiceTxtWrap div p:first-child {
-  font-size: 20px;
-  font-weight: 700;
-}
-main .mainWrap .ellevoice > div > .voiceTxtWrap div p:nth-child(2) {
-  font-size: 36px;
-  font-weight: 700;
-}
-main .mainWrap .ellevoice > div > .voiceTxtWrap div p:nth-child(3) {
-  font-size: 18px;
-  font-weight: 500;
-  color: #666;
-}
-main .mainWrap .ellevoice > div > picture {
-  margin-left: 60px;
-}
-main .mainWrap .ellevoice > div > picture img {
-  width: 682px;
-  height: 587px;
+main .mainWrap .artwalk .mainTxtApp .appTxtWrap div p:nth-child(3) {
+  color: #fff;
 }
 @media screen and (max-width: 768px) {
   main .mainWrap .mainPage .mainTxtMem p:nth-child(1) {
