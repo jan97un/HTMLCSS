@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        /* 비율 조정을 위해 media에 직접 부여할 것 */
+        max-width: 1080px;
+        margin: 50px auto;
+        gap: 15px;
+      }
+      ul li {
+        flex: 1 1 20%;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      ul li a {
+        filter: grayscale(1);
+        transition: 0.5s;
+      }
+      ul li:hover a {
+        filter: grayscale(0);
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      ul li a img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      @media screen and (max-width: 960px) {
+        ul {
+          gap: 20px;
+          width: 70%;
+        }
+        ul li {
+          flex-basis: 40%;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        ul li {
+          flex-basis: 80%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href=""><img src="images/sub_gallery_01.jpg" alt="gallery" /></a>
+      </li>
+      <li>
+        <a href=""><img src="images/sub_gallery_02.jpg" alt="gallery" /></a>
+      </li>
+      <li>
+        <a href=""><img src="images/sub_gallery_03.jpg" alt="gallery" /></a>
+      </li>
+      <li>
+        <a href=""><img src="images/sub_gallery_04.jpg" alt="gallery" /></a>
+      </li>
+      <li>
+        <a href=""><img src="images/sub_gallery_05.jpg" alt="gallery" /></a>
+      </li>
+      <li>
+        <a href=""><img src="images/sub_gallery_06.jpg" alt="gallery" /></a>
+      </li>
+      <li>
+        <a href=""><img src="images/sub_gallery_07.jpg" alt="gallery" /></a>
+      </li>
+      <li>
+        <a href=""><img src="images/sub_gallery_08.jpg" alt="gallery" /></a>
+      </li>
+      <li>
+        <a href=""><img src="images/sub_gallery_09.jpg" alt="gallery" /></a>
+      </li>
+      <li>
+        <a href=""><img src="images/sub_gallery_10.jpg" alt="gallery" /></a>
+      </li>
+      <li>
+        <a href=""><img src="images/sub_gallery_11.jpg" alt="gallery" /></a>
+      </li>
+      <li>
+        <a href=""><img src="images/sub_gallery_12.jpg" alt="gallery" /></a>
+      </li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </body>
+</html>

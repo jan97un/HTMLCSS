@@ -121,6 +121,7 @@ header .headWrap .headNav .inner .dep1:hover ~ .bgWhite {
   height: 280px;
 }
 main .mainWrap .mainPage {
+  width: 100%;
   height: 100vh;
   /* height:953px */
   position: relative;
@@ -215,6 +216,7 @@ main .mainWrap .mainPage .mainDark .mainLink a span::after {
   height: 20px;
   transform: translateY(-50%);
 }
+/* 페이지 분류 */
 main .mainWrap .point {
   background-color: #111;
   color: #fff;
@@ -223,7 +225,6 @@ main .mainWrap .coupon {
   background: url(images/main3bg.png) 0/100% no-repeat;
   color: #fff;
 }
-
 main .mainWrap .elle .mainTxtBrand p:nth-child(3) {
   color: #666;
 }
@@ -272,4 +273,20 @@ main .mainWrap .ellevoice > div > picture {
 main .mainWrap .ellevoice > div > picture img {
   width: 682px;
   height: 587px;
+}
+@media screen and (max-width: 768px) {
+  main .mainWrap .mainPage .mainTxtMem p:nth-child(1) {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  main .mainWrap .mainPage .mainTxtMem p:nth-child(2) {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 24px;
+  }
+  main .mainWrap .mainPage .mainTxtMem p:nth-child(3) {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 40px;
+  }
 }
