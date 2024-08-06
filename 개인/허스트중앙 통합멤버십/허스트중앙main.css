@@ -222,7 +222,7 @@ main .mainWrap .point {
   color: #fff;
 }
 main .mainWrap .coupon {
-  background: url(images/main3bg.png) 0/100% no-repeat;
+  background: url(images/couponbg.png) 0/100% no-repeat;
   color: #fff;
 }
 main .mainWrap .elle .mainTxtBrand p:nth-child(3) {
