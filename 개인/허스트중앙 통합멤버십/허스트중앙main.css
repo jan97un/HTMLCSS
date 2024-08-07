@@ -16,7 +16,9 @@ ul {
 }
 a {
   text-decoration: none;
-  color: #111;
+}
+br.pc {
+  display: none;
 }
 header {
   position: fixed;
@@ -25,6 +27,8 @@ header {
   left: 0;
   top: 0;
   text-align: center;
+  background-color: #fff;
+  z-index: 1000;
 }
 header .head {
   width: 100%;
@@ -56,6 +60,10 @@ header .head .headNav .dep1 > li > a {
   font-size: 16px;
   line-height: 72px;
   font-weight: 700;
+  color: #111;
+}
+header .head .headNav .dep1 > li .dep2 {
+  display: none;
 }
 header .head .headNav .dep1 > li .dep2 li {
   line-height: 40px;
@@ -74,16 +82,36 @@ header .head .headLogin ul li a {
   font-size: 14px;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
+  color: #111;
 }
 header .head .hamberger {
   display: none;
 }
+main {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 main .mainPage {
   width: 100%;
-  max-width: 1280px;
   margin: 0 auto;
   height: 100vh;
   position: relative;
+}
+main .mainPage .obj {
+  width: 100%;
+  height: 100%;
+}
+main .mainPage .obj p {
+  height: 100%;
+}
+main .mainPage .obj p img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 main .memPage,
 main .whiteBg,
@@ -93,6 +121,18 @@ main .brandPage {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+}
+main .point {
+  background-color: #111;
+}
+main .coupon {
+  background: url(images/couponbg.png) center/cover no-repeat;
+}
+main .mainPage .txt {
+  position: absolute;
+}
+main .darkPage .txt {
+  color: #fff;
 }
 main .memPage .txt p:nth-child(1) {
   font-size: 28px;
@@ -106,13 +146,40 @@ main .memPage .txt p:nth-child(3) {
   font-size: 18px;
   font-weight: 500;
 }
-main .memPage .txt .mainLink a span {
+main .mainPage .txt .mainLink a span {
   font-size: 16px;
   font-weight: 500;
   padding-right: 28px;
   box-sizing: border-box;
+  position: relative;
 }
-main .memPage .txt .mainLink a span @media screen and (max-width: 900px) {
+main .darkPage .txt .mainLink a {
+  color: #fff;
+}
+main .brightPage .txt .mainLink a {
+  color: #111;
+}
+main .darkPage .txt .mainLink a span::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: url(images/arrowwhite.png) center/100% no-repeat;
+}
+main .brightPage .txt .mainLink a span::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: url(images/arrowdark.svg) center/100% no-repeat;
+}
+@media screen and (max-width: 900px) {
   header .head .headNav {
     position: absolute;
     left: 0;
