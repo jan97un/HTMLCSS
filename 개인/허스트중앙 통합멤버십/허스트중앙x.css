@@ -1,0 +1,311 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  color: #111;
+  word-break: keep-all;
+  letter-spacing: -0.1px;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+header {
+  position: fixed;
+  width: 100%;
+  max-width: 1280px;
+  height: 72px;
+  z-index: 9999;
+  background-color: aqua;
+  left: 0;
+  top: 0;
+}
+.inner {
+  width: 100%;
+  padding: 0 40px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+}
+header .headWrap .headSide .inner .headLogo {
+  background: url(images/logoblack.svg);
+  width: 97px;
+  height: 33px;
+  position: absolute;
+  left: 40px;
+  top: calc((72px - 33px) / 2);
+}
+header .headWrap .headSide .inner .sign {
+  position: absolute;
+  right: 40px;
+  top: 0;
+}
+header .headWrap .headSide .inner .sign > div {
+  display: inline-flex;
+  padding: 0 10px;
+  line-height: 72px;
+}
+header .headWrap .headSide .inner .sign > div p a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+}
+header .headWrap .headNav .inner .dep1 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+header .headWrap .headNav .inner .dep1 > li {
+  position: relative;
+  line-height: 72px;
+}
+header .headWrap .headNav .inner .dep1 li a {
+  font-size: 16px;
+  color: #111;
+}
+header .headWrap .headNav .inner .dep1 > li > a {
+  display: block;
+  padding: 0 34px;
+  font-weight: 700;
+}
+header .headWrap .headNav .inner .dep1 li .subNav {
+  position: absolute;
+  left: 0;
+  top: 72px;
+  width: 100%;
+  z-index: 101;
+  display: none;
+  background-color: #fff;
+}
+header .headWrap .headNav .inner .dep1:hover li .subNav {
+  display: block;
+}
+header .headWrap .headNav .inner .dep2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header .headWrap .headNav .inner .dep2 li {
+  line-height: 40px;
+}
+header .headWrap .headNav .inner .dep2 li a {
+  font-weight: 500;
+  color: #666;
+}
+header .headWrap .headNav .inner .bgWhite {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0;
+  z-index: 100;
+  background-color: #fff;
+  overflow: hidden;
+}
+header .headWrap .headNav .inner .dep1:hover ~ .bgWhite {
+  height: 280px;
+}
+main .mainWrap .mainPage {
+  width: 100%;
+  max-width: 1280px;
+  height: 100vh;
+  /* height:953px */
+  position: relative;
+  margin: 0 auto;
+}
+main .mainWrap .mainPage .mainBg p img {
+  width: 100%;
+  height: 100vh;
+  /* height:953px */
+  object-fit: cover;
+}
+main .mainWrap .mainPage .mainTxtMem p:nth-child(1) {
+  font-size: 28px;
+  font-weight: 700;
+}
+main .mainWrap .mainPage .mainTxtMem p:nth-child(2) {
+  font-size: 56px;
+  font-weight: 700;
+  margin-top: 24px;
+}
+main .mainWrap .mainPage .mainTxtMem p:nth-child(3) {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+main .mainWrap .mainPage .mainTxtPage p:nth-child(1) {
+  font-size: 80px;
+  font-weight: 700;
+}
+main .mainWrap .mainPage .mainTxtPage p:nth-child(2) {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 20px;
+  color: #666;
+}
+main .mainWrap .mainPage .mainTxtBrand p:nth-child(2) {
+  font-size: 28px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin-top: 47px;
+}
+main .mainWrap .mainPage .mainTxtBrand p:nth-child(3) {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+main .mainWrap .mainPage .mainTxt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+main .mainWrap .mainPage .mainTxtMem .mainLink {
+  margin-top: 80px;
+}
+main .mainWrap .mainPage .mainTxtBrand .mainLink,
+main .mainWrap .mainPage .mainTxtApp .mainLink {
+  margin-top: 60px;
+}
+main .mainWrap .mainPage .mainBright .mainLink a {
+  padding: 16px 24px;
+  border: 1px solid rgba(17, 17, 17, 0.6);
+  color: #111;
+}
+main .mainWrap .mainPage .mainDark .mainLink a {
+  color: #fff;
+  padding: 16px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+main .mainWrap .mainPage .mainTxt .mainLink a span {
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  padding-right: 28px;
+}
+main .mainWrap .mainPage .mainBright .mainLink a span::after {
+  content: "";
+  position: absolute;
+  background: url(images/arrowdark.svg) 0/100% no-repeat;
+  right: 0;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+}
+main .mainWrap .mainPage .mainDark .mainLink a span::after {
+  content: "";
+  position: absolute;
+  background: url(images/arrowwhite.png) 0/100% no-repeat;
+  right: 0;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+}
+main .mainWrap .mainPage .mainTxtApp {
+  display: flex;
+}
+main .mainWrap .mainPage .mainTxtApp .appTxtWrap {
+  width: 458px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+main .mainWrap .mainPage .mainTxtApp .appTxtWrap div p:first-child {
+  font-size: 20px;
+  font-weight: 700;
+}
+main .mainWrap .mainPage .mainTxtApp .appTxtWrap div p:nth-child(2) {
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 24px;
+}
+main .mainWrap .mainPage .mainTxtApp .appTxtWrap div p:nth-child(3) {
+  font-size: 18px;
+  font-weight: 500;
+  color: #666;
+  margin-top: 20px;
+}
+main .mainWrap .mainPage .mainTxtApp picture {
+  margin-left: 60px;
+}
+main .mainWrap .mainPage .mainTxtApp picture img {
+  width: 682px;
+  height: 587px;
+}
+/* 페이지 분류 */
+main .mainWrap .point {
+  background-color: #111;
+  color: #fff;
+}
+main .mainWrap .coupon {
+  background: url(images/couponbg.png) 0 / cover no-repeat;
+  color: #fff;
+}
+main .mainWrap .elle .mainTxtBrand p:nth-child(3) {
+  color: #666;
+}
+main .mainWrap .cosmopolitan {
+  background-color: #ff1493;
+  color: #fff;
+}
+main .mainWrap .bazzar {
+  background-color: #111;
+  color: #fff;
+}
+main .mainWrap .esquire {
+  background-color: #969c98;
+  color: #fff;
+}
+main .mainWrap .ellevoice {
+  background-color: #f2efe8;
+}
+main .mainWrap .artwalk {
+  background-color: #111;
+  color: #fff;
+}
+main .mainWrap .artwalk .mainTxtApp .appTxtWrap div p:nth-child(3) {
+  color: #fff;
+}
+@media screen and (max-width: 900px) {
+  header .headWrap {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .mainWrap .mainPage .mainTxtMem p:nth-child(1) {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  main .mainWrap .mainPage .mainTxtMem p:nth-child(2) {
+    font-size: 28px;
+    margin-top: 24px;
+  }
+  main .mainWrap .mainPage .mainTxtMem p:nth-child(3) {
+    font-size: 14px;
+    margin-top: 40px;
+  }
+  main .mainWrap .mainPage .mainBright .mainLink a {
+    padding: 16px 24px;
+  }
+  main .mainWrap .mainPage .mainDark .mainLink a {
+    padding: 16px 24px;
+  }
+  main .mainWrap .mainPage .mainTxt .mainLink a span {
+    font-size: 14px;
+  }
+}
