@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        word-break: keep-all;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      main {
+        width: 97%;
+        max-width: 940px;
+        margin: 0 auto;
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4%;
+      }
+      ul li {
+        flex: 1 1 40%;
+      }
+      ul li p img {
+        width: 100%;
+        border: 1px solid #acacac;
+        box-sizing: border-box;
+      }
+      ul li .txt:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 3px;
+        height: 90%;
+        background: #cbcbcb;
+      }
+      ul li .txt {
+        position: relative;
+        color: #444;
+        letter-spacing: -2px;
+        line-height: 30px;
+        padding-left: 17px;
+        margin: 30px 0;
+      }
+      ul li .txt p:first-child {
+        font-size: 20px;
+        font-weight: 700;
+        padding-bottom: 5px;
+      }
+      ul li .txt p:nth-child(2) {
+        font-size: 15px;
+      }
+      ul li .txt .link {
+        background: #aeaeae;
+        padding: 0px 10px;
+        display: inline-block;
+        border-radius: 2px;
+        margin-top: 20px;
+      }
+      ul li .txt .link a {
+        font-size: 15px;
+        color: #fff;
+        font-weight: 700;
+      }
+      @media screen and (max-width: 960px) {
+        br {
+          display: none;
+        }
+        ul li .txt {
+          line-height: 25px;
+          margin: 15px 0;
+        }
+        ul li .txt p:first-child {
+          font-size: 14px;
+        }
+        ul li .txt p:nth-child(2) {
+          font-size: 14px;
+        }
+        ul li .txt .link {
+          padding: 0px 8px;
+        }
+        ul li .txt .link a {
+          font-size: 14px;
+        }
+      }
+      @media screen and (max-width: 640px) {
+        ul li {
+          flex: 1 1 80%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <ul>
+        <li>
+          <p><img src="images/bg_evf_img_01.png" alt="evf" /></p>
+          <div class="txt">
+            <p>음성공장 태양열발전</p>
+            <p>
+              음성공장 상부 유휴부지를 활용하여 신재생에너지를 생산하여<br />
+              가스(LNG)를 대체하여 사용하고 있습니다.
+            </p>
+            <div class="link"><a href="#">태양열에너지 사용현황</a></div>
+          </div>
+        </li>
+        <li>
+          <p><img src="images/bg_evf_img_02.png" alt="evf" /></p>
+          <div class="txt">
+            <p>친환경패키징 확대</p>
+            <p>
+              식품제조 시 사용되는 용기를 탄소중립형 포장재,<br />
+              대체 플라스틱 적용을 확대하고 있습니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <p><img src="images/bg_evf_img_03.png" alt="evf" /></p>
+          <div class="txt">
+            <p>대안육제품 개발</p>
+            <p>
+              제품 제조 시 원료육 대신 식물성 원료를 사용하여 가축사육 시<br />
+              발생되는 메탄가스 및 물과 사료의 사용량을 줄여 지속가능한<br />
+              지구환경에 이바지 하고자 합니다.
+            </p>
+          </div>
+        </li>
+        <li>
+          <p><img src="images/bg_evf_img_05.png" alt="evf" /></p>
+          <div class="txt">
+            <p>(협력회사)친환경 경영 독려</p>
+            <p>
+              2021년부터 (물류 등)협력회사 입찰평가 시 ESG경영 우수 실천<br />
+              협력사 대상 가점 부여를 통해 ESG 영향력 전파에 앞장서고 있습니다.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>

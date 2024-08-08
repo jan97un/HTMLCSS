@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .wrap {
+        width: 100%;
+        max-width: 940px;
+        margin: 0px auto;
+      }
+      .tit {
+        font-size: 25px;
+        color: #444;
+        font-weight: 700;
+        text-align: center;
+      }
+      .tit:nth-of-type(2) {
+        padding-bottom: 34px;
+      }
+      .value ul {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 48px 0 90px;
+        text-align: center;
+      }
+      .value ul li {
+        flex: 0 1 200px;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        gap: 40px;
+        /* 가로세로 비율을 동일하게 가지겠다는 의미 */
+      }
+      .value ul li:after {
+        content: ">";
+        position: absolute;
+        right: -28px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: red;
+        font-size: 24px;
+      }
+      .value ul li:nth-child(1) {
+        background: #000;
+      }
+      .value ul li:nth-child(2) {
+        background: #333;
+      }
+      .value ul li:nth-child(3) {
+        background: #666;
+      }
+      .value ul li:nth-child(3)::after {
+        content: "";
+      }
+      .value ul li p {
+        color: #fff;
+      }
+      .value ul li p:nth-child(1) {
+        font-size: 22px;
+        position: relative;
+        font-weight: 600;
+      }
+      .value ul li p:nth-child(1)::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -20px;
+        transform: translateX(-50%);
+        width: 35px;
+        height: 2px;
+        background-color: #aaa;
+      }
+      .value ul li p:nth-child(2) {
+        font-size: 15px;
+        line-height: 25px;
+        font-weight: 400;
+      }
+      h1 {
+        color: #444;
+        text-align: center;
+      }
+      @media screen and (max-width: 960px) {
+        .tit {
+          font-size: 16px;
+        }
+        .value ul {
+          padding: 20px 0 90px;
+        }
+        .tit:nth-of-type(2) {
+          padding-bottom: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Wrap">
+      <p class="tit">사회적 책임경영의 가치체계</p>
+      <div class="value">
+        <ul>
+          <li>
+            <p>경영이념</p>
+            <p>사회적 책임을 근간으로<br />하는 경영이념</p>
+          </li>
+          <li>
+            <p>신세계의 길</p>
+            <p>사회적 책임을 실천하는<br />신념 및 방향</p>
+          </li>
+          <li>
+            <p>신세계 Credo</p>
+            <p>이해관계자들의 사회적<br />책임경영 실천강령</p>
+          </li>
+        </ul>
+      </div>
+      <p class="tit">경영이념</p>
+      <h1>
+        "고객의 불만에서 기회를 찾고 관습을 타파하며<br />지속적으로 성장하는
+        혁신 기업"
+      </h1>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        width: 100%;
+        max-width: 940px;
+        margin: 100px auto;
+        text-align: center;
+      }
+      div p {
+        font-size: 25px;
+        color: #444;
+        font-weight: 700;
+      }
+      div p:nth-child(2) {
+        padding: 48px 0 90px;
+      }
+      div p:nth-child(3) {
+        padding-bottom: 34px;
+      }
+      @media screen and (max-width: 960px) {
+        div p {
+          width: 80%;
+          margin: 0 auto;
+        }
+        div p img {
+          width: 100%;
+        }
+        div p {
+          font-size: 16px;
+        }
+        div p:nth-child(2) {
+          padding: 20px 0 90px;
+        }
+        div p:nth-child(3) {
+          padding-bottom: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>사회적 책임경영의 가치체계</p>
+      <p><img src="images/ssg.png" alt="ssg" /></p>
+      <p>경영이념</p>
+      <p><img src="images/ssg (2).png" alt="ssg" /></p>
+    </div>
+  </body>
+</html>
