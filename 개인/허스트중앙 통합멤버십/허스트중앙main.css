@@ -10,6 +10,8 @@
 body {
   font-family: "Noto Sans KR", sans-serif;
   word-break: keep-all;
+  letter-spacing: -0.01rem;
+  cursor: default;
 }
 ul {
   list-style: none;
@@ -17,9 +19,11 @@ ul {
 a {
   text-decoration: none;
 }
-br.pc {
+br.mob {
   display: none;
 }
+/* 전체 */
+/* header(fixed) */
 header {
   position: fixed;
   height: 72px;
@@ -40,7 +44,6 @@ header .head {
   align-items: center;
   box-sizing: border-box;
   height: 100%;
-  position: relative;
 }
 header .head .headLogo {
   background: url(images/logoblack.svg) center/cover no-repeat;
@@ -55,6 +58,7 @@ header .head .headNav .dep1 {
 }
 header .head .headNav .dep1 > li {
   padding: 0 34px;
+  position: relative;
 }
 header .head .headNav .dep1 > li > a {
   font-size: 16px;
@@ -63,6 +67,12 @@ header .head .headNav .dep1 > li > a {
   color: #111;
 }
 header .head .headNav .dep1 > li .dep2 {
+  position: absolute;
+  left: 0;
+  top: 72px;
+  width: 100%;
+  height: 275px;
+  z-index: 1020;
   display: none;
 }
 header .head .headNav .dep1 > li .dep2 li {
@@ -71,6 +81,22 @@ header .head .headNav .dep1 > li .dep2 li {
 header .head .headNav .dep1 > li .dep2 li a {
   font-weight: 500;
   color: #666;
+}
+/* head nav background */
+header .head .headNav .bgWhite {
+  position: absolute;
+  left: 0;
+  top: 72px;
+  width: 100%;
+  height: 0;
+  z-index: 1010;
+}
+header .head .headNav .dep1:hover ~ .bgWhite {
+  height: 275px;
+  background-color: #fff;
+}
+header .head .headNav .dep1:hover > li .dep2 {
+  display: block;
 }
 header .head .headLogin ul {
   display: flex;
@@ -87,6 +113,7 @@ header .head .headLogin ul li a {
 header .head .hamberger {
   display: none;
 }
+/* main */
 main {
   width: 100%;
   height: 100%;
@@ -122,7 +149,7 @@ main .brandPage {
   justify-content: center;
 }
 main .point {
-  background-color: #111;
+  background: #111;
 }
 main .coupon {
   background: url(images/couponbg.png) center/cover no-repeat;
@@ -135,6 +162,40 @@ main .bazzar {
 }
 main .esquire {
   background: #969c98;
+}
+main .ellevoice {
+  background: #f2efe8;
+}
+main .artwalk {
+  background: #111;
+}
+main .eee {
+  background: #f7f7f7;
+}
+main .appPage {
+  display: flex;
+  align-items: center;
+}
+main .appPage .appWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 600px;
+  box-sizing: border-box;
+}
+main .appPage .appWrap .txt {
+  width: 460px;
+}
+main .appPage .appWrap picture {
+  width: 680px;
+  margin-left: 60px;
+}
+main .appPage .appWrap picture img {
+  width: 100%;
 }
 main .darkPage .txt {
   color: #fff;
@@ -184,7 +245,22 @@ main .brandPage .txt p:nth-child(3) {
   font-weight: 500;
   margin-top: 24px;
 }
-main .elle .txt p:nth-child(3) {
+main .appPage .txt p:nth-child(1) {
+  font-size: 20px;
+  font-weight: 700;
+}
+main .appPage .txt p:nth-child(2) {
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 24px;
+}
+main .appPage .txt p:nth-child(3) {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+main .elle .txt p:nth-child(3),
+main .ellevoice .txt p:nth-child(3) {
   color: #666;
 }
 main .memPage .txt .mainLink {
@@ -233,11 +309,111 @@ main .brightPage .txt .mainLink a span::after {
   height: 20px;
   background: url(images/arrowdark.svg) center/100% no-repeat;
 }
+/* footer */
+footer {
+  width: 100%;
+  height: 100%;
+}
+footer .foot {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: 500;
+}
+footer .foot .footTop {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  gap: 32px;
+  padding: 23px 0;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+}
+footer .foot .footTop li a {
+  color: #666;
+}
+footer .foot .footTop li:nth-child(2) a {
+  color: #111;
+  font-weight: 700;
+}
+footer .foot .footBot {
+  font-size: 14px;
+  color: #666;
+  padding: 40px 0 60px;
+}
+footer .foot .footBot address {
+  font-style: normal;
+}
+footer .foot .footBot address {
+  margin-bottom: 6px;
+}
+footer .foot .footBot address:first-child span:first-child {
+  color: #111;
+}
+footer .foot .footBot p {
+  margin-top: 32px;
+}
+#floatingNav {
+  display: none;
+}
+#floatingNav:checked ~ div {
+  display: block;
+}
+.floatingNav {
+  position: fixed;
+  right: 80px;
+  bottom: 80px;
+  z-index: 500;
+}
+.floatingNav div {
+  display: none;
+}
+.floatingNav div ul {
+  border: 1px solid #dbdbdb;
+  padding: 20px 0;
+  position: absolute;
+  right: 0;
+  bottom: 80px;
+}
+.floatingNav div ul li a {
+  color: #999;
+  font-size: 18px;
+  font-weight: 500;
+  display: inline-block;
+  padding-left: 32px;
+  line-height: 48px;
+  width: 282px;
+  box-sizing: border-box;
+}
+.floatingNav div ul li:hover a {
+  color: #111;
+  font-weight: 700;
+}
+.floatingNav p {
+  position: relative;
+  background: #111;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: block;
+  cursor: pointer;
+}
+.floatingNav p label img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
 @media screen and (max-width: 900px) {
   header .head .headNav {
-    position: absolute;
+    /* position: absolute;
     left: 0;
-    top: 0;
+    top: 0; */
     display: none;
   }
   header .head .headLogin {

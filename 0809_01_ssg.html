@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      @font-face {
+        font-family: "NanumBarunGothic";
+        src: url(webfonts/NanumBarunGothic.otf);
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #444;
+        font-family: "NanumBarunGothic";
+        word-break: keep-all;
+      }
+      .mainCon {
+        width: 97%;
+        max-width: 940px;
+        margin: 0 auto;
+        border: 1px solid #ddd;
+        margin-bottom: 30px;
+        height: 289px;
+      }
+      .mainCon a {
+        display: flex;
+      }
+      .mainCon a .mainTxt {
+        padding: 25px 30px 0;
+      }
+      .mainCon a .mainTxt p .mob {
+        display: none;
+      }
+      .mainCon a .mainTxt p:nth-child(1) {
+        font-size: 20px;
+        margin-bottom: 15px;
+        font-weight: bold;
+        line-height: 28px;
+      }
+      .mainCon a .mainTxt p:nth-child(2) {
+        font-size: 15px;
+        line-height: 30px;
+      }
+      .mainCon a .mainTxt .date {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 30px;
+      }
+      .mainCon a .mainTxt .date span {
+        font-size: 15px;
+        line-height: 30px;
+      }
+      .con {
+        width: 97%;
+        max-width: 940px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+      .con li {
+        flex: 1 1 27%;
+        border: 1px solid #ddd;
+      }
+      .con li:last-child {
+        display: none;
+        border: none;
+      }
+      .con li a > p {
+        height: 183px;
+      }
+      .con li a p img {
+        width: 100%;
+        height: 100%;
+        border-bottom: 1px solid #ddd;
+      }
+      .con li a .txt {
+        padding: 15px;
+      }
+      .con li a .txt p {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 24px;
+      }
+      .con li a .txt .date {
+        padding-top: 27px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .con li a .txt .date span {
+        font-size: 15px;
+        line-height: 20px;
+      }
+      @media screen and (max-width: 960px) {
+        br {
+          display: none;
+        }
+        .mainCon {
+          height: auto;
+        }
+        .mainCon a {
+          flex-direction: column;
+        }
+        .mainCon a picture img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .mainCon a .mainTxt {
+          padding: 15px;
+        }
+        .mainCon a .mainTxt p .mob {
+          display: inline-block;
+        }
+        .mainCon a .mainTxt p:nth-child(1) {
+          font-size: 14px;
+          margin-bottom: 10px;
+          line-height: 20px;
+        }
+        .mainCon a .mainTxt p:nth-child(2) {
+          font-size: 12px;
+          line-height: 20px;
+        }
+        .mainCon a .mainTxt .date {
+          padding-top: 20px;
+        }
+        .mainCon a .mainTxt .date span {
+          font-size: 12px;
+          line-height: 20px;
+        }
+        .con {
+          width: 98%;
+          gap: 2%;
+        }
+        .con li {
+          flex: 1 1 48%;
+          margin-bottom: 2%;
+        }
+        .con li:last-child {
+          display: block;
+        }
+        .con li a > p {
+          width: auto;
+          height: auto;
+        }
+        .con li a p img {
+          width: 100%;
+          height: 100%;
+        }
+        .con li a .txt {
+          padding: 10px;
+        }
+        .con li a .txt p {
+          font-size: 14px;
+          line-height: 20px;
+        }
+        .con li a .txt .date {
+          padding-top: 27px;
+        }
+        .con li a .txt .date span {
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+      @media screen and (max-width: 640px) {
+        .mainCon {
+          display: none;
+        }
+        .con li {
+          flex: 1 1 98%;
+          margin-bottom: 2%;
+        }
+        .con li a p img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="mainCon">
+        <a href="#">
+          <picture
+            ><img
+              src="https://www.shinsegaefood.com/uimages/2024/08/07/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C-1.jpg"
+              alt="ssg"
+          /></picture>
+          <div class="mainTxt">
+            <p>신세계푸드, 역대급 무더위에 삼계탕 간편식 인기 “앗 뜨거”</p>
+            <p>
+              역대급 무더위와 고물가 현상에 합리적인 가격으로 간편하게 보양<br />
+              간편식 즐기는 ‘집보신’ 수요 늘어 호텔컬렉션, 올반 등 삼계탕
+              간편식<br />
+              7월 판매량 270% 급증…5~7월 판매량 50만개 돌파, 역대 최고 수준<br />
+              전문점 수준의 맛과 품질 메뉴 외식물가 대비 3분의 2 수준의 가격으로
+              <span class="mob">
+                즐길 수 있어 각광 무더위 길어질 것으로 예상…8월말까지 삼계탕
+                간편식 판매 강화 나서
+              </span>
+            </p>
+            <div class="date">
+              <span>2024.08.07</span>
+              <span>보도자료</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <ul class="con">
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="	https://www.shinsegaefood.com/uimages/2024/08/07/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C-1.jpg"
+                alt="ssg"
+              />
+            </p>
+            <div class="txt">
+              <p>신세계푸드, 역대급 무더위에 삼계탕 간편식 인기 “앗 뜨거”</p>
+              <div class="date">
+                <span>2024.08.07</span>
+                <span>보도자료</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://www.shinsegaefood.com/uimages/2024/08/05/%EC%97%90%EB%B0%98_%EB%B2%84%EB%B2%88_%ED%95%98%EC%9D%B4%EB%B3%BC__-_%EB%B3%B5%EC%82%AC%EB%B3%B8.jpg"
+                alt="ssg"
+              />
+            </p>
+            <div class="txt">
+              <p>
+                신세계푸드 ‘데블스도어’, 에반 윌리엄스 협업 ‘하이볼 해피아워’
+                실시
+              </p>
+              <div class="date">
+                <span>2024.08.05</span>
+                <span>보도자료</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="	https://www.shinsegaefood.com/uimages/2024/07/31/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C-1.jpg"
+                alt="ssg"
+              />
+            </p>
+            <div class="txt">
+              <p>
+                신세계푸드, 와인앤모어 협업…와인 애호가 위한 ‘치즈 케이크
+                플래터’ 출시
+              </p>
+              <div class="date">
+                <span>2024.07.31</span>
+                <span>보도자료</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="	https://www.shinsegaefood.com/uimages/2024/07/29/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C-1.jpg"
+                alt="ssg"
+              />
+            </p>
+            <div class="txt">
+              <p>
+                신세계푸드 ‘유아왓유잇’, ‘르 꼬르동 블루’와 손잡고 프렌치 대안식
+                출시
+              </p>
+              <div class="date">
+                <span>2024.07.29</span>
+                <span>보도자료</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://www.shinsegaefood.com/uimages/2024/07/29/%EC%8B%A0%EC%84%B8%EA%B3%84%ED%91%B8%EB%93%9C_%EC%9D%B4%EC%B2%9C%EA%B3%B5%EC%9E%A5__-_%EB%B3%B5%EC%82%AC%EB%B3%B8(1).jpg"
+                alt="ssg"
+              />
+            </p>
+            <div class="txt">
+              <p>
+                신세계푸드, 식품제조시설 폐기물 매립 제로화 앞장…ESG 경영 적극
+                실천
+              </p>
+              <div class="date">
+                <span>2024.07.29</span>
+                <span>보도자료</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://www.shinsegaefood.com/uimages/2024/07/25/%EB%B8%8C%EB%9E%9C%EB%93%9C%EC%BD%9C%EB%9D%BC.jpg"
+                alt="ssg"
+              />
+            </p>
+            <div class="txt">
+              <p>
+                신세계푸드, 버니콘비니 협업 ‘브랜드 콜라’ 스포츠 에디션 출시
+              </p>
+              <div class="date">
+                <span>2024.07.25</span>
+                <span>보도자료</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://www.shinsegaefood.com/uimages/2024/07/24/%EC%8B%A0%EC%84%B8%EA%B3%84%ED%91%B8%EB%93%9C-%EC%9C%A0%EC%95%84%EC%99%93%EC%9C%A0%EC%9E%87_%EC%8B%9D%EB%AC%BC%EC%84%B1_%EB%9D%BC%EC%9D%B4%EC%8A%A4_%EB%B2%A0%EC%9D%B4%EC%8A%A4%EB%93%9C_(%EB%AA%A8%EB%8D%B8%EC%BB%B7)_-_%EB%B3%B5%EC%82%AC%EB%B3%B8.jpg"
+                alt="ssg"
+              />
+            </p>
+            <div class="txt">
+              <p>
+                신세계푸드, 가루쌀 활용 100% 식물성 음료 ‘유아왓유잇 라이스
+                베이스드’ 출시
+              </p>
+              <div class="date">
+                <span>2024.07.24</span>
+                <span>보도자료</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://www.shinsegaefood.com/uimages/2024/07/17/[%EC%8B%A0%EC%84%B8%EA%B3%84%ED%91%B8%EB%93%9C]_%EB%AC%B4%EB%8D%94%EC%9C%84%EC%97%90_%EC%96%BC%EB%A0%A4%EB%A8%B9%EB%8A%94_%E2%80%98%EC%BF%A8(Cool)%EC%9E%BC%E2%80%99_%EB%A8%B9%EA%B1%B0%EB%A6%AC_%EC%9D%B8%EA%B8%B01_-_%EB%B3%B5%EC%82%AC%EB%B3%B8.jpg"
+                alt="ssg"
+              />
+            </p>
+            <div class="txt">
+              <p>신세계푸드, 무더위에 얼려먹는 ‘쿨(Cool)잼’ 먹거리 인기</p>
+              <div class="date">
+                <span>2024.07.17</span>
+                <span>보도자료</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p>
+              <img
+                src="https://www.shinsegaefood.com/uimages/2024/07/11/240613_%ED%96%84%EC%97%90%EA%B7%B8%EA%B9%80%EC%B9%98_%EC%B5%9Css%EC%A2%85_1.png"
+                alt="ssg"
+              />
+            </p>
+            <div class="txt">
+              <p>
+                “Let’s Kimchi!”…신세계푸드 ‘노브랜드 버거’, 김치 버거 2종 출시
+              </p>
+              <div class="date">
+                <span>2024.07.11</span>
+                <span>보도자료</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li></li>
+      </ul>
+    </div>
+  </body>
+</html>
