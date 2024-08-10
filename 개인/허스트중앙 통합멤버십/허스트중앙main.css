@@ -6,10 +6,9 @@
 * {
   margin: 0;
   padding: 0;
-}
-body {
   font-family: "Noto Sans KR", sans-serif;
   word-break: keep-all;
+  white-space: nowrap;
   letter-spacing: -0.01rem;
   cursor: default;
 }
@@ -22,7 +21,6 @@ a {
 br.mob {
   display: none;
 }
-/* 전체 */
 /* header(fixed) */
 header {
   position: fixed;
@@ -31,7 +29,7 @@ header {
   left: 0;
   top: 0;
   text-align: center;
-  background-color: #fff;
+  background-color: transparent;
   z-index: 1000;
 }
 header .head {
@@ -46,7 +44,7 @@ header .head {
   height: 100%;
 }
 header .head .headLogo {
-  background: url(images/logoblack.svg) center/cover no-repeat;
+  background: url(images/logowhite.svg) center/cover no-repeat;
   width: 97px;
   height: 33px;
 }
@@ -64,7 +62,7 @@ header .head .headNav .dep1 > li > a {
   font-size: 16px;
   line-height: 72px;
   font-weight: 700;
-  color: #111;
+  color: #fff;
 }
 header .head .headNav .dep1 > li .dep2 {
   position: absolute;
@@ -94,6 +92,7 @@ header .head .headNav .bgWhite {
 header .head .headNav .dep1:hover ~ .bgWhite {
   height: 275px;
   background-color: #fff;
+  border-bottom: 1px solid #dbdbdb;
 }
 header .head .headNav .dep1:hover > li .dep2 {
   display: block;
@@ -108,7 +107,7 @@ header .head .headLogin ul li a {
   font-size: 14px;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
-  color: #111;
+  color: #fff;
 }
 header .head .hamberger {
   display: none;
@@ -199,9 +198,6 @@ main .appPage .appWrap picture img {
 }
 main .darkPage .txt {
   color: #fff;
-}
-main .video .txt {
-  color: #111;
 }
 main .memPage .txt,
 main .brandPage .txt {
@@ -354,11 +350,9 @@ footer .foot .footBot address:first-child span:first-child {
 footer .foot .footBot p {
   margin-top: 32px;
 }
-#floatingNav {
+/* floating nav */
+#float {
   display: none;
-}
-#floatingNav:checked ~ div {
-  display: block;
 }
 .floatingNav {
   position: fixed;
@@ -366,18 +360,18 @@ footer .foot .footBot p {
   bottom: 80px;
   z-index: 500;
 }
-.floatingNav div {
-  display: none;
-}
-.floatingNav div ul {
+.floatingNav .navBar {
   border: 1px solid #dbdbdb;
   padding: 20px 0;
   position: absolute;
   right: 0;
   bottom: 80px;
+  background: #fff;
+  transition: 0.5s;
+  /* width: 282px;
+  height: 384px; */
 }
-.floatingNav div ul li a {
-  color: #999;
+.floatingNav .navBar li {
   font-size: 18px;
   font-weight: 500;
   display: inline-block;
@@ -386,11 +380,14 @@ footer .foot .footBot p {
   width: 282px;
   box-sizing: border-box;
 }
-.floatingNav div ul li:hover a {
+.floatingNav .navBar li a {
+  color: #999;
+}
+.floatingNav .navBar li:hover a {
   color: #111;
   font-weight: 700;
 }
-.floatingNav p {
+.floatingNav label {
   position: relative;
   background: #111;
   width: 68px;
@@ -399,7 +396,7 @@ footer .foot .footBot p {
   display: block;
   cursor: pointer;
 }
-.floatingNav p label img {
+.floatingNav label img {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -407,9 +404,22 @@ footer .foot .footBot p {
   height: 24px;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  display: block;
 }
-
+/* #float:checked ~ .navBar {
+  display: none;
+} */
 @media screen and (max-width: 900px) {
+  header .head {
+    align-items: normal;
+    padding: 0;
+  }
+  header .head .headLogo {
+    width: 72px;
+    height: 24px;
+    margin-top: 12px;
+    margin-left: 25px;
+  }
   header .head .headNav {
     /* position: absolute;
     left: 0;
@@ -421,5 +431,13 @@ footer .foot .footBot p {
   }
   header .head .hamberger {
     display: block;
+    margin-top: 12px;
+    margin-right: 20px;
   }
+  header .head .hamberger p img {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
 }
