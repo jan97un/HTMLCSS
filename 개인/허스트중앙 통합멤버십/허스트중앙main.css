@@ -124,13 +124,10 @@ main .mainPage {
   height: 100vh;
   position: relative;
 }
-main .mainPage .obj {
-  width: 100%;
-  height: 100%;
+/* main .mainPage .obj {
 }
 main .mainPage .obj p {
-  height: 100%;
-}
+} */
 main .mainPage .obj p img {
   position: absolute;
   left: 0;
@@ -147,11 +144,14 @@ main .brandPage {
   align-items: center;
   justify-content: center;
 }
+main .coupon {
+  background: url(images/couponbg.png) center/cover no-repeat;
+}
 main .point {
   background: #111;
 }
-main .coupon {
-  background: url(images/couponbg.png) center/cover no-repeat;
+main .point .mobObj {
+  display: none;
 }
 main .cosmopolitan {
   background: #ff1493;
@@ -189,11 +189,14 @@ main .appPage .appWrap {
 main .appPage .appWrap .txt {
   width: 460px;
 }
-main .appPage .appWrap picture {
+main .appPage .appWrap .appPagePc {
   width: 680px;
   margin-left: 60px;
 }
-main .appPage .appWrap picture img {
+main .appPage .appWrap .appPageMob {
+  display: none;
+}
+main .appPage .appWrap .appPagePc img {
   width: 100%;
 }
 main .darkPage .txt {
@@ -241,29 +244,32 @@ main .brandPage .txt p:nth-child(3) {
   font-weight: 500;
   margin-top: 24px;
 }
-main .appPage .txt p:nth-child(1) {
+main .appPage .appWrap .txt p:nth-child(1) {
   font-size: 20px;
   font-weight: 700;
 }
-main .appPage .txt p:nth-child(2) {
+main .appPage .appWrap .txt p:nth-child(2) {
   font-size: 36px;
   font-weight: 700;
   margin-top: 24px;
 }
-main .appPage .txt p:nth-child(3) {
+main .appPage .appWrap .txt p:nth-child(3) {
   font-size: 18px;
   font-weight: 500;
   margin-top: 20px;
 }
+main .video .videoMob {
+  display: none;
+}
 main .elle .txt p:nth-child(3),
-main .ellevoice .txt p:nth-child(3) {
+main .ellevoice .appWrap .txt p:nth-child(3) {
   color: #666;
 }
 main .memPage .txt .mainLink {
   margin-top: 80px;
 }
 main .brandPage .txt .mainLink,
-main .appPage .txt .mainLink {
+main .appPage .appWrap .txt .mainLink {
   margin-top: 60px;
 }
 main .darkPage .txt .mainLink a {
@@ -409,6 +415,31 @@ footer .foot .footBot p {
 /* #float:checked ~ .navBar {
   display: none;
 } */
+@media screen and (max-width: 1024px) {
+  main .appPage {
+    padding-top: 72px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  main .appPage .appWrap {
+    flex-direction: column;
+    text-align: center;
+  }
+  main .appPage .appWrap .txt .mainLink {
+    margin-top: 30px;
+  }
+  main .appPage .appWrap .appPagePc {
+    display: none;
+  }
+  main .appPage .appWrap .appPageMob {
+    display: block;
+    margin-top: 50px;
+    max-width: 830px;
+  }
+  main .appPage .appWrap .appPageMob img {
+    width: 70%;
+  }
+}
 @media screen and (max-width: 900px) {
   header .head {
     align-items: normal;
@@ -440,4 +471,59 @@ footer .foot .footBot p {
   }
 }
 @media screen and (max-width: 768px) {
+  br.mob {
+    display: block;
+  }
+  main .memPage .txt {
+    z-index: 2;
+  }
+  main .memPage .txt p:nth-child(1) {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  main .memPage .txt p:nth-child(2) {
+    font-size: 28px;
+    margin-top: 12px;
+  }
+  main .memPage .txt p:nth-child(3) {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  main .memPage .txt .mainLink {
+    margin-top: 40px;
+  }
+  main .darkPage .txt .mainLink a {
+    padding: 10px 16px 12px 20px;
+  }
+  main .brightPage .txt .mainLink a {
+    padding: 10px 16px 12px 20px;
+  }
+  main .mainPage .txt .mainLink a span {
+    font-size: 14px;
+  }
+  main .darkPage .txt .mainLink a span::after {
+    background: url(images/arrowmobwhite.svg) center/16px no-repeat;
+  }
+  main .brightPage .txt .mainLink a span::after {
+    background: url(images/arrowmobdark.svg) center/16px no-repeat;
+  }
+  main .mainPage .obj {
+    display: none;
+  }
+  main .point .mobObj {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+  main .point .mobObj .slide {
+    display: flex;
+    gap: 12px;
+  }
+  main .point .mobObj .slide li p {
+  }
+  main .point .mobObj .slide li p img {
+    width: 130px;
+    height: auto;
+  }
 }
