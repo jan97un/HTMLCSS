@@ -143,15 +143,25 @@ main .brandPage {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
-main .coupon {
-  background: url(images/couponbg.png) center/cover no-repeat;
+main .video .videoMob {
+  display: none;
+}
+main .point::before {
+  display: none;
 }
 main .point {
   background: #111;
 }
-main .point .mobObj {
+main .point .pointMobObj {
   display: none;
+}
+main .coupon::before {
+  display: none;
+}
+main .coupon {
+  background: url(images/couponbg.png) center/cover no-repeat;
 }
 main .cosmopolitan {
   background: #ff1493;
@@ -202,8 +212,7 @@ main .appPage .appWrap .appPagePc img {
 main .darkPage .txt {
   color: #fff;
 }
-main .memPage .txt,
-main .brandPage .txt {
+main .memPage .txt {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -258,9 +267,6 @@ main .appPage .appWrap .txt p:nth-child(3) {
   font-weight: 500;
   margin-top: 20px;
 }
-main .video .videoMob {
-  display: none;
-}
 main .elle .txt p:nth-child(3),
 main .ellevoice .appWrap .txt p:nth-child(3) {
   color: #666;
@@ -310,6 +316,9 @@ main .brightPage .txt .mainLink a span::after {
   width: 20px;
   height: 20px;
   background: url(images/arrowdark.svg) center/100% no-repeat;
+}
+main .brandPage .brandMobObj {
+  display: none;
 }
 /* footer */
 footer {
@@ -412,9 +421,6 @@ footer .foot .footBot p {
   cursor: pointer;
   display: block;
 }
-/* #float:checked ~ .navBar {
-  display: none;
-} */
 @media screen and (max-width: 1024px) {
   main .appPage {
     padding-top: 72px;
@@ -474,6 +480,9 @@ footer .foot .footBot p {
   br.mob {
     display: block;
   }
+  br.pc {
+    display: none;
+  }
   main .memPage .txt {
     z-index: 2;
   }
@@ -491,6 +500,39 @@ footer .foot .footBot p {
   }
   main .memPage .txt .mainLink {
     margin-top: 40px;
+  }
+  main .whiteBg .txt p:nth-child(1) {
+    font-size: 36px;
+    font-weight: 700;
+  }
+  main .whiteBg .txt p:nth-child(2) {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #666;
+  }
+  main .brandPage .txt {
+    padding: 60px 0;
+  }
+  main .brandPage .txt p:first-child {
+    margin: 0 auto;
+  }
+  main .brandPage .txt p:first-child img {
+    max-width: 100%;
+  }
+  main .brandPage .txt p:nth-child(2) {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 30px;
+    font-family: "Montserrat", sans-serif;
+  }
+  main .brandPage .txt p:nth-child(3) {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 18px;
+  }
+  main .brandPage .txt .mainLink {
+    margin-top: 30px;
   }
   main .darkPage .txt .mainLink a {
     padding: 10px 16px 12px 20px;
@@ -510,20 +552,68 @@ footer .foot .footBot p {
   main .mainPage .obj {
     display: none;
   }
-  main .point .mobObj {
+  main .brandPage .brandMobObj {
+    display: block;
+  }
+  main .brandPage .brandMobObj .mobObjWrap {
+    display: flex;
+    gap: 12px;
+  }
+  main .brandPage .brandMobObj .mobObjWrap li p img {
+    height: 212px;
+    max-width: 100%;
+    object-fit: cover;
+  }
+  main .point::before {
+    content: "";
+    position: absolute;
+    background-image: url(images/pointmob.png);
+    background-size: cover;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  main .point .pointMobObj {
     display: block;
     position: absolute;
     bottom: 0;
     z-index: 1;
   }
-  main .point .mobObj .slide {
+  main .point .pointMobObj .slide {
     display: flex;
     gap: 12px;
   }
-  main .point .mobObj .slide li p {
-  }
-  main .point .mobObj .slide li p img {
+  main .point .pointMobObj .slide li p img {
     width: 130px;
     height: auto;
+  }
+  main .coupon::before {
+    display: block;
+    content: "";
+    position: absolute;
+    background: url(images/couponmob.png) center/cover no-repeat;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  main .coupon {
+    background: none;
+  }
+  main .coupon .obj p img {
+    display: none;
+  }
+  main .elle .txt p:first-child {
+    width: 132px;
+  }
+  main .cosmopolitan .txt p:first-child {
+    width: 220px;
+  }
+  main .bazzar .txt p:first-child {
+    width: 172px;
+  }
+  main .esquire .txt p:first-child {
+    width: 211px;
   }
 }
