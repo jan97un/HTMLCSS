@@ -10,7 +10,6 @@
   word-break: keep-all;
   white-space: nowrap;
   letter-spacing: -0.01rem;
-  cursor: default;
 }
 ul {
   list-style: none;
@@ -124,10 +123,10 @@ main .mainPage {
   height: 100vh;
   position: relative;
 }
-/* main .mainPage .obj {
+main .mainPage .obj {
 }
 main .mainPage .obj p {
-} */
+}
 main .mainPage .obj p img {
   position: absolute;
   left: 0;
@@ -212,7 +211,8 @@ main .appPage .appWrap .appPagePc img {
 main .darkPage .txt {
   color: #fff;
 }
-main .memPage .txt {
+main .memPage .txt,
+main .brandPage .txt {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -271,6 +271,8 @@ main .elle .txt p:nth-child(3),
 main .ellevoice .appWrap .txt p:nth-child(3) {
   color: #666;
 }
+main .mainPage .txt .mainLink {
+}
 main .memPage .txt .mainLink {
   margin-top: 80px;
 }
@@ -281,7 +283,7 @@ main .appPage .appWrap .txt .mainLink {
 main .darkPage .txt .mainLink a {
   color: #fff;
   padding: 16px 24px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border: 1px solid #fff;
   display: inline-block;
 }
 main .brightPage .txt .mainLink a {
@@ -294,7 +296,6 @@ main .mainPage .txt .mainLink a span {
   font-size: 16px;
   font-weight: 500;
   padding-right: 28px;
-  box-sizing: border-box;
   position: relative;
 }
 main .darkPage .txt .mainLink a span::after {
