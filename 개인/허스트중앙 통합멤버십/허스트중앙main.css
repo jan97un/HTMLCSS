@@ -211,8 +211,7 @@ main .appPage .appWrap .appPagePc img {
 main .darkPage .txt {
   color: #fff;
 }
-main .memPage .txt,
-main .brandPage .txt {
+main .memPage .txt {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -554,13 +553,10 @@ footer .foot .footBot p {
     display: none;
   }
   main .brandPage .brandMobObj {
-    display: block;
-  }
-  main .brandPage .brandMobObj .mobObjWrap {
     display: flex;
     gap: 12px;
   }
-  main .brandPage .brandMobObj .mobObjWrap li p img {
+  main .brandPage .brandMobObj li p img {
     height: 212px;
     max-width: 100%;
     object-fit: cover;
