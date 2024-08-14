@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "PretendardVariable";
+        src: url(webfonts/PretendardVariable.woff2);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "PretendardVariable";
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .main {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 100px;
+      }
+      .left {
+        width: 50%;
+        height: 100%;
+        position: sticky;
+        top: 0;
+      }
+      .left > p {
+        font-size: 22px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+      .left > h1 {
+        font-size: 96px;
+        margin: 16px 0 32px;
+      }
+      .left > a {
+        font-size: 20px;
+        font-weight: 700;
+        color: #000;
+        display: inline-flex;
+        gap: 10px;
+        align-items: center;
+        height: 56px;
+        padding: 0 32px;
+        border: 2px solid #000;
+        box-sizing: border-box;
+        border-radius: 28px;
+      }
+      .left > a span {
+        width: 24px;
+        height: 24px;
+        background: url(images/samwonarrow.png) no-repeat;
+      }
+      .left .box {
+        width: 65%;
+        position: relative;
+        margin-top: 120px;
+      }
+      .left .box a .intro {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #3f3f46;
+        padding: 72px 56px;
+      }
+      .left .box a .intro h2 {
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+      .left .box a .intro p {
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .left .box a img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .right {
+        flex: 1;
+      }
+      .right > ul {
+        display: flex;
+      }
+      .right > ul > li:nth-child(1) {
+        margin-top: 330px;
+      }
+      .right > ul > li ul li {
+        padding: 28px 24px;
+      }
+      .right > ul > li ul li a {
+        display: block;
+        position: relative;
+      }
+      .right > ul > li ul li a img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .right > ul > li ul li a .txt {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: #000;
+        width: 100%;
+        padding: 24px 0 44px 24px;
+        box-sizing: border-box;
+      }
+      .right > ul > li ul li a .txt p:nth-child(1) {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.4);
+        font-weight: 500;
+        margin-bottom: 4px;
+      }
+      .right > ul > li ul li a .txt p:nth-child(2) {
+        font-size: 24px;
+        color: #fff;
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="left">
+        <p>Samwon Gray Paper : 다채로운 매력의 그레이 페이퍼</p>
+        <h1>Monthly Paper</h1>
+        <a href="">제품보기<span></span></a>
+        <div class="box">
+          <a href="#"
+            ><img src="images/samwonintro.jpg" alt="intro" />
+            <div class="intro">
+              <h2>다채로운 매력의 소유자, 그레이 페이퍼를 소개합니다.</h2>
+              <p>July 2024</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="right">
+        <ul>
+          <li>
+            <ul>
+              <li>
+                <a href="#"
+                  ><img src="images/paper1.png" alt="paper" />
+                  <div class="txt">
+                    <p>시리오러프</p>
+                    <p>시리오러프</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="images/paper2.png" alt="paper" />
+                  <div class="txt">
+                    <p>마테리카</p>
+                    <p>마테리카</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="images/paper3.png" alt="paper" />
+                  <div class="txt">
+                    <p>큐리어스 스킨</p>
+                    <p>큐리어스 스킨</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>
+                <a href="#"
+                  ><img src="images/paper4.png" alt="paper" />
+                  <div class="txt">
+                    <p>문보드</p>
+                    <p>문보드</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="images/paper5.png" alt="paper" />
+                  <div class="txt">
+                    <p>리메이크</p>
+                    <p>리메이크</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="images/paper6.png" alt="paper" />
+                  <div class="txt">
+                    <p>큐리어스 매터</p>
+                    <p>큐리어스 매터</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
