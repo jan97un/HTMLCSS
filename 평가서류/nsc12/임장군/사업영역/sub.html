@@ -13,6 +13,7 @@
         margin: 0;
         padding: 0;
         font-family: "PretendardVariable";
+        word-break: keep-all;
       }
       .top {
         max-width: 1200px;
@@ -54,6 +55,38 @@
       .con .txt p {
         font-size: 16px;
         line-height: 25px;
+      }
+      @media screen and (max-width: 1440px) {
+        .top {
+          width: 95%;
+        }
+        .con {
+          width: 95%;
+        }
+      }
+      @media screen and (max-width: 1023px) {
+        br {
+          display: none;
+        }
+        .top {
+          margin-bottom: 50px;
+        }
+        .top h3 {
+          font-size: 14px;
+        }
+        .top h1 {
+          font-size: 22px;
+          line-height: 32px;
+        }
+        .con .txt {
+          padding: 0 16px;
+        }
+        .con .txt h2 {
+          font-size: 18px;
+        }
+        .con .txt p {
+          font-size: 14px;
+        }
       }
     </style>
   </head>
