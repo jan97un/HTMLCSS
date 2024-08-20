@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .on {
+        color: #111;
+      }
+      .wrap {
+        display: flex;
+      }
+      li {
+        color: #ccc;
+        font-size: 28px;
+      }
+      div img {
+        width: 300px;
+        left: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- <h1>What’s New</h1> -->
+      <ul class="txtBox">
+        <li class="txt">보도자료</li>
+        <li class="txt">언론보도</li>
+        <li class="txt">CJBS Now</li>
+        <li class="txt">미디어</li>
+        <li class="txt">뉴스 구독(E-mail)</li>
+      </ul>
+      <div>
+        <img src="images/photo1.jpg" alt="photo" />
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll(".txt")[0].classList.add("on");
+      function myfnc() {
+        document.querySelectorAll(".txt").forEach(function (keys, item) {
+          keys.classList.remove("on");
+        });
+      }
+      document.querySelectorAll(".txt").forEach(function (keys, item) {
+        console.log(keys);
+        keys.onclick = function () {
+          myfnc();
+          keys.classList.add("on");
+          console.log(item);
+          document.getElementsByTagName("img")[0].src =
+            "images/photo" + (item + 1) + ".jpg";
+        };
+      });
+    </script>
+  </body>
+</html>
