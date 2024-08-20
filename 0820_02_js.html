@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        display: none;
+      }
+    </style>
+    <script>
+      // 2. 웹페이지가 모두 로드된 후 실행되는 코드
+      window.onload = function () {
+        console.log("onload");
+      };
+      // 3. 문서가 로드된 후 실행되는 코드
+      window.addEventListener("load", function () {
+        console.log("load");
+      });
+      // 1. DOM구성이 완료된 후 실행되는 코드
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("DOMContentLoaded");
+      });
+      function myFnc1() {
+        document.getElementById("demo1").style.display = "block";
+        document.getElementById("demo2").style.display = "none";
+      }
+      function myFnc2() {
+        document.getElementById("demo1").style.display = "none";
+        document.getElementById("demo2").style.display = "block";
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Demo JavaScript in Head</h2>
+    <p id="demo1">demo1</p>
+    <p id="demo2">demo2</p>
+    <button type="button" onclick="myFnc1()">demo1</button>
+    <button type="button" onclick="myFnc2()">demo2</button>
+    <script>
+      document.getElementById("demo1").style.display = "block";
+    </script>
+  </body>
+</html>

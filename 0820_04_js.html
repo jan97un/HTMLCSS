@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p.demo {
+        display: none;
+      }
+    </style>
+    <script>
+      function myFnc1() {
+        document.getElementsByTagName("p")[0].style.display = "block";
+        document.getElementsByTagName("p")[1].style.display = "none";
+      }
+      //   index 번호는 0 부터 시작한다
+      function myFnc2() {
+        document.getElementsByTagName("p")[0].style.display = "none";
+        document.getElementsByTagName("p")[1].style.display = "block";
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Demo JavaScript in Head</h2>
+    <p class="demo">demo1</p>
+    <p class="demo">demo2</p>
+    <button type="button" onclick="myFnc1()">demo1</button>
+    <button type="button" onclick="myFnc2()">demo2</button>
+    <p>First Name: <input name="fname" type="text" value="Michael" /></p>
+    <p>First Name: <input name="fname" type="text" value="Doug" /></p>
+    <script>
+      document.getElementsByTagName("p")[0].style.display = "block";
+      document.getElementsByName("fname")[0].value = "미첼";
+    </script>
+  </body>
+</html>
