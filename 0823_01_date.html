@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let x = new Date();
+      document.write(x + "<br>");
+      document.write("연 : " + x.getFullYear() + "<br>");
+      document.write("월 : ", x.getMonth() + 1, "<br>");
+      document.write("일 : ", x.getDate(), "<br>");
+      document.write("요일 : ", x.getDay() + 1, "<br>");
+      document.write(
+        "오늘 날짜 : ",
+        x.getFullYear() + "년 ",
+        x.getMonth() + 1,
+        "월 ",
+        x.getDate() + "일 ",
+        "<br>"
+      );
+      document.write("hour : ", x.getHours(), "<br>");
+      document.write("minute : ", x.getMinutes(), "<br>");
+      document.write("second : ", x.getSeconds(), "<br>");
+      document.write("millisecond : ", x.getMilliseconds(), "<br>");
+      document.write("time : ", x.getTime(), "<br>");
+      document.write(
+        "현재 시간 : ",
+        x.getHours(),
+        "시 ",
+        x.getMinutes(),
+        "분 ",
+        x.getSeconds(),
+        "초"
+      );
+      let hour = x.getHours();
+      let hours = hour.toString().padStart(2, "0");
+    </script>
+  </body>
+</html>
