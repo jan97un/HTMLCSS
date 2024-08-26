@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    ul {
+      list-style: none;
+    }
+    .wrap {
+    }
+    .wrap ul {
+      max-width: 1280px;
+      margin: 100px auto 0;
+      display: flex;
+      justify-content: space-between;
+    }
+    .wrap ul li {
+      background-color: #fff;
+      padding: 30px;
+    }
+    .wrap .tit {
+      margin: 130px auto 60px;
+      width: 100%;
+      height: 80px;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+    }
+    .wrap .visual {
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+    }
+  </style>
+  <body>
+    <div class="wrap">
+      <ul>
+        <li>ELLE</li>
+        <li>COSMOPOLITAN</li>
+        <li>Harper's BAZZAR</li>
+        <li>ESQUIRE</li>
+        <li>STUDIO DOT</li>
+        <li>YEET</li>
+      </ul>
+      <div class="tit"></div>
+      <div class="visual"></div>
+    </div>
+    <script>
+      let brand = document.querySelectorAll(".wrap ul li");
+      let tit = document.querySelector(".wrap .tit");
+      let vis = document.querySelector(".wrap .visual");
+      const logo = "url(images/hlltit1.svg)";
+      const photo = "url(images/hllvisual1.png)";
+      brand.forEach(function (v, k) {
+        v.onclick = function () {
+          tit.style.backgroundImage = logo.replace(logo.slice(-6, -5), k + 1);
+        };
+      });
+    </script>
+  </body>
+</html>
