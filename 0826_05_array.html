@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const cars = ["Saab", "Volvo", "BMW", 109, true];
+      cars[5] = "white";
+      document.write(cars[1] + "<br>");
+      document.write(cars[3] + "<br>");
+      document.write(cars[4] + "<br>");
+      document.write(cars[5] + "<br>");
+      document.write(cars.length + "<br>");
+      const cars1 = ["Saab", "Volvo", "BMW", 109, true];
+      cars2 = [];
+      cars2[0] = "Saab";
+      cars2[1] = "Volvo";
+      cars2[2] = "BMW";
+      cars2[3] = "109";
+      cars2[4] = "true";
+      cars3 = new Array();
+      cars3[0] = "Saab";
+      cars3[1] = "Volvo";
+      cars3[2] = "BMW";
+      cars3[3] = "109";
+      cars3[4] = "true";
+      const cars4 = new Array("Saab", "Volvo", "BMW");
+      //   new Array 작성 시 대괄호로 묶지 않아도 된다
+      document.write(typeof cars4 + "<br>");
+    </script>
+  </body>
+</html>

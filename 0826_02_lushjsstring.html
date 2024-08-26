@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      div {
+        display: flex;
+        width: 100%;
+        height: 720px;
+        background-color: #f2f2f2;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      div ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 94px 177px;
+        margin: auto;
+      }
+      div ul li {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: #222;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <script>
+      let ItemBg = "url(images/ico_main_value01.svg)";
+      let ContBg = "url(images/main_value01.jpg)";
+      function my() {
+        btn.forEach(function (v, k) {
+          v.style.backgroundColor = "transparent";
+        });
+      }
+      let btn = document.querySelectorAll("div ul li");
+      btn.forEach(function (v, k) {
+        v.style.backgroundImage = ItemBg.replace(ItemBg.slice(-6, -5), k + 1);
+        v.onmouseenter = function () {
+          my();
+          btn[k].style.backgroundColor = "#222";
+          document.querySelector("div").style.backgroundImage = ContBg.replace(
+            ContBg.substr(-6, 1),
+            k + 1
+          );
+        };
+        v.onmouseleave = function () {
+          btn.forEach(function (v, k) {
+            v.style.backgroundColor = "#222";
+          });
+        };
+      });
+      document.querySelector("div").onmouseleave = function () {
+        this.style.backgroundImage = "none";
+      };
+    </script>
+  </body>
+</html>

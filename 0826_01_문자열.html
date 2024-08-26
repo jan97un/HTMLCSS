@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str = new String("nice Nice");
+      let str1 = "nice";
+      document.write(str.search("c") + "<br>");
+      document.write(str.search("C") + "<br>");
+      document.write(str.search(/E/i) + "<br>");
+      //   대소문자 구분 X = 정규화
+      document.write(str.search("z") + "<br>");
+      document.write(str.search("ice") + "<br>");
+      document.write(str.replace("nice", "sleep") + "<br>");
+      document.write(str.replace("Nice", "sleep") + "<br>");
+      document.write(str.replace(/Nice/i, "sleep") + "<br>");
+      document.write(str.replace(/nice/g, "sleep") + "<br>");
+      //   모두 대체한다(대소문자 구분 O)
+      document.write(str.replace(/nice/gi, "sleep") + "<br>");
+      //   대소문자 구분없이 대체한다
+      document.write(str + "<br>");
+      let str2 = "Mr Blue has a red house and a red car.";
+      document.write(str2.replace("blue", "red") + "<br>");
+      //   가장 처음 만나는 blue를 red로 대체한다
+      document.write(str2.replaceAll("blue", "red") + "<br>");
+      document.write(str2.indexOf("Blue") + "<br>");
+      document.write(str2.lastIndexOf("Blue") + "<br>");
+      document.write(str2.match("Blue") + "<br>");
+      document.write(str2.match("blue") + "<br>");
+      document.write(str2.match("red") + "<br>");
+      document.write(str2.charAt(3) + "<br>");
+      document.write(str2.slice(3, 7) + "<br>");
+      //   지정된 숫자 직전까지 값을 가져온다
+      document.write(str2.slice(-5) + "<br>");
+      document.write(str2.slice(-5, -1) + "<br>");
+      //   음수는 뒤에서부터 값을 가져온다
+      let str3 = "123456-1234567";
+      document.write(str3.replace(str3.slice(7), "*******") + "<br>");
+      document.write(str3.substring(7, 8) + "<br>");
+      document.write(str3.substring(-2, 2) + "<br>");
+      //   substring에서 인수값에 음수가 입력되면 0으로 처리한다
+      //   음의 값은 불가능하다
+      document.write(str3.substr(0) + "<br>");
+      document.write(str3.substr(0, 6) + "<br>");
+      document.write(str3.substr(-6) + "<br>");
+      document.write(str3.length + "<br>");
+      document.write("*".repeat(5) + "<br>");
+      document.write(str2.split(" ", 3));
+      document.write(str2.split(" ").length + "<br>");
+      document.write(str2.split(" ")[2] + "<br>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      document.write(typeof fruits + "<br>");
+      document.write(fruits.join(" * ") + "<br>");
+      document.write(typeof fruits.join(" * ") + "<br>");
+      document.write(typeof fruits + "<br>");
+      document.write(
+        `${fruits[0]}<br> * ${fruits[1]}<br> * ${fruits[2]}<br> * ${fruits[3]}<br>`
+      );
+      document.write(
+        fruits[0] +
+          " * " +
+          fruits[1] +
+          " * " +
+          fruits[2] +
+          " * " +
+          fruits[3] +
+          " * " +
+          "<br>"
+      );
+      fruits.pop();
+      document.write(fruits + "<br>");
+      //   마지막 요소를 제거한다
+      //   ` ${변수}<br>`
+      document.write(`${fruits}<br>`);
+      fruits.push("Kiwi");
+      document.write(`${fruits}<br>`);
+      fruits.shift();
+      document.write(`${fruits}<br>`);
+      //   첫 요소를 제거하고 당긴다
+      fruits.unshift("Lemon");
+      document.write(`${fruits}<br>`);
+      //   첫 요소를 추가한다
+      document.write(`${fruits.length}<br>`);
+      const myGirls = ["Cecilie", "Lone"];
+      const myBoys = ["Emil", "Tobias", "Linus"];
+      const myChildren = myGirls.concat(myBoys);
+      document.write(`${typeof myChildren}<br>`);
+      document.write(`${myChildren}<br>`);
+      document.write(`${myChildren.splice(2, 0, "Tom")}<br>`);
+      document.write(`${myChildren}<br>`);
+      document.write(`${myChildren.splice(2, 1, "Ann", "Gom")}<br>`);
+      document.write(`${myChildren}<br>`);
+      document.write(`${myChildren.splice(2, 2)}<br>`);
+      document.write(`${myChildren}<br>`);
+      document.write(`${myChildren.slice(1, 3)}<br>`);
+      document.write(`${myChildren.slice(-2, -1)}<br>`);
+      //   document.write(`${myChildren.substr(1, 2)}<br>`);
+      //   문자 데이터에만 적용 가능하고, 배열에는 적용 불가능
+      document.write(`${myChildren.sort().reverse()}<br>`);
+      //   알파벳순 정렬, 역순 정렬
+    </script>
+  </body>
+</html>
