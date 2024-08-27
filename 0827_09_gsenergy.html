@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .list {
+        width: 95%;
+        max-width: 1520px;
+        margin: 100px auto 0;
+      }
+      .list .tit {
+        height: 95px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+      }
+      .list .tit span {
+        position: relative;
+        width: 23px;
+        display: block;
+      }
+      .list .tit span::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 23px;
+        height: 3px;
+        margin: -1px 0 0 -11px;
+        background: #000;
+        border-radius: 2px;
+        transition: 0.2s linear;
+      }
+      .list .tit span::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 3px;
+        height: 23px;
+        margin: -11px 0 0 -1px;
+        background: #000;
+        border-radius: 2px;
+        transition: 0.2s linear;
+      }
+      .list .tit span.on:after {
+        transform: rotate(90deg);
+        opacity: 0;
+      }
+      .list .con {
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+      .list .con.on {
+        height: 400px;
+      }
+      .list .con p {
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: 1.2s;
+      }
+      .list .con p.on {
+        transform: translateY(20px);
+        opacity: 1;
+      }
+      .list .con img {
+        width: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="list">
+      <li>
+        <div class="tit">
+          <h2>GS파워</h2>
+          <span></span>
+        </div>
+        <div class="con">
+          <p><img src="images/gs1.jpg" alt="gs" /></p>
+        </div>
+      </li>
+      <li>
+        <div class="tit">
+          <h2>인천종합에너지</h2>
+          <span></span>
+        </div>
+        <div class="con">
+          <p><img src="images/gs2.jpg" alt="gs" /></p>
+        </div>
+      </li>
+    </ul>
+    <script>
+      let list = document.querySelectorAll(".list li");
+      function myfnc() {
+        let bool = this.querySelector("span").classList.contains("on");
+        console.log(bool);
+        list.forEach(function (v, k) {
+          v.querySelector("span").classList.remove("on");
+          v.querySelector(".con").classList.remove("on");
+          v.querySelector(".con p").classList.remove("on");
+        });
+        if (!bool) {
+          this.querySelector("span").classList.add("on");
+          this.querySelector(".con").classList.add("on");
+          this.querySelector(".con p").classList.add("on");
+        }
+      }
+      list.forEach(function (v, k) {
+        v.onclick = myfnc;
+      });
+    </script>
+  </body>
+</html>

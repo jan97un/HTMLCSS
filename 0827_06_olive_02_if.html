@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        width: 95%;
+        max-width: 1420px;
+        margin: 100px auto 0;
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+      }
+      ul li {
+        flex: 1;
+        cursor: pointer;
+        position: relative;
+      }
+      ul li img {
+        position: absolute;
+        width: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: 0.5s;
+      }
+      ul li img.default {
+        opacity: 1;
+      }
+      ul li img.hidden {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <img src="images/img_sustain_pc_1.jpg" alt="img" />
+        <img src="images/img_sustain_pc_hover_1_1.jpg" alt="hover" />
+        <img src="images/img_sustain_pc_hover_2_1.jpg" alt="hover" />
+        <img src="images/img_sustain_pc_hover_3_1.jpg" alt="hover" />
+        <img src="images/img_sustain_pc_hover_4_1.jpg" alt="hover" />
+        <img src="images/img_sustain_pc_hover_5_1.jpg" alt="hover" />
+      </li>
+      <li>
+        <img src="images/img_sustain_pc_2.jpg" alt="img" />
+        <img src="images/img_sustain_pc_hover_1_2.jpg" alt="hover" />
+        <img src="images/img_sustain_pc_hover_2_2.jpg" alt="hover" />
+        <img src="images/img_sustain_pc_hover_3_2.jpg" alt="hover" />
+        <img src="images/img_sustain_pc_hover_4_2.jpg" alt="hover" />
+        <img src="images/img_sustain_pc_hover_5_2.jpg" alt="hover" />
+      </li>
+      <li>
+        <img src="images/img_sustain_pc_3.jpg" alt="img" />
+        <img src="images/img_sustain_pc_hover_1_3.jpg" alt="hover" />
+        <img src="images/img_sustain_pc_hover_2_3.jpg" alt="hover" />
+        <img src="images/img_sustain_pc_hover_3_3.jpg" alt="hover" />
+        <img src="images/img_sustain_pc_hover_4_3.jpg" alt="hover" />
+        <img src="images/img_sustain_pc_hover_5_3.jpg" alt="hover" />
+      </li>
+      <li>
+        <img src="images/img_sustain_pc_4.jpg" alt="img" />
+        <img src="images/img_sustain_pc_hover_1_4.jpg" alt="hover" />
+        <img src="images/img_sustain_pc_hover_2_4.jpg" alt="hover" />
+        <img src="images/img_sustain_pc_hover_3_4.jpg" alt="hover" />
+        <img src="images/img_sustain_pc_hover_4_4.jpg" alt="hover" />
+        <img src="images/img_sustain_pc_hover_5_4.jpg" alt="hover" />
+      </li>
+      <li>
+        <img src="images/img_sustain_pc_5.jpg" alt="img" />
+        <img src="images/img_sustain_pc_hover_1_5.jpg" alt="hover" />
+        <img src="images/img_sustain_pc_hover_2_5.jpg" alt="hover" />
+        <img src="images/img_sustain_pc_hover_3_5.jpg" alt="hover" />
+        <img src="images/img_sustain_pc_hover_4_5.jpg" alt="hover" />
+        <img src="images/img_sustain_pc_hover_5_5.jpg" alt="hover" />
+      </li>
+    </ul>
+    <script>
+      let btn = document.querySelectorAll("ul li");
+      function my(k) {
+        btn.forEach(function (item, index) {
+          let imgs = item.querySelectorAll("img");
+          imgs.forEach(function (value, key) {
+            value.classList.add("hidden");
+            if (key == k + 1) {
+              value.classList.add("default");
+              value.classList.remove("hidden");
+            }
+          });
+        });
+      }
+      function mymy() {
+        btn.forEach(function (item, index) {
+          let imgs = item.querySelectorAll("img");
+          imgs.forEach(function (value, key) {
+            imgs[0].classList.add("default");
+            value.classList.remove("hidden");
+            value.classList.remove("default");
+          });
+        });
+      }
+      mymy();
+      btn.forEach(function (v, k) {
+        v.onmouseenter = function () {
+          my(k);
+        };
+        v.onmouseleave = function () {
+          mymy();
+        };
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #111;
+      }
+      .btn {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+      }
+      .btn li a {
+        display: block;
+        padding: 0 16px;
+        line-height: 44px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        font-size: 14px;
+      }
+      .btn li a.on {
+        background-color: #211955;
+        color: #fff;
+        border-color: #211955;
+      }
+      .con .tit {
+        width: 1200px;
+        margin: 100px auto 50px;
+        height: 100px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .con .vis {
+        height: 624px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="btn">
+      <li><a href="#">ELLE</a></li>
+      <li><a href="#">COSMOPOLITAN</a></li>
+      <li><a href="#">Harper’s BAZAAR </a></li>
+      <li><a href="#">ESQUIRE</a></li>
+      <li><a href="#">STUDIO DOT</a></li>
+      <li><a href="#">YEET</a></li>
+    </ul>
+    <div class="con">
+      <p class="tit"></p>
+      <p class="vis"></p>
+    </div>
+    <script>
+      let btn = document.querySelectorAll(".btn li");
+      let bgTit = "url(images/hlltit1.svg)";
+      let bg = "url(images/hllvisual1.png)";
+      btn[0].querySelector("a").classList.add("on");
+      document.querySelector(".tit").style.backgroundImage = bgTit;
+      document.querySelector(".vis").style.backgroundImage = bg;
+      function im() {
+        btn.forEach(function (v, k) {
+          v.querySelector("a").classList.remove("on");
+        });
+      }
+      btn.forEach(function (v, k) {
+        v.querySelector("a").onclick = function (e) {
+          e.preventDefault();
+          im();
+          console.log(k);
+          btn[k].querySelector("a").classList.add("on");
+          document.querySelector(".tit").style.backgroundImage = bgTit.replace(
+            bgTit.slice(-6, -5),
+            k + 1
+          );
+          document.querySelector(".vis").style.backgroundImage = bg.replace(
+            bgTit.slice(-6, -5),
+            k + 1
+          );
+        };
+        // v.querySelector("a").onmouseenter = function (e)
+      });
+    </script>
+  </body>
+</html>
