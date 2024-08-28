@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let text = "";
+      let text1 = "";
+      cars = ["소나타", "아반떼", "그랜저", "벤츠", "볼보", "제네시스"];
+      text += cars[0] + "<br>"; //text = text + "소나타" + "<br>";
+      text += cars[1] + "<br>"; //text = 소나타 + "아반떼" + "<br>";
+      text += cars[2] + "<br>";
+      text += cars[3] + "<br>";
+      text += cars[4] + "<br>";
+      text += cars[5] + "<br>";
+      // document.write(`${text}<br>`);
+      for (let i = 0; i <= 5; i++) {
+        //i=i+1  ++1  i+=1
+        text1 += cars[i] + "<br>";
+      }
+      document.write(`${text1}<br>`);
+
+      let txt = "";
+      for (let i = 1; i <= 5; i++) {
+        // document.write(`The number is ${i}<br>`);
+        txt += `The number is ${i}<br>`;
+      }
+      document.write(`${txt}<br>`);
+      for (let i = 1; i <= 100; i++) {
+        document.write(`${i}<br>`);
+      }
+      document.write("<br>");
+      for (let i = 100; i >= 1; i--) {
+        document.write(`${i},`);
+      }
+      document.write("<br>");
+      for (let i = 2; i <= 100; i++) {
+        //짝수값 출력
+        if (i % 2 == 0) {
+          document.write(`${i},`);
+        }
+      }
+      document.write("<br>");
+      for (let i = 2; i <= 100; i += 2) {
+        //짝수값 출력
+        document.write(`${i},`);
+      }
+      document.write("<br>");
+      for (let i = 1; i <= 100; i += 2) {
+        //홀수값 출력
+      }
+      document.write("<br>");
+      let sum = 0;
+      for (let i = 1; i <= 10; i++) {
+        sum += i; //sum=sum+i
+      }
+      document.write(`${sum}<br>`);
+    </script>
+  </body>
+</html>

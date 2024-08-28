@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <p>더하기연산</p>
+    <script>
+      function add(a, b) {
+        return a + b;
+      }
+      document.write(add(3, 4) + "<br>");
+      document.write(`${add(3, 4)}<br>`);
+      document.querySelector("p").onclick = function () {
+        document.write(add(3, 4) + "<br>");
+        document.write(add + "<br>");
+      };
+    </script>
+  </body>
+</html>
