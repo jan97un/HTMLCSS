@@ -48,22 +48,33 @@
       .main {
         display: flex;
         height: 721px;
+        text-align: center;
       }
       .main li {
         width: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: 0.5s;
+      }
+      .main li:first-child a {
+        background: url(images/main1.png) center/cover no-repeat;
+      }
+      .main li:last-child a {
+        background: url(images/main2.png) center/cover no-repeat;
+      }
+      .main li:hover {
       }
       .main li a {
-        /* color: #fff; */
-        text-align: center;
+        transform: scale(1.1);
       }
       .main li a h1 {
         font-size: 45px;
+        color: #fff;
       }
       .main li a p {
         font-size: 15px;
+        color: #fff;
       }
     </style>
   </head>
