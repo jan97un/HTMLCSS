@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", sans-serif;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      div {
+        width: 1504px;
+        margin: 0 auto;
+        height: 776px;
+      }
+      .top {
+        display: flex;
+      }
+      .top li {
+        width: 50%;
+      }
+      .top li:first-child {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 15px;
+      }
+      .top li:last-child {
+        margin-left: 15px;
+      }
+      .top li a {
+        line-height: 55px;
+        font-size: 11px;
+        color: #a8a9ad;
+      }
+      .main {
+        display: flex;
+        height: 721px;
+      }
+      .main li {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .main li a {
+        /* color: #fff; */
+        text-align: center;
+      }
+      .main li a h1 {
+        font-size: 45px;
+      }
+      .main li a p {
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul class="top">
+        <li><a href="#">search</a></li>
+        <li><a href="#">concept</a></li>
+      </ul>
+      <ul class="main">
+        <li>
+          <a href="#">
+            <h1>search</h1>
+            <p>매드포갈릭 매장 찾기</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h1>concept</h1>
+            <p>매드포갈릭 컨셉 이미지</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

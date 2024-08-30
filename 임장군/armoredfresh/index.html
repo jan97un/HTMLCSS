@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="xeicon.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        color: #d1a050;
+      }
+      ul {
+        list-style: none;
+      }
+      main {
+        width: 1210px;
+        margin: 0 auto;
+      }
+      h1 {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      h2 {
+        font-size: 42px;
+        font-weight: 500;
+        padding-bottom: 20px;
+      }
+      h3 {
+        font-size: 24px;
+        padding: 15px 40px;
+        font-weight: 400;
+        position: relative;
+        border-top: 1px solid #d1a050;
+      }
+      h3.on {
+        font-weight: 700;
+      }
+      h3::before {
+        content: "";
+        position: absolute;
+        left: 26px;
+        top: 50%;
+        width: 2px;
+        height: 14px;
+        background: #d1a050;
+        transform: translateY(-50%);
+      }
+      h3:after {
+        content: "";
+        position: absolute;
+        left: 20px;
+        top: calc(50% - 1px);
+        width: 14px;
+        height: 2px;
+        background: #d1a050;
+      }
+      ul li {
+        cursor: pointer;
+      }
+      ul li p {
+        padding: 70px 40px 80px;
+        display: none;
+      }
+      ul li p.on {
+        display: block;
+      }
+      ul li p img {
+        width: 1130px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>RETAIL</h1>
+      <h2>Slices - Almond Base</h2>
+      <ul>
+        <li>
+          <h3>AMERICAN</h3>
+          <p><img src="images/main1.jpg" alt="main1" /></p>
+        </li>
+        <li>
+          <h3>CHEDDAR</h3>
+          <p><img src="images/main2.jpg" alt="main2" /></p>
+        </li>
+        <li>
+          <h3>PROVOLONE</h3>
+          <p><img src="images/main3.jpg" alt="main3" /></p>
+        </li>
+        <li>
+          <h3>PEPPER JACK</h3>
+          <p><img src="images/main4.jpg" alt="main4" /></p>
+        </li>
+      </ul>
+    </main>
+    <script>
+      let tit = document.querySelectorAll("ul li");
+      let img = document.querySelectorAll("p");
+      img.forEach(function (v) {
+        v.querySelector("img").style.display = "none";
+      });
+      tit.forEach(function (v) {
+        v.onclick = function () {
+          let nope = this.querySelector("img").style.display;
+          if (nope == "none") {
+            this.querySelector("h3").classList.add("on");
+            this.querySelector("img").style.display = "block";
+            this.querySelector("p").classList.add("on");
+          } else {
+            this.querySelector("h3").classList.remove("on");
+            this.querySelector("img").style.display = "none";
+            this.querySelector("p").classList.remove("on");
+          }
+        };
+      });
+    </script>
+  </body>
+</html>
