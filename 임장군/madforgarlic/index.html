@@ -56,23 +56,16 @@
         justify-content: center;
         align-items: center;
         transition: 0.5s;
-      }
-      .main li:first-child a {
-        background: url(images/main1.png) center/cover no-repeat;
-      }
-      .main li:last-child a {
-        background: url(images/main2.png) center/cover no-repeat;
-      }
-      .main li:hover {
+        overflow: hidden;
       }
       .main li a {
-        transform: scale(1.1);
+        display: block;
       }
-      .main li a h1 {
+      .main li a .txt h1 {
         font-size: 45px;
         color: #fff;
       }
-      .main li a p {
+      .main li a .txt p {
         font-size: 15px;
         color: #fff;
       }
@@ -87,14 +80,20 @@
       <ul class="main">
         <li>
           <a href="#">
-            <h1>search</h1>
-            <p>매드포갈릭 매장 찾기</p>
+            <div class="bg"><img src="images/main1.png" alt="main1" /></div>
+            <div class="txt">
+              <h1>search</h1>
+              <p>매드포갈릭 매장 찾기</p>
+            </div>
           </a>
         </li>
         <li>
           <a href="#">
-            <h1>concept</h1>
-            <p>매드포갈릭 컨셉 이미지</p>
+            <div class="bg"><img src="images/main2.png" alt="main2" /></div>
+            <div class="txt">
+              <h1>concept</h1>
+              <p>매드포갈릭 컨셉 이미지</p>
+            </div>
           </a>
         </li>
       </ul>
