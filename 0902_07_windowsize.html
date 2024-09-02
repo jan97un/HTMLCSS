@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      document.getElementById("demo").innerHTML =
+        "Browser inner window width: " +
+        window.innerWidth +
+        "px<br>" +
+        "Browser inner window height: " +
+        window.innerHeight +
+        "px";
+      window.onresize = function () {
+        document.getElementById("demo").innerHTML =
+          "Browser inner window width: " +
+          window.innerWidth +
+          "px<br>" +
+          "Browser inner window height: " +
+          window.innerHeight +
+          "px";
+      };
+    </script>
+    Set Text Content
+    <p id="demo" onclick="myfnc()">demo</p>
+    <script>
+      function myfnc() {
+        document.getElementById("demo").textContent = "I have changed!";
+      }
+    </script>
+  </body>
+</html>
