@@ -79,7 +79,16 @@
         document.querySelector(".box").style.transform =
           "rotateX(" + (x -= 90) + "deg)";
       };
+      let interval = "";
+      function fnc() {
+        interval = setInterval(function () {
+          document.querySelector(".box").style.transform =
+            "rotateY(" + (y -= 90) + "deg)";
+        }, 2500 /*2.5초*/);
+      }
+      fnc();
       document.onkeydown = function (e) {
+        clearInterval(interval);
         console.log(e.keyCode);
         if (e.keyCode == 37) {
           document.querySelector(".box").style.transform =
@@ -94,11 +103,20 @@
           document.querySelector(".box").style.transform =
             "rotateX(" + (x -= 90) + "deg)";
         }
+        setTimeout(fnc, 100);
       };
-      setInterval(function () {
-        document.querySelector(".box").style.transform =
-          "rotateY(" + (y -= 90) + "deg)";
-      }, 2500 /*2.5초*/);
+      let btn = document.querySelectorAll("button");
+      btn.forEach(function (v, k) {
+        v.onmouseenter = function () {
+          clearInterval(interval);
+        };
+        v.onmouseleave = function () {
+          interval = setInterval(function () {
+            document.querySelector(".box").style.transform =
+              "rotateY(" + (y -= 90) + "deg)";
+          }, 2500 /*2.5초*/);
+        };
+      });
     </script>
   </body>
 </html>
