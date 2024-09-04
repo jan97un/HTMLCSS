@@ -54,8 +54,8 @@
     </div>
     <div class="con">
       <ul class="btn">
-        <li>이전으로</li>
-        <li>다음으로</li>
+        <li class="prev">이전으로</li>
+        <li class="next">다음으로</li>
       </ul>
       <ul class="photo">
         <li>photo1</li>
@@ -76,6 +76,43 @@
       let slideWidth = slide.offsetWidth;
       let len = slideLi.length;
       photo[0].classList.add("on");
+      console.log(slideWidth);
+      function clone() {
+        let first = slideLi[0].cloneNode(true);
+        slides.append(first);
+        let last = slideLi[len - 1].cloneNode(true);
+        slides.prepend(last);
+      }
+      clone();
+      function fnc() {
+        slides.style.width = slideWidth * (len + 2) + "px";
+        slides.style.left = -slideWidth + "px";
+      }
+      fnc();
+      document.querySelector(".next").onclick = function () {
+        if (current <= len - 1) {
+          slides.style.left = -(current + 2) * slideWidth + "px";
+          slides.style.transition = "0.5s";
+        }
+        if (current == len - 1) {
+          setTimeout(function () {
+            slides.style.left = -slideWidth + "px";
+            slides.style.transition = "0s";
+          }, 500);
+          current = -1;
+        }
+        current++;
+        // console.log(current);
+        for (let i = 0; i < len; i++) {
+          photo[i].classList.remove("on");
+        }
+        photo[current].classList.add("on");
+      };
+      document.querySelector("#prev").onclick = function () {
+        if (current >= 0) {
+          slides.style.left = -current * slideWidth + "px";
+        }
+      };
     </script>
   </body>
 </html>
