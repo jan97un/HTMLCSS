@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        position: fixed;
+        width: 100%;
+        height: 110px;
+        background: #fff;
+        z-index: 9999;
+      }
+      .swiper {
+        width: 100%;
+        height: 100vh;
+      }
+      .swiper-wrapper .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .swiper-wrapper .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.1);
+        transition: 3s;
+      }
+      .swiper-wrapper .swiper-slide img.on {
+        transform: scale(1);
+      }
+      .swiper-wrapper .swiper-slide section {
+        position: absolute;
+        left: 300px;
+        top: 300px;
+        color: #fff;
+      }
+      .swiper-wrapper .swiper-slide section h1 {
+        font-size: 65px;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 20px;
+      }
+      .swiper-wrapper .swiper-slide section h3 {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+      .autoplay-progress {
+        position: absolute;
+        left: 300px;
+        bottom: 275px;
+        z-index: 10;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: #fff;
+      }
+      .autoplay-progress svg:nth-child(1) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        stroke-width: 3px;
+        stroke: rgba(255, 255, 255, 0.5);
+        fill: none;
+        transform: rotate(-90deg);
+      }
+      .autoplay-progress svg:nth-child(2) {
+        --progress: 0;
+        position: absolute;
+        left: 0;
+        top: 0px;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        stroke-width: 3px;
+        stroke: #fff;
+        fill: none;
+        stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+        stroke-dasharray: 125.6;
+        transform: rotate(-90deg);
+      }
+      .autoplay-progress span {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        text-align: center;
+        line-height: 70px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            src="https://sustainability.coway.co.kr/images/main/visual-slide-1.jpg"
+            alt="slide1"
+          />
+          <section>
+            <h1>Company caring<br />for better Earth</h1>
+            <h3>코웨이가 더 나은 지구를 만들어 나가겠습니다.</h3>
+          </section>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://sustainability.coway.co.kr/images/main/visual-slide-2.jpg"
+            alt="slide2"
+          />
+          <section>
+            <h1>Company caring<br />for better Earth</h1>
+            <h3>코웨이가 더 나은 지구를 만들어 나가겠습니다.</h3>
+          </section>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://sustainability.coway.co.kr/images/main/visual-slide-3.jpg"
+            alt="slide3"
+          />
+          <section>
+            <h1>Company caring<br />for better Earth</h1>
+            <h3>코웨이가 더 나은 지구를 만들어 나가겠습니다.</h3>
+          </section>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://sustainability.coway.co.kr/images/main/visual-slide-4.jpg"
+            alt="slide4"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://sustainability.coway.co.kr/images/main/visual-slide-5.jpg"
+            alt="slide5"
+          />
+          <section>
+            <h1>Company caring<br />for better Earth</h1>
+            <h3>코웨이가 더 나은 지구를 만들어 나가겠습니다.</h3>
+          </section>
+        </div>
+      </div>
+      <div class="autoplay-progress">
+        <svg viewBox="0 0 48 48">
+          <circle cx="24" cy="24" r="20"></circle>
+        </svg>
+        <svg viewBox="0 0 48 48">
+          <circle cx="24" cy="24" r="20"></circle>
+        </svg>
+        <span><img src="images/visual-icon-pause.png" alt="pause" /></span>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const slide = document.querySelectorAll(".swiper-slide");
+      const progressCircle = document.querySelectorAll(
+        ".autoplay-progress svg"
+      );
+      const progressContent = document.querySelector(".autoplay-progress span");
+      let bool = true;
+      progressContent.onclick = function () {
+        if (bool) {
+          swiper.autoplay.stop();
+          this.innerHTML = '<img src="images/visual-icon-play.png" alt="play">';
+        } else {
+          swiper.autoplay.start();
+          this.innerHTML =
+            '<img src="images/visual-icon-pause.png" alt="pause">';
+        }
+        bool = !bool;
+        // 클릭을 할 때마다 참과 거짓을 반복한다
+        console.log(bool);
+      };
+      setTimeout(function () {
+        slide[0].querySelector("img").classList.add("on");
+      }, 1000);
+      var swiper = new Swiper(".mySwiper", {
+        effect: "fade",
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        on: {
+          autoplayTimeLeft(s, time, progress) {
+            progressCircle[1].style.setProperty("--progress", 1 - progress);
+          },
+          slideChange: function () {
+            for (let i = 0; i < 5; i++) {
+              slide[i].querySelector("img").classList.remove("on");
+            }
+            slide[this.realIndex].querySelector("img").classList.add("on");
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
