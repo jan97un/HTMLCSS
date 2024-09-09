@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(function () {
+        $("p:first").css("color", "red");
+        $("p:nth-child(2)").css("display", "none");
+        $("p:nth-child(3)").hide();
+        $("p:nth-child(2)").css("display", "");
+        $("p:nth-child(3)").show;
+        $("p:nth-child(4)").remove;
+        let node = $("#demo").parent().prop("nodeName");
+        console.log(node);
+        // body
+      });
+    </script>
+  </head>
+  <body>
+    <p id="demo">jQuery</p>
+    <p>하나</p>
+    <p>둘</p>
+    <p>셋</p>
+    <p>넷</p>
+    <script></script>
+  </body>
+</html>

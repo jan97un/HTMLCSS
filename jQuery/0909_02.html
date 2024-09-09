@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        color: aquamarine;
+        font-size: 20px;
+      }
+    </style>
+    <!-- style 속성보다 script 속성이 인라인방식으로 적용되어 더 강한 영향력을 보인다 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      //   $(document).ready(function () {});
+      $(function () {
+        $("#demo").html("<h1>제이쿼리</h1>");
+        $("p:nth-child(1)").css("color", "red");
+        $("p:nth-child(3)").css("color", "green");
+        $("p:nth-child(4)").css("font-size", "60px").css("font-weight", "800");
+        $("p:nth-child(5)").css({ color: "blue", "font-style": "italic" });
+        // 한 단어의 속성명은 따옴표 없이 가능하다. 두 개 이상의 속성명은 따옴표가 필요하다.
+      });
+      //   구조를 변경시켜 문자로 출력
+    </script>
+  </head>
+  <body>
+    <p id="demo">jQuery</p>
+    <p>하나</p>
+    <p>둘</p>
+    <p>셋</p>
+    <p>넷</p>
+    <script></script>
+  </body>
+</html>
