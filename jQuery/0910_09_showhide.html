@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $("#hide").click(function () {
+          //   $(this).hide("slow");
+          //   $(this).hide(시간, "easing", callback);
+          //   easing: "swing", "linear";
+          //   $(this).hide(1000, "swing", function () {
+          //     alert("작업반장 : 완");
+          //   });
+          $(this).hide(1000, "swing", function () {
+            alert("작업반장 : 완");
+          });
+        });
+        $("#show").click(function () {
+          $("#hide").show(1000, "easeOutBounce", function () {
+            alert("작업반장 : 료");
+          });
+        });
+        $("#toggle").click(function () {
+          $("#show").toggle(1000, "easeOutBounce");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>If you click on the "Hide" button, I will disappear.</p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">toggle</button>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(function () {
+        $("input").select(function () {
+          // 요소를 더블클릭해서 요소가 선택되었을 때 이벤트가 발생한다
+          alert("selected");
+        });
+        $("#area").change(function () {
+          alert("change");
+        });
+        $("form").submit(function () {
+          // form 태그에 submit 버튼을 클릭했을 때 이벤트가 발생한다
+          alert("너의 정보는 유출되었다");
+        });
+        $("button").click(function () {
+          $("form").trigger("submit");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form action="">
+      <select name="area" id="area">
+        <option value="선택안함">선택안함</option>
+        <option value="서울">서울</option>
+        <option value="대전">대전</option>
+      </select>
+      <input type="text" value="웅" />
+      <input type="submit" />
+      <button>클릭</button>
+    </form>
+  </body>
+</html>
