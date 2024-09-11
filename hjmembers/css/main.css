@@ -1,0 +1,507 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  word-break: keep-all;
+  white-space: nowrap;
+  letter-spacing: -0.01rem;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.mob {
+  display: none;
+}
+
+/* header(fixed) */
+
+header {
+  position: fixed;
+  height: 72px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  text-align: center;
+  background-color: transparent;
+  z-index: 1000;
+}
+header .head {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100%;
+}
+header .head .logo {
+  position: relative;
+  width: 97px;
+  height: 33px;
+  padding-right: 50px;
+}
+
+header .head .gnb {
+  height: 100%;
+}
+header .head .gnb .dep1 {
+  display: flex;
+}
+header .head .gnb .dep1 > li {
+  position: relative;
+}
+header .head .gnb .dep1 > li > a {
+  display: block;
+  font-size: 16px;
+  line-height: 72px;
+  font-weight: 700;
+  padding: 0 34px;
+  color: #fff;
+}
+header .head .gnb:hover .dep1 > li > a {
+  color: #111 !important;
+}
+header .head .gnb .dep1 > li .dep2 {
+  position: absolute;
+  left: 0;
+  top: 72px;
+  width: 100%;
+  height: 275px;
+  z-index: 1020;
+  display: none;
+}
+header .head .gnb .dep1 > li .dep2 li {
+  line-height: 40px;
+}
+header .head .gnb .dep1 > li .dep2 li a {
+  font-weight: 500;
+  color: #666;
+}
+
+/* head nav background */
+
+header .head .gnb .bgWhite {
+  position: absolute;
+  left: 0;
+  top: 72px;
+  width: 100%;
+  height: 0;
+  z-index: 1010;
+}
+header .head .gnb:hover .dep1 ~ .bgWhite {
+  height: 275px;
+  background-color: #fff;
+  border-bottom: 1px solid #dbdbdb;
+}
+header .head .gnb:hover .dep1 > li .dep2 {
+  display: block;
+}
+header .head .headRight {
+  display: flex;
+}
+header .head .headRight li {
+  padding: 0 12px;
+}
+header .head .headRight li a {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #fff;
+}
+header .head .gnb:hover ~ .headRight li a {
+  color: #666 !important;
+}
+header .head .hamberger {
+  display: none;
+}
+
+/* main */
+
+.section {
+  overflow: hidden;
+}
+
+#section0 {
+  overflow: hidden;
+  /*solves problem with overflowing video in Mac with Chrome */
+}
+#myVideo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  object-fit: cover;
+  z-index: 3;
+}
+main .mainPage {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+main .memPage,
+main .whiteBg,
+main .brandPage {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .appPage {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+main .appPage .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+main .coupon {
+  background: url(../images/couponbg.png) center/cover no-repeat;
+}
+main .appPage .obj p {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+main .memPage .obj p img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 3;
+}
+main .brandPage .obj p img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+main .darkPage .txt {
+  color: #fff;
+}
+main .memPage .txt,
+main .brandPage .txt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+main .memPage .txt p:nth-child(1) {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+main .memPage .txt p:nth-child(2) {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-top: 24px;
+}
+main .memPage .txt p:nth-child(3) {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-top: 40px;
+}
+main .whiteBg .txt p:nth-child(1) {
+  font-size: 80px;
+  font-weight: 700;
+}
+main .whiteBg .txt p:nth-child(2) {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 20px;
+  color: #666;
+}
+main .brandPage .txt p:nth-child(2) {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 29px;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 47px;
+}
+main .brandPage .txt p:nth-child(3) {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-top: 24px;
+}
+main .appPage .wrap .txt {
+  width: 460px;
+}
+main .appPage .wrap .txt p:nth-child(1) {
+  font-size: 20px;
+  font-weight: 700;
+}
+main .appPage .wrap .txt p:nth-child(2) {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 52px;
+  margin-top: 24px;
+}
+main .appPage .wrap .txt p:nth-child(3) {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-top: 20px;
+}
+main .elle .txt p:nth-child(3),
+main .ellevoice .wrap .txt p:nth-child(3),
+main .eee .wrap .txt p:nth-child(3) {
+  color: #666;
+}
+main .memPage .txt .mainLink {
+  margin-top: 80px;
+}
+main .brandPage .txt .mainLink,
+main .appPage .wrap .txt .mainLink {
+  margin-top: 60px;
+}
+main .darkPage .txt .mainLink a {
+  color: #fff;
+  padding: 16px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  display: inline-block;
+}
+main .brightPage .txt .mainLink a {
+  color: #111;
+  padding: 16px 24px;
+  border: 1px solid rgba(17, 17, 17, 0.6);
+  display: inline-block;
+}
+main .mainPage .txt .mainLink a span {
+  font-size: 16px;
+  font-weight: 500;
+  padding-right: 28px;
+  position: relative;
+}
+main .darkPage .txt .mainLink a span::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/arrowwhite.png);
+  background-position: center;
+  background-size: cover;
+}
+main .brightPage .txt .mainLink a span::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/arrowdark.svg);
+  background-position: center;
+  background-size: cover;
+}
+main .appPage .wrap .pc {
+  width: 680px;
+  margin-left: 60px;
+}
+main .appPage .wrap .pc img {
+  width: 100%;
+}
+
+/* footer */
+
+footer {
+  width: 100%;
+  height: 100%;
+}
+footer .foot {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: 500;
+}
+footer .foot .footTop {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  gap: 32px;
+  padding: 23px 0;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+}
+footer .foot .footTop li a {
+  color: #666;
+}
+footer .foot .footTop li:nth-child(2) a {
+  color: #111;
+  font-weight: 700;
+}
+footer .foot .footBot {
+  font-size: 14px;
+  color: #666;
+  padding: 40px 0 60px;
+}
+footer .foot .footBot address {
+  display: block;
+  font-style: normal;
+}
+footer .foot .footBot address span {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+footer .foot .footBot address span:first-child {
+  color: #111;
+}
+footer .foot .footBot address span:nth-child(2) {
+  padding: 0 17px;
+}
+footer .foot .footBot address span:nth-child(5) {
+  padding-right: 17px;
+}
+footer .foot .footBot address span:nth-child(2)::before,
+footer .foot .footBot address span:nth-child(5)::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 11px;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #dbdbdb;
+}
+footer .foot .footBot address span:nth-child(5)::before {
+  display: none;
+}
+footer .foot .footBot address span:nth-child(2)::after,
+footer .foot .footBot address span:nth-child(5)::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 11px;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #dbdbdb;
+}
+footer .foot .footBot p {
+  padding-top: 32px;
+}
+
+/* floating nav */
+
+#float {
+  display: none;
+}
+.float {
+  position: fixed;
+  right: 80px;
+  bottom: 80px;
+  z-index: 500;
+}
+.float .navBar {
+  border: 1px solid #dbdbdb;
+  padding: 20px 0;
+  position: absolute;
+  right: 0;
+  bottom: 80px;
+  background: #fff;
+  transition: 0.5s;
+  /* width: 282px;
+  height: 384px; */
+}
+.float .navBar li {
+  font-size: 18px;
+  font-weight: 500;
+  display: block;
+  padding-left: 32px;
+  line-height: 48px;
+  width: 282px;
+  box-sizing: border-box;
+}
+.float .navBar li a {
+  color: #999;
+}
+.float .navBar li:hover a {
+  color: #111;
+  font-weight: 700;
+}
+.float label {
+  position: relative;
+  background: #111;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: block;
+  cursor: pointer;
+}
+.float label img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+  /* display: block; */
+}
+
+@media screen and (max-width: 1024px) {
+  main .appPage {
+    padding-top: 72px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  main .appPage .wrap {
+    flex-direction: column;
+    text-align: center;
+  }
+  main .appPage .wrap .txt .mob {
+    display: none;
+  }
+  main .appPage .wrap .txt .mainLink {
+    margin-top: 30px;
+  }
+  main .appPage .wrap .pc {
+    display: none;
+  }
+  main .appPage .wrap .mob {
+    display: block;
+    margin-top: 50px;
+    max-width: 830px;
+  }
+  main .appPage .wrap .mob img {
+    width: 60%;
+  }
+}
