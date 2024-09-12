@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: green;
+      }
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+      .swiper-slide {
+        width: 684px;
+        height: 430px;
+        border-radius: 16px;
+        overflow: hidden;
+      }
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .swiper {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #btn {
+        position: absolute;
+        width: 850px;
+        height: 40px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: khaki;
+      }
+      .swiper-button-next:after,
+      .swiper-button-prev:after {
+        font-size: 1em;
+        color: #fff;
+      }
+      .swiper-pagination {
+        position: static;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/main1.png" alt="main1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/main2.png" alt="main2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/main3.png" alt="main3" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/main4.png" alt="main4" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/main5.png" alt="main5" />
+        </div>
+      </div>
+      <div id="btn">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 118,
+        centeredSlides: true,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

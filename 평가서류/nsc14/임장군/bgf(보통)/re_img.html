@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bgf</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      @font-face {
+        font-family: "PretendardVariable";
+        src: url(webfonts/PretendardVariable.woff2) format("woff2");
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "PretendardVariable";
+      }
+      body {
+        overflow-x: hidden;
+      }
+      .solution {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        border: 1px solid #000;
+        padding-bottom: 100px;
+        position: relative;
+      }
+      .inner {
+        width: 1200px;
+      }
+      h1 {
+        font-size: 100px;
+      }
+      .swiper {
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        position: static;
+      }
+      .swiper-slide {
+        background: #fff;
+      }
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .swiper-slide .txt {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        color: #fff;
+      }
+      .txt h1 {
+        font-size: 45px;
+      }
+      .txt p {
+        font-size: 20px;
+      }
+      #btn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 200px;
+        height: 40px;
+      }
+      .swiper-pagination {
+        width: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .swiper-button-next:after,
+      .swiper-button-prev:after {
+        font-size: 1em;
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="solution">
+      <div class="inner">
+        <h1>Solution</h1>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/sec03_img01.jpg" alt="sec03_img01" />
+              <div class="txt">
+                <h1>자동차</h1>
+                <p>
+                  탄소저감과 지속가능성을 고려하여 혁신적인 자동차 소재를
+                  개발하는데 주력하고 있습니다.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/sec03_img02.jpg" alt="sec03_img02" />
+              <div class="txt">
+                <h1>전기전자</h1>
+                <p>
+                  내충격성과 전기절연, 단열성, 화학적 기능을 강화하여 전기·전자
+                  제품의 신뢰성과 안전성을 향상시키는 것을 목표로 합니다.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/sec03_img03.jpg" alt="sec03_img03" />
+              <div class="txt">
+                <h1>산업재</h1>
+                <p>
+                  가구, 공구, 기타 산업재 등의 외장 및 부품 등 다양한 산업재
+                  분야에서의 고기능성 소재 라인업을 제공합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="btn">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: { delay: 1000 },
+        spaceBetween: 50,
+        speed: 1000,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        slidesOffsetAfter: -240,
+      });
+    </script>
+  </body>
+</html>
