@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        // $("p").remove("#demo");
+        $("p").empty();
+        // console.log($("#demo").data("num"));
+        // console.log($(".test").attr("aaa"));
+        console.log($(".test").attr("aaa", "ccc"));
+      });
+    </script>
+  </head>
+  <body>
+    <p id="demo" data-num="first">문단태그</p>
+    <p class="test" aaa="bbb">p태그</p>
+  </body>
+</html>
