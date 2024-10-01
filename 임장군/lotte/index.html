@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $(".better span").eq(0).addClass("on");
+        $(".better span").click(function () {
+          let s = $(this).index();
+          // console.log(s);
+          $(".better span").removeClass("on");
+          $(".better span").eq(s).addClass("on");
+          if ($(".life").css("display") == "none") {
+            $(".life").css("display", "block");
+            $(".wrap").css("display", "none");
+            $("main").addClass("on");
+            $(".mainBox>h1").addClass("on");
+            $(".mainBox>p").addClass("on");
+          } else {
+            $(".life").css("display", "none");
+            $(".wrap").css("display", "block");
+            $("main").removeClass("on");
+            $(".mainBox>h1").removeClass("on");
+            $(".mainBox>p").removeClass("on");
+          }
+        });
+        $(".conBox li").hover(
+          function () {
+            let c = $(this).index();
+            console.log(c);
+            $(".conBox li").eq(c).find(".red").css("opacity", "1");
+            $(".conBox li").eq(c).find("a").addClass("on");
+          },
+          function () {
+            $(".conBox li .red").css("opacity", "0");
+            $(".conBox li a").removeClass("on");
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <main>
+      <div class="mainBox">
+        <h1>ACHIVEMENTS</h1>
+        <p>
+          제품 개발을 비롯해 전 연구분야에 걸쳐 창의적 솔루션을 제시하고
+          있습니다. 끊임없는 노력으로 일궈낸 고도화된 연구 성과를 소개합니다.
+        </p>
+        <div class="better">
+          <span>Better Food</span>
+          <span>Better Life</span>
+        </div>
+        <div class="wrap">
+          <ul class="conBox">
+            <li>
+              <a href="#">
+                <div class="con">
+                  <img src="images/con1.jpg" alt="con1" />
+                </div>
+                <div class="red">
+                  <h2>클라우드 크러시(KRUSH)</h2>
+                  <div class="arrow"><img src="images/arrow.png" alt="" /></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="con"><img src="images/con2.jpg" alt="con2" /></div>
+                <div class="red">
+                  <h2>Chefood 요리킥</h2>
+                  <div class="arrow"><img src="images/arrow.png" alt="" /></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="con">
+                  <img src="images/con3.jpg" alt="con3" />
+                </div>
+                <div class="red">
+                  <h2>오잉 노가리칩 청양마요맛</h2>
+                  <div class="arrow"><img src="images/arrow.png" alt="" /></div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="life">
+          <a href="#">
+            <h1>푸드 업사이클링 연구 : 다시 태어나는 식품 부산물</h1>
+          </a>
+          <a href="#">
+            <p>
+              이상 기후에 따른 환경 변화와 지속 가능성에 대한 관심 증대로,
+              소비자들은 지속적으로 친환경 제품에 대한 가치 소비를 원하고 있으며
+            </p>
+            <br />
+            <p>
+              국내외 ESG 트렌드 또한 변화하고 있습니다. 이에 식품 업계에서도
+              적극적으로 친환경 소재와 제품을 개발할 필요가 높아졌습니다.
+            </p>
+          </a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
