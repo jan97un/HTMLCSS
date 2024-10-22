@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      body {
+        font-family: Arial, 돋움, Dotum, sans-serif;
+      }
+      #wrap {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      header {
+        height: 100px;
+      }
+      .slide {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+      }
+      .slide .slideImg {
+        display: flex;
+      }
+      .slide .slideImg li {
+        width: 1200px;
+        font-size: 0;
+        flex-shrink: 0;
+      }
+      .slide .slideImg li img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        function nextani() {
+          $(".slide ul").animate({ marginLeft: "-1200px" }, 500, function () {
+            $(".slide ul li").eq(0).appendTo(".slide ul");
+            $(".slide ul").css({ marginLeft: "0" });
+          });
+        }
+        // nextani();
+        function prevani() {
+          $(".slide ul li").eq(2).prependTo(".slide ul");
+          $(".slide ul").css({ marginLeft: "-1200px" });
+          $(".slide ul").animate(
+            {
+              marginLeft: "0",
+            },
+            500
+          );
+        }
+        let interval = setInterval(function () {
+          nextani();
+        }, 2000);
+        $(".btn li").hover(
+          function () {
+            clearInterval(interval);
+          },
+          function () {
+            interval = setInterval(function () {
+              nextani();
+            }, 2000);
+          }
+        );
+        $(".btn li")
+          .eq(0)
+          .click(function () {
+            prevani();
+          });
+        $(".btn li")
+          .eq(1)
+          .click(function () {
+            nextani();
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <header></header>
+      <div class="slide">
+        <ul class="slideImg">
+          <li><img src="../images/photo1.jpg" alt="photo1" /></li>
+          <li><img src="../images/photo2.jpg" alt="photo2" /></li>
+          <li><img src="../images/photo3.jpg" alt="photo3" /></li>
+        </ul>
+      </div>
+      <ul class="btn">
+        <li><p>이전</p></li>
+        <li><p>다음</p></li>
+      </ul>
+    </div>
+  </body>
+</html>
